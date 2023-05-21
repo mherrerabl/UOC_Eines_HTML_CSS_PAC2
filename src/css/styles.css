@@ -28,12 +28,18 @@ body{
     max-width: 1200px;
 }
 
-.logo h1, .logo p, .logo a{
+header h1, footer h1{
+    font-size: 4rem;
+    font-family: 'Aboreto', cursive;
+    color: var(--mainColor);
+}
+
+.logoName h1, .logoName p, .logoName a{
     font-size: 4rem;
     font-family: 'Aboreto', cursive;
 }
 
-.logo p{
+.logoName p{
     color: var(--mainColor);
 }
 
@@ -84,7 +90,7 @@ p{
     margin-bottom: 25px;
 }
 
-.logo{
+.logoName{
     word-break: normal;
 }
 
@@ -142,21 +148,27 @@ a.btn{
 }
 
 .logo{
-    text-align: right;
-    font-weight: 900;
-    display: inline-block;
-    padding-left: 15px;
-    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    margin: 25px;
 }
 
-.logo p{
-    text-align: end;
+.logo:not(.logoIndex){
+    cursor: pointer;
+}
+
+.logo h1{
+    margin-left: 15px;
+}
+
+.logoHover{
+    position: absolute;
+    opacity: 0;
 }
 
 .indexHeader nav {
     position: absolute;
     z-index: 10;
-    background: linear-gradient(to top, rgba(255,0,0,0), rgba(82,82,82, 0.7));
     width: 100%;
     height: 15vw;
 }
@@ -191,6 +203,7 @@ a.btn{
     position: relative;
     width: 100%;
     height: inherit;
+    mask-image: linear-gradient(125deg, transparent, rgba(0,0,0,0.8) 80%);
 }
 .slideshow img {
     position: absolute;
@@ -239,7 +252,7 @@ footer > div:first-child{
     margin: 15px auto;
 }
 
-footer > div .logo{
+footer > div .logoName{
     padding: 0;
 }
 
@@ -267,22 +280,22 @@ footer div:first-child{
     padding-bottom: 0;
 }
 
-footer div:last-child{
+footer > div:last-child{
     background: var(--mainColor);
     padding: 15px 0;
 }
 
-footer div:last-child ul{
+footer > div:last-child ul{
     display: grid;
     grid-template-columns: auto;
 }
 
-footer div:last-child li{
+footer > div:last-child li{
     display: grid;
     justify-items: center;
 }
 
-footer div:last-child li a{
+footer > div:last-child li a{
     color: var(--background);
 }
 
@@ -306,9 +319,17 @@ footer div:last-child li a{
 }
 
 /**Section 1**/
-.containerIndex .logo{
+.containerIndex .logoName{
+    text-align: right;
+    font-weight: 900;
+    display: inline-block;
     padding: 0;
 }
+
+.logoName p{
+    text-align: end;
+}
+
 .containerIndex > section:first-child{
     margin-top: 25px;
     margin-bottom: 100px;
@@ -501,19 +522,16 @@ swiper-container swiper-slide h5{
 /**********MEDIA QUERIES**********/
 @media screen and (max-width: 479px) {
     /**HEADER**/
-    header .logo h1, header .logo p{
+    header .logoName h1, header .logoName p{
         font-size: 3rem;
     }
+
     /**FOOTER**/
    
 }
 
-@media screen and (min-width: 480px) and (max-width: 799px){
+@media screen and (min-width: 480px) and (max-width: 849px){
     /*****HEADER*****/
-    .indexHeader .logo{
-        padding: 25px;
-    }
-
     .indexHeader nav .dropdown i{
         bottom: -23vw;
     }
@@ -567,14 +585,10 @@ swiper-container swiper-slide h5{
     
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 850px){
    /*****HEADER*****/
     .indexHeader .dropdown{
         display: none;
-    }
-
-    .indexHeader .navBigScreen {
-        display: block;
     }
 
     .indexHeader nav .mainNav{
@@ -582,16 +596,21 @@ swiper-container swiper-slide h5{
         padding: 25px 60px 25px 40px;
     }
 
-    .indexHeader .logo{
-        padding-left: 0;
-        width: 125px;
+    .logo{
+        margin: 0;
     }
 
     .indexHeader .mainNav ul{
+        display: block;
         align-items: center;
         display: flex;
         grid-column-start: 2;
-        justify-content: space-between;
+        justify-content: end;
+        gap: 20px;
+    }
+
+    .indexHeader .slideshow {
+        mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8) 50%);
     }
 
     /**HEADER2**/
@@ -745,7 +764,7 @@ swiper-container swiper-slide h5{
 }
 
 @media screen and (min-width: 1024) {
-    .logo h1, .logo p {
+    .logoName h1, .logoName p {
         font-size: 4rem;
     }
 
@@ -769,6 +788,10 @@ swiper-container swiper-slide h5{
         font-size: 1.8rem;
     }
 
+    .mainNav .logoName img{
+        margin-right: 25px;
+    }
+
     /*****INDEX*****/
     .containerIndex{
         margin: 50px;
@@ -783,6 +806,10 @@ swiper-container swiper-slide h5{
     }
 
     /*****HEADER*****/
+    .containerHeader{
+        height: 200px;
+    }
+
     .indexHeader{
         max-height: 700px;
     }
@@ -790,7 +817,7 @@ swiper-container swiper-slide h5{
         grid-column-start: 3;
     }
   
-    .indexHeader .logo{
+    .indexHeader .logoName{
         width: 175px;
     }
 
@@ -802,11 +829,11 @@ swiper-container swiper-slide h5{
 
 /*****HOVER AND ACTIVE****/
 /**general links (s'exclou el logotip, els cards del swiper i els cards de la pàgina categories**/
-a:hover:not(.logo, .card, .card a){
+a:hover:not(.logoName, .card, .card a){
     text-decoration: underline var(--main2Color) 2px;
 }
 
-a:active:not(.logo, .card, .card a, .menu a), a:focus:not(.logo, .card, .card a, .menu a) {
+a:active:not(.logoName, .card, .card a, .menu a), a:focus:not(.logoName, .card, .card a, .menu a) {
     color: var(--main2Color);
     text-decoration: underline var(--main2Color) 2px;
 }
@@ -850,15 +877,16 @@ footer a:hover i, footer a:active i, footer a:focus i{
 }
 
 /**Logo**/
-a.logo:hover, a.logo:hover p{
-    color: var(--main2Color);
-    cursor: pointer;
+/*.logo:hover:not(.logoIndex) img:first-child{
+    opacity: 0%;
+}
+.logo:hover:not(.logoIndex) .logoHover{
+    opacity: 100%;
 }
 
-a.logo:active, a.logo:active p, a.logo:focus, a.logo:focus p{
+.logo:hover h1{
     color: var(--main2Color);
-    cursor: pointer;
-}
+}*/
 
 /**Swiper .card**/
 swiper-slide:hover{

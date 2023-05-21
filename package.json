@@ -1,6 +1,6 @@
 {
   "name": "pac1_nara",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "PAC1",
   "author": "Míriam Herrera Blanes",
   "source": "src/index.html",
@@ -10,8 +10,8 @@
     "dead"
   ],
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
+    "dev": "parcel",
+    "build": "parcel build --no-content-hash",
     "clean": "rimraf dist .parcel-cache"
   },
   "devDependencies": {

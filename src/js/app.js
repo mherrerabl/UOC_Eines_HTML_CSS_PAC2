@@ -4,7 +4,6 @@ import data from '../json/details.json';
 //import { register } from 'swiper/element/swiper-element-bundle'; //Error intern en el document
 //register();
 
-
 $(function(){
     /**********GENEREAL FUNCTIONS***********/
     //Modifica la variable de la categoria clicada
@@ -316,6 +315,13 @@ $(function(){
     setCategory("footer a");
 
 
+    /*****LOGO ANIMATION*****/
+     $(".logo").on("mouseenter", function(){
+        console.log($(".logo img")[0].src);
+        $(".logo img")[0].srcset="/src/img/logo/logo-32-hover.png 129w, /src/img/logo/logo-50-hover.png 200w, /src/img/logo/logo-100-hover.png 415w"
+        console.log($(".logo img")[0].src);
+
+    });
 
     //Modifica el nombre de slide que es mostren en pantalla segons la mida de la pantalla
     let wWidth = $(window).width();

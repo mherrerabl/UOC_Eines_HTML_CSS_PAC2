@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="/favicon.ico"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script type="module" src="js/app.js"></script>
@@ -16,10 +17,18 @@
     <header class="indexHeader">
         <nav>
             <div class="mainNav">
-                <div class="logo">
-                    <h1>Hōmon</h1>
-                    <p>Nara</p>
+                <div class="logo logoIndex">
+                    <img srcset="/src/img/logo/logo-32.png 129w,
+                                /src/img/logo/logo-50.png 200w,
+                                /src/img/logo/logo-100.png 415w"
+                    sizes="(max-width: 480px) 20vw,
+                            (max-width: 850px) 15vw,
+                            (max-width: 1200px) 10vw,
+                            (min-width: 1201px) 150px"
+                    src="/src/img/logo/logo-100.png" alt="logotip">
+                <h1>Nara</h1>
                 </div>
+        
                 <div class="dropdown">
                     <div class="iconMenu">
                         <i class="fa-solid fa-bars fa-2xl"></i>
@@ -45,7 +54,7 @@
 
     <main class="containerIndex">
         <section>
-            <div class="logo">
+            <div class="logoName">
                 <h1>Hōmon</h1>
                 <p>Nara</p>
             </div>
@@ -76,10 +85,17 @@
     </main>
     <footer>
         <div>
-            <a href="./index.html" class="logo">
-                <h1>Hōmon</h1>
-                <p>Nara</p>
-            </a>
+            <div class="logo logoIndex">
+                <img srcset="/src/img/logo/logo-32.png 129w,
+                            /src/img/logo/logo-50.png 200w,
+                            /src/img/logo/logo-100.png 415w"
+                sizes="(max-width: 480px) 20vw,
+                        (max-width: 850px) 15vw,
+                        (max-width: 1200px) 10vw,
+                        (min-width: 1201px) 150px"
+                src="/src/img/logo/logo-100.png" alt="logotip">
+                <h1>Nara</h1>
+            </div>
         </div>
         <div>
             <h4>Mapa de la web</h4>
