@@ -1,0 +1,874 @@
+/*****Imports*****/
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@500;700;800&display=swap');
+
+
+
+/**********COMMONS**********/
+:root{
+    --mainColor: #006612;
+    --main2Color: #B3102E;
+    --textColor: #000; 
+    --background: #EDEDED;
+    --swiper-theme-color: var(--mainColor);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.logo h1, .logo p, .logo a{
+    font-size: 4rem;
+    font-family: 'Aboreto', cursive;
+}
+
+.logo p{
+    color: var(--mainColor);
+}
+
+h2{
+    font-size: 3rem;
+    word-break: break-word;
+    font-family: 'Encode Sans SC', sans-serif;
+    margin-bottom: 25px;
+}
+
+h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-decoration: underline;
+    word-break: break-word;
+    font-family: 'Encode Sans SC', sans-serif;
+}
+
+h4{
+    font-size: 2rem;
+    font-family: 'Encode Sans SC', sans-serif;
+}
+
+h5{
+    font-size: 2rem;
+    font-family: 'Palanquin', sans-serif;
+}
+
+p, li, a{
+    font-size: 1.6rem;
+    color: var(--textColor);
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 500;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    word-break: break-word;
+}
+
+p{
+    line-height: 2.8rem;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.logo{
+    word-break: normal;
+}
+
+figure{
+    margin-bottom: 25px;
+}
+
+figure img{
+    width: 100%;
+}
+
+figcaption{
+    text-align: end;
+    margin-top: 5px;
+}
+
+figcaption a{
+    font-size: 1.4rem;
+    text-decoration: underline var(--mainColor) 2px;
+}
+
+a.btn{
+    background: var(--mainColor);
+    text-align: center;
+    border-radius: 5px;
+    color: var(--background);
+}
+
+/**Icons**/
+.fa-2xl{
+    font-size: 2.5rem;
+    margin-right: 5px;
+}
+
+
+
+
+/**********HEADER**********/
+.indexHeader {
+    height: 45vw;
+    overflow:hidden;
+    position: relative;
+}
+
+.indexHeader a{
+    font-weight: 600;
+}
+
+.indexHeader .navBigScreen{
+    display: none;
+}
+
+.navBigScreen a{
+    text-decoration: underline var(--mainColor) 2px;
+}
+
+.logo{
+    text-align: right;
+    font-weight: 900;
+    display: inline-block;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.logo p{
+    text-align: end;
+}
+
+.indexHeader nav {
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(to top, rgba(255,0,0,0), rgba(82,82,82, 0.7));
+    width: 100%;
+    height: 15vw;
+}
+
+.indexHeader nav .dropdown i{
+    position: absolute;
+    right: 25px;
+    bottom: -22vw;
+    cursor:pointer
+}
+
+.menu ul{
+    background: var(--background);
+    width: 100%;
+    text-align: end;
+}
+
+.menu li{
+    margin: 0px;
+}
+
+.menu li a{
+    margin: 0px;
+    max-width: 100%;
+    height: 100%;
+    padding: 7px 25px;
+    display: block;
+}
+
+/**Slider HeaderIndex**/
+.indexHeader .slideshow {
+    position: relative;
+    width: 100%;
+    height: inherit;
+}
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+/**header2**/
+.containerHeader{
+    height: 150px;
+    overflow-y: hidden;
+}
+
+.containerHeader .swiper img{
+    height: auto;
+}
+
+/**Slider Header2**/
+.containerHeader {
+    height: 30vw;
+}
+.slideshow img {
+    height: auto;
+}
+
+.containerHeader nav .dropdown i{
+    bottom: -5vw;
+}
+
+
+
+/**********FOOTER**********/
+footer{
+    display: grid;
+    background: var(--background);
+    grid-template-columns: 100%;
+    grid-gap: 0;
+    padding-top: 25px;
+}
+
+footer > div:first-child{
+    margin: 0 auto;
+}
+footer > div:first-child{
+    margin: 15px auto;
+}
+
+footer > div .logo{
+    padding: 0;
+}
+
+footer h4{
+    padding-bottom: 15px;
+}
+
+footer div:not(:last-child,:first-child){
+    justify-self: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+}
+
+footer div:not(:last-child,:first-child) a{
+    padding-left: 15px;
+
+}
+
+footer div:not(:last-child,:first-child) li{
+    padding-bottom: 15px;
+}
+
+footer div:first-child{
+    padding-bottom: 0;
+}
+
+footer div:last-child{
+    background: var(--mainColor);
+    padding: 15px 0;
+}
+
+footer div:last-child ul{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+footer div:last-child li{
+    display: grid;
+    justify-items: center;
+}
+
+footer div:last-child li a{
+    color: var(--background);
+}
+
+/*****BREADCRUMBS*****/
+.breadcrumbs .separator{
+    margin: 0 15px;
+}
+
+.breadcrumbs .currentPage{
+    color: var(--main2Color);
+    font-weight: 700;
+}
+
+/*******INDEX********/
+.containerIndex{
+    margin: 50px 25px;
+}
+
+.containerIndex > section{
+    margin-bottom: 70px;
+}
+
+/**Section 1**/
+.containerIndex .logo{
+    padding: 0;
+}
+.containerIndex > section:first-child{
+    margin-top: 25px;
+    margin-bottom: 100px;
+    text-align:center;
+}
+
+.containerIndex > section:first-child > p{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Encode Sans SC', sans-serif;
+}
+
+.containerIndex > section:first-child > p span{
+    display: block;
+    margin-top: 15px;
+    font-size: 2rem;
+}
+
+
+/**Section 2**/
+.containerIndex .about ul{
+    margin-bottom: 50px;
+}
+
+.containerIndex .about li{
+    list-style: disc;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+/**Section 3**/
+swiper-container{
+    width: 100%;
+    height: 90vw;
+    margin-bottom: 25px;
+}
+
+swiper-container swiper-slide {
+    text-align: center;
+    background: var(--background);
+}
+
+swiper-container swiper-slide div{
+    height: 70%;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+swiper-container swiper-slide h5{
+    margin-top: 15px;
+}
+
+.containerIndex #mapIndex{
+    width: 100%;
+    height: 600px;
+}
+
+
+
+
+
+/**********COMMON CONTAINER**********/
+.container{
+    margin: 25px;
+    margin-bottom: 50px;
+}
+
+.container h2{
+    margin-bottom: 25px;
+}
+
+.container h3{
+    margin-bottom: 15px;
+}
+
+
+
+/**********LINKS**********/
+.containerLinks ul{
+    margin-bottom: 25px;
+}
+
+.containerLinks li{
+    margin-bottom: 15px;
+    margin-left: 25px;
+    list-style-type: disc;
+}
+.containerLinks a:not(.breadcrumbs a){
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/**********CATEGORY**********/
+.containerCategory > ul{
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 25px;
+}
+
+.containerCategory .card{
+    background: var(--background);
+    justify-items: center;
+    height: 100%;
+}
+
+.containerCategory .card a {
+    height: inherit;
+}
+
+.containerCategory .card img{
+    width: 100%;
+}
+
+.containerCategory .card h5{
+    padding: 25px 15px;
+    text-align: center;
+}
+
+
+/**********DETAIL**********/
+/*****Architecture*****/
+.containerDetail .architecture ul{
+    margin-bottom: 25px;
+}
+
+.containerDetail .architecture li{
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.containerDetail > section{
+    margin-top: 50px;
+}
+.containerDetail > section h3{
+    margin-bottom: 25px;
+}
+
+.containerDetail .architectureMap{
+    max-width: 100%;
+    height: 300px;
+}
+
+/*****Accommodation*****/
+.containerDetail .accommodation .accommodationMap{
+    width: 800px;
+    max-width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.containerDetail .accommodation .price{
+    text-align: end;
+}
+
+.containerDetail .accommodation a{
+    text-decoration: underline var(--main2Color) 2px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+/*****Gastronomy*****/
+.containerDetail .gastronomy{
+    margin-bottom: 50px;
+}
+
+
+
+/**********ABOUT**********/
+.containerAbout ul{
+    margin-bottom: 50px;
+}
+
+.containerAbout li{
+    list-style: disc;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+
+
+/**********MEDIA QUERIES**********/
+@media screen and (max-width: 479px) {
+    /**HEADER**/
+    header .logo h1, header .logo p{
+        font-size: 3rem;
+    }
+    /**FOOTER**/
+   
+}
+
+@media screen and (min-width: 480px) and (max-width: 799px){
+    /*****HEADER*****/
+    .indexHeader .logo{
+        padding: 25px;
+    }
+
+    .indexHeader nav .dropdown i{
+        bottom: -23vw;
+    }
+
+    /**HEADER2**/
+    .containerHeader{
+        height: 25vw;
+    }
+    .containerHeader nav .dropdown i{
+        bottom: -5vw;
+    }
+
+    /*****FOOTER*****/
+    footer{
+        grid-template-columns: auto auto;
+    }
+
+    footer div:not(:last-child, :first-child){
+        padding-left: 50px;
+    }
+
+    footer div:first-child{
+        margin-left: 15%;
+    }
+
+    footer > div:last-child{
+        grid-column: span 2;
+    }
+
+    footer div:last-child ul{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+ 
+    /*****INDEX*****/
+    swiper-container{
+        height: 50vw;
+    }
+
+    /*****CATEGORY*****/
+    .containerCategory > ul{
+        grid-template-columns: auto auto;
+    }
+
+    .containerCategory .card img{
+        width: 45vw;
+        height: 35vw;
+        max-width: 100%;
+    }
+    
+}
+
+@media screen and (min-width: 800px){
+   /*****HEADER*****/
+    .indexHeader .dropdown{
+        display: none;
+    }
+
+    .indexHeader .navBigScreen {
+        display: block;
+    }
+
+    .indexHeader nav .mainNav{
+        display: grid;
+        padding: 25px 60px 25px 40px;
+    }
+
+    .indexHeader .logo{
+        padding-left: 0;
+        width: 125px;
+    }
+
+    .indexHeader .mainNav ul{
+        align-items: center;
+        display: flex;
+        grid-column-start: 2;
+        justify-content: space-between;
+    }
+
+    /**HEADER2**/
+    .containerHeader{
+        height: 150px;
+    }
+
+    /*****FOOTER*****/
+    footer{ 
+        grid-template-columns: auto auto auto auto;
+    }
+    
+    footer div:last-child{
+        grid-column: span 4;
+    }
+
+    footer div:last-child ul{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+
+    /*****INDEX*****/
+    swiper-container{
+        height: 20vw;
+        max-height: 300px;
+    }
+
+    /*****CATEGORY*****/
+    .containerCategory > ul{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 25px;
+    }
+
+    .containerCategory .card a{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .containerCategory .card img{
+        height: 18vw;
+        max-height: 175px;
+        min-width: 100%;
+    }
+
+
+
+    /*****DETAIL*****/
+    .containerDetail .architecture{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 35px;
+    }
+
+    .containerDetail .architecture h2, .containerDetail .architecture p:nth-child(2){
+        grid-column: span 2;
+        margin-bottom: 0;
+    }
+
+    .containerDetail .architecture figure, .containerDetail .architecture p, .containerDetail .architecture section{
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+    .containerDetail .architecture p:last-child, .containerDetail .architecture p:nth-child(7){
+        grid-column: span 2;
+    }
+
+    .containerDetail .architecture section:last-child{
+        grid-column: span 2;
+    }
+
+    .containerDetail .architectureMap{
+        width: 700px;
+        margin: 50px auto;
+        height: 400px;
+    }
+
+   
+
+    /**Accommodation**/
+    .containerDetail .accommodation {
+        display: block;
+    }
+
+    /**Gastronomy**/
+    .containerDetail .gastronomy section{
+        grid-column: span 2;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-column-gap: 25px;
+    }
+
+    .containerDetail .gastronomy section:not(:last-child){
+        margin-bottom: 25px;
+    }
+
+    .containerDetail .gastronomy section h3{
+        grid-column: span 2;
+    }
+
+
+    /*****ABOUT*****/
+    .containerAbout h2{
+        grid-column: span 2;
+    }
+
+    .containerAbout > div{
+       display: grid;
+       grid-template-columns: auto auto;
+       grid-gap: 25px;
+    }
+
+    .containerAbout div > p{
+        align-self: center;
+    }
+
+    .containerAbout div > figure img{
+        width: 500px;
+        height: 300px;
+    }
+
+    .containerAbout section {
+       display: grid;
+       grid-template-columns: auto auto;
+       grid-gap: 0px 50px;
+    }
+
+    .containerAbout section:nth-child(3) h3, .containerAbout section:nth-child(4) h3 {
+        grid-column: span 2;
+    }
+
+    .containerAbout section:nth-child(3) p:nth-child(2),  .containerAbout section:nth-child(3) p:nth-child(5), .containerAbout section:nth-child(4) p:nth-child(2){
+        grid-column: span 2;
+    }
+
+    .containerAbout section:nth-child(3) p:nth-child(4), .containerAbout section:nth-child(4) ul:nth-child(3){
+        align-self: center;
+    }
+
+    .containerAbout section:nth-child(4) li{
+        margin-bottom: 25px;
+    }
+    
+    /*****COMMON CONTAINER*****/
+       .container{
+        margin: 50px;
+    }
+    
+}
+
+@media screen and (min-width: 1024) {
+    .logo h1, .logo p {
+        font-size: 4rem;
+    }
+
+    .header2 h1 a{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 3.5rem;
+    }
+
+    h3{
+        font-size: 3rem;
+    }
+
+    h4{
+        font-size: 2.5rem;
+    }
+
+    a, li, p{
+        font-size: 1.8rem;
+    }
+
+    /*****INDEX*****/
+    .containerIndex{
+        margin: 50px;
+    }
+}
+    
+
+@media screen and (min-width: 1200px){
+    /*****COMMON CONTAINER*****/
+    header, footer, .containerIndex, .container{
+        max-width: 1200px;
+    }
+
+    /*****HEADER*****/
+    .indexHeader{
+        max-height: 700px;
+    }
+    .indexHeader .mainNav ul{
+        grid-column-start: 3;
+    }
+  
+    .indexHeader .logo{
+        width: 175px;
+    }
+
+   /*****INDEX*****/
+    .containerIndex {
+        margin: 100px 0;
+    }
+}
+
+/*****HOVER AND ACTIVE****/
+/**general links (s'exclou el logotip, els cards del swiper i els cards de la pàgina categories**/
+a:hover:not(.logo, .card, .card a){
+    text-decoration: underline var(--main2Color) 2px;
+}
+
+a:active:not(.logo, .card, .card a, .menu a), a:focus:not(.logo, .card, .card a, .menu a) {
+    color: var(--main2Color);
+    text-decoration: underline var(--main2Color) 2px;
+}
+
+/**links header menu**/
+.menu li a:hover{
+    text-decoration: none;
+    color: var(--background);
+    background: var(--main2Color);
+}
+
+.menu li a:active, .menu li a:focus{
+    color: var(--background);
+    background: var(--main2Color);
+}
+
+.dropdown .iconMenu i:hover{
+    color: var(--main2Color);
+}
+
+.dropdown .iconMenu i:active, .iconMenu i:focus{
+    color: var(--mainColor);
+}
+
+/**links footer**/
+footer a:hover i, footer a:active i, footer a:focus i{
+    color: var(--main2Color);
+}
+
+/**Cards**/
+.card:hover{
+    border-bottom: 2px solid var(--main2Color);
+    height: auto;
+    cursor: pointer;
+}
+
+.card:active, .card:focus{
+    border: 2px solid var(--main2Color);
+    height: auto;
+    cursor: pointer;
+}
+
+/**Logo**/
+a.logo:hover, a.logo:hover p{
+    color: var(--main2Color);
+    cursor: pointer;
+}
+
+a.logo:active, a.logo:active p, a.logo:focus, a.logo:focus p{
+    color: var(--main2Color);
+    cursor: pointer;
+}
+
+/**Swiper .card**/
+swiper-slide:hover{
+    border-bottom: 2px solid var(--main2Color);
+    height: auto;
+    cursor: pointer;
+}
+
+swiper-slide:active, swiper-slide:focus{
+    border-bottom: 2px solid var(--main2Color);
+    height: auto;
+    cursor: pointer;
+}

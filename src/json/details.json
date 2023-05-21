@@ -1,0 +1,361 @@
+{
+    "accommodations": {
+        "title": "Allotjaments turístics",
+        "introduction": "Per poder visitar la ciutat de Nara amb tranquil·litat, necessites decidir a on allotjar-te per tant, et detallem alguns dels hotels més populars de la zona",
+        "information": [
+            {
+                "id": 1,
+                "name": "Daiwa Roynet Hotel Nara",
+                "ubication": "11-12 Sanjohonmachi, Nara, 630-8122, Japó",
+                "latitude": 34.68039209616143,
+                "altitude": 135.81776363923822,
+                "price": 70,
+                "description": "El Daiwa Roynet Hotel Nara ofereix allotjament de 4 estrelles a Nara, a 500 m de l'estació de Nara ia 18 km del santuari d'Iwafune. Compta amb restaurant, recepció 24 hores, consigna d'equipatge i WiFi gratuïta a totes les instal·lacions. Hi ha aparcament privat. Cada dia se serveix un esmorzar a la carta, americà o asiàtic. L´hotel ofereix allotjament de 4 estrelles amb bany termal.",
+                "url": "https://www.daiwaroynet.jp/nara/"
+            },
+            {
+                "id": 2,
+                "name": "JW Marriott Hotel Nara",
+                "ubication": "630-8013 Nara, Nara, Sanjo-Oji 1-1-1, Japó",
+                "latitude": 34.68412409757321,
+                "altitude": 135.80520236622016,
+                "price": 309,
+                "description": "El JW Marriott Nara, és el primer hotel de luxe internacional de Nara. Japó, Els clients podrán gaudir d'una sofisticació vivencial amb un toc realment personal. Hi han 158 habitacions elegants, incloent les 16 suites, que ofereixen una gamma completa de comoditats modernes. L’hotel ofereix una gran varietat d'opcions gastronòmiques, un entrenament refrescant al gimnàs obert les 24 hores, una piscina coberta, massatges, tractaments facials a l'spa de luxe de l'hotel, entre d’altres. Els organitzadors professionals de reunions i casaments estan preparats per personalitzar l'esdeveniment perfecte utilitzant la sala de ball de l’hotel i 4 sales de reunions addicionals, així com l'ampli espai al centre de convencions connectat, el més gran de Nara.",
+                "url": "https://www.marriott.com/en-us/hotels/osajw-jw-marriott-hotel-nara/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"
+            },
+            {
+                "id": 3,
+                "name": "Okuyama Nara Kasuga Tsukihitei",
+                "ubication": "158 Kasuganocho, Nara, 630-8212, Japó",
+                "latitude": 34.68548614792334,
+                "altitude": 135.85219906327117,
+                "price": 466 ,
+                "description": "El Okuyama Nara Kasuga Tsukihitei es troba al bosc primitiu de Kasugayama, declarat Patrimoni de la Humanitat per la UNESCO. Les habitacions tenen una decoració japonesa i tenen vista panoràmica sobre el bosc, terra tradicional de tatami i paravents de paper shoji. Totes les habitacions estan equipades amb bany i llits de tipus futó japonès. L'establiment és a 400 m del santuari de Kasuga Taisha i a 10 minuts a peu del temple Todaiji. El xef japonès elabora un esmorzar d'estil japonès i sopars amb plats diferents elaborats amb especialitats de temporada.",
+                "url": "http://www.nara-ryoutei.com/tsukihitei/"
+            },
+            {
+                "id": 4,
+                "name": "Candeo Hotels Nara Kashihara",
+                "ubication": "1 Chome-1-50 Naizencho, Kashihara, Nara 634-0804, Japó",
+                "latitude": 34.51174910517716,
+                "altitude": 135.79261719504692,
+                "price": 98,
+                "description": "El Candeo Hotels Nara Kashihara està situat a 4,3 km del santuari de Kashihara Jingu, a Kashihara, i ofereix habitacions amb aire condicionat i internet WiFi gratuïta. També compta amb recepció 24 hores i restaurant. Tots els allotjaments estan equipats amb TV de pantalla plana i nevera. El bany privat inclou banyera. Cada matí se serveix un esmorzar bufet.",
+                "url": "https://www.candeohotels.com/ja/nara-kashihara/?utm_source=google&utm_medium=maps"
+            }
+        ]
+    },
+    "gastronomy": {
+        "title": "Gastronomia típica",
+        "information": [
+            {
+                "name": "Narazuke",
+                "description": "El sake té una història molt llarga al Japó, sobretot a Nara. La majoria d'experts coincideixen que el primer sake, conegut com a “sake de temple”, i moltes de les tècniques modernes per destil·lar-lo són originàries de Nara. Un dels problemes que sorgien en destil·lar aquesta beguda era el pòsit. I, per descomptat, no es podia desaprofitar res que provingués d'un temple sargat, per això el sediment que quedava en produir Sake es feia servir per fer adobats d'un sabor únic. Es triguen aproximadament tres anys a fer aquests adobats.",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Sake-Soy_Marinated_Sablefish_%283466997813%29.jpg",
+                "alt": "Narazuke",
+                "attribution": {
+                    "author": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Sake-Soy_Marinated_Sablefish_(3466997813).jpg"
+                }
+            },
+            {
+                "name": "Chagayu",
+                "description": "A més de la producció de sake, Nara és també tradicionalment conegut pel seu te verd, especialment el llegendari te Yamato el qual es creu que prové dels anys 800-810. Per a una de les coses que antigament es feia servir més aquesta beguda és per fer unes farinetes d'arròs anomenades Chagayu. Se sol fer amb te verd però també es poden trobar variacions amb te fulla, sencha o fins i tot bancha.",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Cha_Gayu_20141001.jpg/640px-Cha_Gayu_20141001.jpg",
+                "alt": "Chagayu",
+                "attribution": {
+                    "author": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Cha_Gayu_20141001.jpg"
+                }
+            },
+            {
+                "name": "Kuzumochi",
+                "description": "Un dels aperitius més populars del Japó és el mochi, petits pastissos d'arròs normalment coberts per una pasta de mongeta dolça. Aquest aperitiu té una llarga història a Nara i fins i tot pots arribar a veure actualment multituds al voltant de botigues com Nakatanidou per presenciar com preparen el mochi de la forma tradicional, usant un martell de fusta per aixafar l'arròs i donar-li forma.",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Kuzumochi_001.jpg",
+                "alt": "Kuzumochi",
+                "attribution": {
+                    "author": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Kuzumochi_001.jpg"
+                }
+            },
+            {
+                "name": "Miwa Somen",
+                "description": "L'aigua de l'àrea de Miwa és considerada una de les més pures de tot el Japó. Cada any hi ha grups de gent que pugen a la Muntanya Miwa només per poder-la provar. Encara que sigui deliciosa per si sola també li donen un altre ús, combinada amb farina i sal creen un tipus únic de fideus anomenats Miwa Somen. Es poden reconèixer per la forma prima i el sabor suau. Com que el seu sabor és molt subtil se solen menjar amb salsa de soja, brou i sake dolç acompanyats amb algues, confitats, gingebre i altres espècies que potencien el seu sabor. Pots trobar aquest plat servit fred o calent.",
+                "img": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Miwa_somen_01.jpg",
+                "alt": "Miwa Somen",
+                "attribution": {
+                    "author": "Wikimedia Commons",
+                    "url": "https://commons.wikimedia.org/wiki/File:Miwa_somen_01.jpg"
+                }
+            }
+        ]
+    },
+    "architecture": {
+        "title": "Punts d'interès",
+        "introduction": "El patrimoni arquitectònic i cultural de Nara és tan exuberant que té fins a vuit llocs proclamats per la Unesco patrimoni de la humanitat. A continuació us detallem cinc recursos turístics que podeu visitar.",
+        "information": [
+            {
+                "id": 1,
+                "name": "Parc Nara",
+                "description": [
+                    "És un parc públic situat als peus de la Muntanya Wakakusa i creat el 1880. El parc és un dels &quot;llocs de bellesa escènica&quot; designats pel Ministeri d'Educació, Cultura, Esports, Ciència i Tecnologia del Japó (MEXT). Els més de 1.200 cérvols shika salvatges que estan donant voltes lliurement al parc, també es troben sota la designació del MEXT, classificat com a &quot;Monument Natural&quot;. La mida oficial del parc és d'aproximadament 502 ha.", 
+                    "També es poden trobar serveis de jinrikisha (carro que es desplaça amb tracció humana) a les entrades dels temples Tōdai-ji i Kōfukuji. Els jardins que abans eren privats són mostrats al públic. Aquests jardins fan ús dels edificis dels temples com a elements adjunts dels seus paisatges. El parc és la llar del Museu Nacional de Nara i del santuari Todai-ji.", 
+                    "Segons el folklore local, els cérvols d'aquesta zona es consideraven sagrats, a causa de la visita de Takenomikazuchi-no-mikoto, un dels quatre déus del Santuari Kasuga. Es diu que havia estat convidat i va aparèixer a la Muntanya Mikasa-yama muntant un cérvol blanc. Des d'aleshores el cérvol ha sigut considerat un ésser diví i sagrat als temples Kasuga i Kōfukuji. Després de Segona Guerra Mundial, els cérvols van ser desposseïts oficialment el seu estatus sagrat i diví, per ser designats com a tresors nacionals protegits com a tals. Avui dia, els visitants poden comprar Shika-senbei, unes croquetes per alimentar els cérvols al parc."
+                ],
+                "img": [
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Nara_Park_-_panoramio_%282%29.jpg",
+                        "alt": "Parc Nara",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Nara_Park_-_panoramio_(2).jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Nara_Park_Shika.jpg",
+                        "alt": "Cèrvols del Parc Nara",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Nara_Park_Shika.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Nara-tea-house-in-Nara-Park.JPG",
+                        "alt": "Casa del te en el Parc Nara",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Nara-tea-house-in-Nara-Park.JPG"
+                        }
+                    }
+                ],
+                "latitude": 34.68554104408609, 
+                "altitude": 135.84305491534323
+            },
+            {
+                "id": 2,
+                "name": "Temple Tōdai-ji",
+                "description": [
+                    "Durant l'era Tenpyō, Japó va patir diversos desastres i epidèmies. Va ser després de passar per aquests problemes quan l'emperador Shōmu va promulgar una llei el 741 per promoure la construcció de temples provincials per tot el país. Tōdai-ji va ser escollit com el temple de la província de Yamato i el cap de tots els temples provincials.", 
+                    "L'emperador creia que el poder de Buda podria ajudar la gent. El gran Buda va ser dissenyat per Kuninaka no muraji Kimimaro. El temple va ser finalitzat el 745 i el budes completat el 751, havent consumit la majoria de la producció de bronze al Japó durant diversos anys i deixant el país gairebé en fallida. L'estàtua ha estat refosa diverses vegades a causa de raons com a danys causat per terratrèmols i la reconstrucció del temple dues vegades per incendis.", 
+                    "Segons la llegenda, el monjo Gyoki va anar al Gran santuari d'Ise per reconciliar el sintoisme amb el budisme, passant set dies amb les nits recitant sutres fins que l'oracle va declarar que el Buda Vairocana era compatible amb la veneració de la deessa solar Amaterasu."
+                ],
+                "img": [
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/T%C5%8Ddai-ji_Kon-d%C5%8D.jpg",
+                        "alt": "Temple Tōdai-ji",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:T%C5%8Ddai-ji_Kon-d%C5%8D.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/T%C5%8Ddai-ji_hdsr_IMG_3844.jpg",
+                        "alt": "Estatua de Virūpākṣa, un dels quatre Reis Celestials",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:T%C5%8Ddai-ji_hdsr_IMG_3844.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Daibutsu_Grand_bouddha_-_T%C5%8Ddai-ji_-_Nara.jpg",
+                        "alt": "Estatua del Gran Buda",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Daibutsu_Grand_bouddha_-_T%C5%8Ddai-ji_-_Nara.jpg"
+                        }
+                    }
+                ],
+                "latitude": 34.6895496947135, 
+                "altitude": 135.8399016306875,
+                "list": {
+                    "description": [
+                        "Veure la maqueta del edifici original",
+                        "Visitar la sala Daibutsuden",
+                        "Visitar la Torre de la campana",
+                        "Veure l’estatua de bronze del gran buda Daibutsu"
+                    ]
+                }
+            },
+            {
+                "id": 3,
+                "name": "Santuari Kasuga Taisha",
+                "description": [
+                    "És un santuari shinto a la ciutat de Nara. Va ser fundat el 768 i reconstruït diverses vegades al llarg dels segles. L'interior és famós per les moltes llanternes Tōrō de bronze, així com les de pedra que il·luminen el santuari. L'estil arquitectònic és el Kasuga-zukuri, que d’aquí  pren el nom del Santuari de Kasuga.", 
+                    "El Santuari Kasuga, i el Bosc Primigeni Kasugayama a prop seu, estan declarats per la Unesco com a Patrimoni de la Humanitat com a part dels Monuments històrics de l'antiga Nara. El camí a Kasuga-taisha travessa el Parc del Cèrvols. Milers de llanternes de pedra s'alineen als costats del camí. A més, el Jardí Botànic Man'yo és al costat del santuari.", 
+                    "El 965 l'Emperador Murakami va ordenar que els missatgers imperials fossin enviats a informar d'esdeveniments importants al guardià del kami del Japó. Aquest heihaku va ser inicialment presentat a 16 santuaris, inclòs Kasuga-taisha. Des de 1871 a 1946, el Santuari Kasuga va ser oficialment designat com un dels Kanpei-taisha, la qual cosa indicava que es trobava en més alt nivell dels santuaris finançats pel govern.",
+                    "Durant els festivals de Setsubun Mantoro (2 al 4 de febrer) i Obon Mantoro (14 al 15 d'agost), els milers de llanternes del Kasuga-tashi són enceses simultàniament. El 13 de març és el Kasuga Matsuri (&quot;Festival del mico&quot;), el qual és característic per les posades en escena de les danses gagaku i bugaku."
+                ],
+                "img": [
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Kasuga-taisha11bs3200.jpg",
+                        "alt": "Santuari Kasuga Taisha",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Kasuga-taisha11bs3200.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Kasuga-taisha02st3200.jpg",
+                        "alt": "Camí del Santuari Kasuga Taisha",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Kasuga-taisha02st3200.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kasuga_Shrine_lanterns-01.jpg",
+                        "alt": "Fanals del Santuari Kasuga Taisha",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Kasuga_Shrine_lanterns-01.jpg"
+                        }
+                    }
+                ],
+                "latitude": 34.68201562712773, 
+                "altitude": 135.84851434602976,
+                "list": {
+                    "description": [
+                        "Veure els fanals Tōrō",
+                        "Veure el Jardí Botànic de Manyo",
+                        "Visitar l’interior del santuari"
+                    ]
+                }
+            },
+            {
+                "id": 4,
+                "name": "Temple Kōfukuji",
+                "description": [
+                    "És un temple budista de l'escola Obaku ubicat a la ciutat de Nara. El temple, juntament amb altres edificis, van ser declarats per la Unesco el 1998 com a Patrimoni de la Humanitat com a part dels &quot;Monuments històrics de l'antiga Nara&quot;. Va formar part del Nanto Shichi Daiji, els set temples més importants de Nara.", 
+                    "Kōfukuji té el seu origen al 669, quan va ser construït per Kagami-no-Ōkimi, l'esposa de Fujiwara no Kamatari, desitjant que el seu espòs es recuperés de la seva malaltia. Inicialment estava ubicat a Yamashina, Província de Yamashiro (actual Kyoto). El 672, el temple va ser traslladat a Fujiwara-kyō, la primera capital japonesa planificada per copiar el patró de quadrícula ortogonal de Chang'an. El 710, el temple va ser desmantellat per segona vegada i traslladat a la seva ubicació actual, al costat est de la capital recent construïda, Heijō-kyō, l'actual Nara.", 
+                    "El temple va ser danyat i destruït per guerres civils i incendis moltes vegades i va ser reconstruït, encara que finalment alguns dels edificis importants, com un dels tres salons daurats, el Nandaimon, Chūmon i el corredor mai van ser reconstruïts i falten a dia d'avui. La reconstrucció del Pavelló Daurat Central es va completar el 2018."
+                ],
+                "img": [
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Kofukuji12st5s3200.jpg",
+                        "alt": "Temple Kōfukuji",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Kofukuji12st5s3200.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/181029_Ch%C5%AB-kond%C5%8D_of_K%C5%8Dfuku-ji.jpg",
+                        "alt": "Chū-kondō, Saló Daurat Central",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:181029_Ch%C5%AB-kond%C5%8D_of_K%C5%8Dfuku-ji.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Kofukuji09s3200.jpg",
+                        "alt": "Tō-kondō, Saló Daurat del Est",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Kofukuji09s3200.jpg"
+                        }
+                    }
+                ],
+                "latitude": 34.68320060840926, 
+                "altitude": 135.8323129306865,
+                "list": {
+                    "description": [
+                        "Visitar la sala dels tresors nacionals",
+                        "Visitar el Museu Nacional del Temple Kofukuji",
+                        "Veure la Saló Daurat del Est"
+                    ]
+                }
+            },
+            {
+                "id": 5,
+                "name": "Temple Hōryū-ji",
+                "description": [
+                    "És un temple budista localitzat a Ikaruga, prefectura de Nara, Japó. El seu nom complet és Hōryū Gakumonji, traduït com a Temple de l'Ensenyament de la Llei Florescent, a causa que aquest lloc serveix com un monestir. El temple és molt conegut per posseir les edificacions de fusta més antigues al món. Com que té els temples més antics i més importants, Hōryū-ji és el temple més venerat al Japó. Va ser designat com a Patrimoni de la Humanitat de la Unesco i el govern japonès ho ha nomenat com un Tresor Nacional.", 
+                    "El temple va ser originalment comissionat pel príncep Shotoku a la signatura constructora Kongō Gumi.. El primer temple es va completar l'any 607. L'Hōryū-ji estava dedicat a Yakushi, el Nyorai de la curació, i en honor al pare de Shotoku. S'ha confirmat, per mitjà d'excavacions al lloc actual del temple, que el palau del príncep Shotoku ocupava l'extrem oriental d'aquest lloc. També es van descobrir les ruïnes d'un complex de temples al sud del palau, i que no estava comprès dins el complex modern. Va caure un llamp al temple i es va incendiar completament l'any 670. Entre el 670 i el 700 el temple va ser reconstruït seguint l'estil original però reorientat en una posició al nord-oest. El temple es va reparar i va reassemblar a principis del segle XII, l'any 1374 i el 1603. S'ha estimat que només un 15 - 20 per cent del Kondo conté materials de la reconstrucció original.", 
+                    "Els tresors del temple es consideren una càpsula del temps de l'art budista dels segles VI i VII. Molts dels frescos, estàtues i altres obres d'art al temple, així com l'arquitectura dels edificis, mostren la profunda influència cultural de Corea, Xina i Índia, i demostren la connexió internacional entre les nacions de l'orient asiàtic."
+                ],
+                "img": [
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Horyu-ji10s3200.jpg",
+                        "alt": "Temple Hōryū-ji",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Horyu-ji10s3200.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Horyu-ji18s3200.jpg",
+                        "alt": "Dormitori Oest del Temple Hōryū-ji",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Horyu-ji18s3200.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/9/90/H%C5%8Dry%C5%AB-ji_Daik%C5%8Dd%C5%8D%2C_June_7th%2C_2019.jpg",
+                        "alt": "Daikōdō",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:H%C5%8Dry%C5%AB-ji_Daik%C5%8Dd%C5%8D,_June_7th,_2019.jpg"
+                        }
+                    }
+                ],
+                "latitude": 34.61428851487488, 
+                "altitude": 135.73563968464887,
+                "list": {
+                    "description": [
+                        "Veure l’estatua dedicada al Príncep Shotoku",
+                        "Veure algunes de les estatues de Buda",
+                        "Visitar l’edifici Yumedono",
+                        "Visitar la galeria dels Tresors del Temple"
+                    ]
+                }
+            },
+            {
+                "id": 6,
+                "name": "Palau Heijō-Kyu",
+                "description": [
+                    "Va ser el Palau Imperial de Japó (710-784 dC), durant la major part del període Nara. El palau estava localitzat a l'extrem nord de la ciutat cabdal, Heijō-kyō. Les restes del palau i l'àrea circumdant, juntament amb altres edificis, estan declarades per la Unesco com a Patrimoni de la Humanitat com a part dels Monuments històrics de l'antiga Nara.", 
+                    "Després de la successió de l'Emperadriu Genmei al Tron Imperial el 707, es va discutir molt sobre la transferència del palau. Un any després, es va emetre un edicte per al trasllat a Nara. El 710, la nova capital va ser nomenada oficialment, però la finalització del palau va haver d'esperar.", 
+                    "La ciutat i els jardins del palau, es van inspirar principalment a Chang'an (actualment Xian), la capital de la Xina durant la dinastia Tang, que va ser contemporània a l'època en què Nara va ser capital del Japó. Chang'an alhora, igual que moltes antigues ciutats de l'Àsia oriental, es va construir sobre la base d'un complex sistema de creences i lleis de la geomància. Aquestes dictaven la xarxa de carrers, així com la necessitat de santuaris o temples per a la protecció espiritual que havien de situar a determinats punts cardinals al voltant de la ciutat. D'acord amb aquest sistema, el Palau es va col·locar a l'extrem nord, en una línia s'estenia des del carrer de Suzaku, el carrer principal que corre de nord a sud a través del centre de la ciutat.",
+                    "Quan la capital va ser traslladada a Heian-Kyo (actual Kyoto), el Palau Imperial de Nara va ser abandonat. Durant els segles següents, els estralls del temps i els elements van anar destruint els edificis lentament, fins que a principis del Període Kamakura a les acaballes del segle XII no hi havia pràcticament res sobre la terra. Tot i això, les seccions que jeien sota terra s'han conservat i descobert de nou pels arqueòlegs moderns."
+                ],
+                "img": [
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/d/de/181103_Heijo_Palace_Daigokuden_Nara_Japan04bs.jpg",
+                        "alt": " Daigokuden, edifici principal del Palau Heijō-Kyu",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:181103_Heijo_Palace_Daigokuden_Nara_Japan04bs.jpg"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%A7%E6%A5%B5%E6%AE%BF%E3%83%BB%E5%89%8D%E5%BA%AD%28Front_Courtyard%29.JPG",
+                        "alt": "Pati frontal del primer Daigokuden",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%A7%E6%A5%B5%E6%AE%BF%E3%83%BB%E5%89%8D%E5%BA%AD(Front_Courtyard).JPG"
+                        }
+                    },
+                    {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Toin_Teien.jpg",
+                        "alt": "Jardí Tōin Teien",
+                        "attribution": {
+                            "author": "Wikimedia Commons",
+                            "url": "https://commons.wikimedia.org/wiki/File:Toin_Teien.jpg"
+                        }
+                    }
+                ],
+                "latitude": 34.690815959590594, 
+                "altitude": 135.7942596423264,
+                "list": {
+                    "description": [
+                        "Visitar la sala Daigokudan",
+                        "Visitar la nova sala d’audiència",
+                        "Veure el Jardí de l’Est",
+                        "Veure la porta Suzaku, una de les entrades principals"
+                    ]
+                }
+            }
+        ]
+    }
+}
