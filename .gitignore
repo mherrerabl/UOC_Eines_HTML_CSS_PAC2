@@ -3,3 +3,4 @@ node_modules
 .netlify
 dist
 .parcel-cache
+src/img/originals

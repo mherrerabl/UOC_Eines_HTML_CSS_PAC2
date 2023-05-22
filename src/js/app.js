@@ -220,7 +220,7 @@ $(function(){
                                                         <p>${food.description}</p>
                                                         <figure>
                                                             <img src="${food.img}" alt="${food.alt}">
-                                                            <figcaption><a href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
+                                                            <figcaption><a class="figcaptionLink" href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
                                                         </figure>
                                                         
                                                     </section>`);
@@ -247,13 +247,13 @@ $(function(){
             let content = `<p>${objArch[0].description[0]}</p>
                             <figure>
                                 <img src="${objArch[0].img[0].url}" alt="${objArch[0].img[0].alt}">
-                                <figcaption><a href="${objArch[0].img[0].attribution.url}">${objArch[0].img[0].attribution.author}</a></figcaption>
+                                <figcaption><a class="figcaptionLink" href="${objArch[0].img[0].attribution.url}">${objArch[0].img[0].attribution.author}</a></figcaption>
                             </figure>
                             <p>${objArch[0].description[1]}</p>
                             <p>${objArch[0].description[2]}</p>
                             <figure>
                                 <img src="${objArch[0].img[1].url}" alt="${objArch[0].img[1].alt}">
-                                <figcaption><a href="${objArch[0].img[1].attribution.url}">${objArch[0].img[1].attribution.author}</a></figcaption>
+                                <figcaption><a class="figcaptionLink" href="${objArch[0].img[1].attribution.url}">${objArch[0].img[1].attribution.author}</a></figcaption>
                             </figure>`;
 
             //Si te un quart pràgraf, s'afegeix
@@ -273,7 +273,7 @@ $(function(){
                 });
                 $(".containerDetail article").append(`<figure>
                                                         <img src="${objArch[0].img[2].url}" alt="${objArch[0].img[2].url}">
-                                                        <figcaption><a href="${objArch[0].img[2].attribution.url}">${objArch[0].img[2].attribution.author}</a></figcaption>
+                                                        <figcaption><a class="figcaptionLink" href="${objArch[0].img[2].attribution.url}">${objArch[0].img[2].attribution.author}</a></figcaption>
                                                     </figure>`);
             }
             
@@ -315,13 +315,21 @@ $(function(){
     setCategory("footer a");
 
 
-    /*****LOGO ANIMATION*****/
-     $(".logo").on("mouseenter", function(){
-        console.log($(".logo img")[0].src);
-        $(".logo img")[0].srcset="/src/img/logo/logo-32-hover.png 129w, /src/img/logo/logo-50-hover.png 200w, /src/img/logo/logo-100-hover.png 415w"
-        console.log($(".logo img")[0].src);
-
+    /*****LOGO HOVER*****/ 
+    $(".logo:not(.logoIndex)").on("mouseenter", function(event){
+        const logo32 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-32-hover.png";
+        const logo50 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-50-hover.png";
+        const logo100 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-100-hover.png";
+        $(event.currentTarget).children("img")[0].srcset = `${logo32} 129w, ${logo50} 200w, ${logo100} 415w`;
     });
+
+    $(".logo:not(.logoIndex)").on("mouseleave", function(event){
+        const logo32 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-32.png";
+        const logo50 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-50.png";
+        const logo100 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-100.png";
+        $(event.currentTarget).children("img")[0].srcset = `${logo32} 129w, ${logo50} 200w, ${logo100} 415w`;
+    });
+
 
     //Modifica el nombre de slide que es mostren en pantalla segons la mida de la pantalla
     let wWidth = $(window).width();
