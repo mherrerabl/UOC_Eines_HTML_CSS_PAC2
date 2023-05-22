@@ -557,11 +557,17 @@ swiper-container swiper-slide h5{
     margin-bottom: 10px;
 }
 
+.containerAbout .divSvg{
+    border: 15px groove black;
+    margin: 25px auto;
+    max-width: 350px;
+}
+
 .containerAbout svg{
     display: block;
     margin: auto;
-    margin-bottom: 25px;
-    border: 15px groove black;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 
@@ -577,7 +583,7 @@ swiper-container swiper-slide h5{
    
     /**ABOUT**/
     .containerAbout svg{
-        transform: scale(0.7);
+        max-width: 85%;
     }
 }
 
@@ -780,8 +786,8 @@ swiper-container swiper-slide h5{
 
     .containerAbout > div{
        display: grid;
-       grid-template-columns: auto auto;
-       grid-gap: 25px;
+       grid-template-columns: auto 50%;
+       grid-gap: 50px;
     }
 
     .containerAbout div > p{
@@ -789,8 +795,7 @@ swiper-container swiper-slide h5{
     }
 
     .containerAbout div > figure img{
-        width: 500px;
-        height: 300px;
+        max-height: 200px;
     }
 
     .containerAbout section {
