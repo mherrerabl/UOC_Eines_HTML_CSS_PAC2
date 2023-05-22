@@ -129,7 +129,7 @@ $(function(){
         arrArch.forEach( obj => {
             $(".containerIndex .swiperIndex").append(`<swiper-slide>
                                                             <div>
-                                                                <a id="arch${obj.id}" href="./detail.html" class="card">
+                                                                <a id="arch${obj.id}" href="./detail.html" class="card cardSwiper">
                                                                 <img src="${obj.img[0].url}" alt="${obj.img[0].alt}">
                                                                 <h5>${obj.name}</h5>
                                                                 </a>

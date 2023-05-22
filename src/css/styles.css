@@ -942,13 +942,13 @@ footer a:hover i, footer a:active i, footer a:focus i{
 }
 
 /**Cards**/
-.card:hover{
+.card:not(.cardSwiper):hover{
     cursor: pointer;
     transform: scale(1.1); 
     box-shadow: 0 0 10px 4px var(--main2Color);    
 }
 
-.card:active, .card:focus{
+.card:not(.cardSwiper):active, .card:not(.cardSwiper):focus{
     cursor: pointer;
     box-shadow: 0 0 10px 4px var(--mainColor);
     animation: zoom 0.2s ease-out;
