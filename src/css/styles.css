@@ -28,10 +28,6 @@ body{
     max-width: 1200px;
 }
 
-header a, footer a{
-    text-decoration: none;
-}
-
 header h1, footer h1{
     font-size: 4rem;
     font-family: 'Aboreto', cursive;
@@ -83,7 +79,7 @@ li{
     list-style: none;
 }
 
-a:not(.logo, .card, .card a){
+a:not(.logo, .card a, .menu a){
     text-decoration: none;
     word-break: break-word;
     background-image: linear-gradient(to right, var(--main2Color),  var(--main2Color) 50%, #000 50%);
@@ -96,7 +92,7 @@ a:not(.logo, .card, .card a){
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
 }
-a:not(.logo, .card, .card a):before {
+a:not(.logo, .card a, .menu a):before {
     content: '';
     background: var(--main2Color);
     display: block;
@@ -171,10 +167,23 @@ a.btn{
     text-decoration: underline var(--mainColor) 2px;
 }
 
+.indexHeader nav {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, 50%, rgba(255, 255, 255, 0.7));
+}
+
+.indexHeader .slimNav{
+    background-color: rgba(255, 255, 255,0.6);
+}
+
 .logo{
     display: flex;
     align-items: center;
     margin: 25px;
+    text-decoration: none;
 }
 
 .logo:not(.logoIndex){
@@ -184,23 +193,16 @@ a.btn{
 .logo h1{
     margin-left: 15px;
 }
-/*
+
 .logoHover{
     position: absolute;
     opacity: 0;
-}
-*/
-.indexHeader nav {
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: 15vw;
 }
 
 .indexHeader nav .dropdown i{
     position: absolute;
     right: 25px;
-    bottom: -22vw;
+    bottom: 35px;
     cursor:pointer
 }
 
@@ -220,6 +222,7 @@ a.btn{
     height: 100%;
     padding: 7px 25px;
     display: block;
+    text-decoration: none;
 }
 
 /**Slider HeaderIndex**/
@@ -227,8 +230,8 @@ a.btn{
     position: relative;
     width: 100%;
     height: inherit;
-    mask-image: linear-gradient(125deg, transparent, rgba(0,0,0,0.8) 80%);
 }
+
 .slideshow img {
     position: absolute;
     width: 100%;
@@ -250,12 +253,8 @@ a.btn{
 .containerHeader {
     height: 30vw;
 }
-.slideshow img {
-    height: auto;
-}
 
 .containerHeader nav .dropdown i{
-    bottom: -5vw;
 }
 
 
@@ -321,6 +320,8 @@ footer > div:last-child li{
 
 footer > div:last-child li a{
     color: var(--background);
+    font-weight: 500;
+    background-image: linear-gradient(to right, var(--main2Color), var(--main2Color) 50%, var(--background) 50%)
 }
 
 /*****BREADCRUMBS*****/
@@ -355,33 +356,19 @@ footer > div:last-child li a{
 }
 
 .containerIndex > section:first-child{
-    clip-path: polygon(50% 0%, 100% 25%, 98% 100%, 2% 100%, 0% 25%);
-    background-color: burlywood;
-}
-
-.containerIndex > section:first-child > div {   
-    margin: 25px 0px;
-    padding-top: 100px;
-    background-image: url(/src/img/home/temple.jpg);
-    background-position: center;
-    clip-path: polygon(50% 4%, 98% 27%, 96% 96%, 4% 96%, 2% 27%);
-}
-
-.containerIndex > section:first-child > div > div{
-    backdrop-filter: blur(3px); 
-    width: 80%;
-    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 100px;
     text-align:center;
 }
 
-.containerIndex > section:first-child > div > div > p{
+.containerIndex > section:first-child > p{
+    margin-top: 15px;
     text-align: center;
     font-size: 3rem;
-    padding: 25px;
     font-family: 'Encode Sans SC', sans-serif;
 }
 
-.containerIndex > section:first-child > div > div > p span{
+.containerIndex > section:first-child > p span{
     display: block;
     margin-top: 15px;
     font-size: 2rem;
@@ -400,27 +387,35 @@ footer > div:last-child li a{
 }
 
 /**Section 3**/
-swiper-container{
-    width: 100%;
-    height: 90vw;
-    margin-bottom: 25px;
+.divSwiper{
+    overflow: hidden;
+    padding: 25px 0;
+    height: max-content;
 }
 
-swiper-container swiper-slide {
+swiper-container{
+    overflow: visible;
+    height: max-content;
+}
+
+swiper-slide{
+    height: max-content;
+}
+
+swiper-container .card {
+    display: block;
     text-align: center;
     background: var(--background);
-    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+    padding-bottom: 35px;
 }
 
-swiper-container swiper-slide div{
-    height: 70%;
-}
-
-swiper-slide img {
+swiper-slide picture {
     display: block;
+}
+
+swiper-slide picture source, swiper-slide picture img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 200px; 
 }
 
 swiper-container swiper-slide h5{
@@ -479,7 +474,6 @@ swiper-container swiper-slide h5{
     background: var(--background);
     justify-items: center;
     height: 100%;
-    transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
 }
 
 .containerCategory .card a {
@@ -557,6 +551,8 @@ swiper-container swiper-slide h5{
     margin-bottom: 10px;
 }
 
+
+
 .containerAbout .divSvg{
     border: 15px groove black;
     margin: 25px auto;
@@ -589,17 +585,13 @@ swiper-container swiper-slide h5{
 
 @media screen and (min-width: 480px) and (max-width: 849px){
     /*****HEADER*****/
-    .indexHeader nav .dropdown i{
-        bottom: -23vw;
-    }
+
 
     /**HEADER2**/
     .containerHeader{
         height: 25vw;
     }
-    .containerHeader nav .dropdown i{
-        bottom: -5vw;
-    }
+    
 
     /*****FOOTER*****/
     footer{
@@ -625,9 +617,7 @@ swiper-container swiper-slide h5{
 
  
     /*****INDEX*****/
-    swiper-container{
-        height: 50vw;
-    }
+    
 
     /*****CATEGORY*****/
     .containerCategory > ul{
@@ -666,10 +656,6 @@ swiper-container swiper-slide h5{
         gap: 20px;
     }
 
-    .indexHeader .slideshow {
-        mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.8) 50%);
-    }
-
     /**HEADER2**/
     .containerHeader{
         height: 150px;
@@ -691,18 +677,7 @@ swiper-container swiper-slide h5{
 
 
     /*****INDEX*****/
-    swiper-container{
-        height: 20vw;
-        max-height: 300px;
-        padding: 50px;
-    }
-
-    .containerIndex > section:first-child > div{
-            clip-path: polygon(50% 5%, 98% 29%, 96% 95%, 4% 95%, 2% 29%);
-    }
-    .containerIndex > section:first-child > div > div{
-        padding: 25px 0;
-    }
+   
 
     /*****CATEGORY*****/
     .containerCategory > ul{
@@ -893,21 +868,21 @@ swiper-container swiper-slide h5{
 
 /*****HOVER AND ACTIVE****/
 /**general links (s'exclou el logotip, els cards del swiper i els cards de la pàgina categories**/
-a:hover:not(.logo, .card, .card a){
+a:hover:not(.logo, .card){
     text-decoration: underline var(--main2Color) 2px;
     background-position: 0;
 }
 
-a:hover:not(.logo, .card, .card a)::before, a:focus:not(.logoName, .card, .card a, .menu a)::before {
+a:hover:not(.logo, .menu a)::before, a:focus:not(.logo, .menu a)::before {
     width:100%;
 }
 
-a:active:not(.logo, .card, .card a, .menu a), a:focus:not(.logo, .card, .card a, .menu a) {
+a:active:not(.logo, .menu a), a:focus:not(.logo, .menu a) {
     background-image: linear-gradient(to right, var(--mainColor), var(--mainColor) 50%, var(--mainColor) 50%);
     text-decoration: underline var(--mainColor) 2px;
 }
 
-a:active:not(.logo, .card, .card a, .menu a)::before  {
+a:active:not(.logo, .menu a)::before  {
     width:100%;
     background: var(--mainColor);
 }
@@ -930,7 +905,7 @@ a.logo:hover h1{
 
 .menu li a:active, .menu li a:focus{
     color: var(--background);
-    background: var(--main2Color);
+    background: var(--mainColor);
 }
 
 .dropdown .iconMenu i:hover{
@@ -941,36 +916,25 @@ a.logo:hover h1{
     color: var(--mainColor);
 }
 
+
 /**links footer**/
 footer a:hover i, footer a:active i, footer a:focus i{
     color: var(--main2Color);
 }
 
 /**Cards**/
-.card:not(.cardSwiper):hover{
+.card:hover{
     cursor: pointer;
     transform: scale(1.1); 
     box-shadow: 0 0 10px 4px var(--main2Color);    
 }
 
-.card:not(.cardSwiper):active, .card:not(.cardSwiper):focus{
+.card:active, .card:focus{
     cursor: pointer;
     box-shadow: 0 0 10px 4px var(--mainColor);
     animation: zoom 0.2s ease-out;
 }
 
-/**Swiper .card**/
-swiper-slide:hover{
-    cursor: pointer;
-    transform: scale(1.1); 
-    box-shadow: 0 0 10px 4px var(--main2Color);
-}
-
-swiper-slide:active, swiper-slide:focus{
-    cursor: pointer;
-    box-shadow: 0 0 10px 4px var(--mainColor);
-    animation: zoom 0.2s ease-out;
-}
 
 @keyframes zoom {
     0% {
@@ -982,14 +946,12 @@ swiper-slide:active, swiper-slide:focus{
     100% {
       transform: scale(1, 1);
     }
-  }
-
-swiper-slide > div {
-height: max-content;
 }
 
 
-/***ANIMATIONS**/
+
+
+/***ANIMATION SVG**/
 .containerAbout svg .svg_1{
     transform: translate(100%, -100%) scale(0.5, 0.5);
     animation: bounce2 1.2s ease-in-out 1s forwards;
@@ -1039,20 +1001,15 @@ height: max-content;
     }
   }
 
-  @keyframes gelatine {
-    
-    
-   
-  }
 
   @keyframes bounce2 {
 	0% {transform: scale(1, 1) translateY(-100%);}
     20% { transform: scale(1, 1) translateY(0%); }
-    25% { transform: scale(1, 0.6) translateY(calc(0% + 160px));}
+    25% { transform: scale(1, 0.6) translateY(calc(0% + 120px));}
     30% { transform: scale(1, 1) translateY(0%); }
-    40% {transform: scale(0.8, 1.2) translate(45px, -50%);}
-	60% { transform: scale(1, 1) translateY(0%); }
-    65% { transform: scale(1, 0.7) translateY(calc(0% + 50px));}
+    45% {transform: scale(0.8, 1.2) translate(20px, -100px);}
+	55% { transform: scale(1, 1) translateY(0%); }
+    60% { transform: scale(1, 0.7) translateY(calc(0% + 75px));}
     70% { transform: scale(1, 1) translateY(0%); }
     80% {transform: scale(1, 1) translateY(-15%);}
     100% {transform: scale(1, 1) translateY(0%);}

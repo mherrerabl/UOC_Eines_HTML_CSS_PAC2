@@ -6,7 +6,7 @@ import data from '../json/details.json';
 
 $(function(){
     /**********GENEREAL VARIABLES***********/
-    const urlImages = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/";
+    const urlImages = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/";
 
 
     /**********GENEREAL FUNCTIONS***********/
@@ -132,9 +132,18 @@ $(function(){
         const arrArch = data["architecture"].information;
         arrArch.forEach( obj => {
             $(".containerIndex .swiperIndex").append(`<swiper-slide>
-                                                            <div>
-                                                                <a id="arch${obj.id}" href="./detail.html" class="card cardSwiper">
-                                                                <img src="${obj.img[0].url}" alt="${obj.img[0].alt}">
+                                                            <div class="card cardSwiper">
+                                                                <a id="arch${obj.id}" href="./detail.html" >
+                                                                <picture>
+                                                                <source srcset="${urlImages + (Object.keys(obj.img[0].url.webp).length == 2 ? obj.img[0].url.webp.art[0] : obj.img[0].url.webp.url[0])} 1x,
+                                                                                ${urlImages + (Object.keys(obj.img[0].url.webp).length == 2 ? obj.img[0].url.webp.art[0] : obj.img[0].url.webp.url[0])} 2x"
+                                                                                type="image/webp">
+                                                                
+                                                                <source srcset="${(Object.keys(obj.img[0].url.jpg).length == 2 ? obj.img[0].url.jpg.art[0] : obj.img[0].url.jpg.url[0])} 1x,
+                                                                                ${urlImages + (Object.keys(obj.img[0].url.jpg).length == 2 ? obj.img[0].url.jpg.art[0] : obj.img[0].url.jpg.url[0])} 2x"
+                                                                                type="image/jpg">
+                                                                <img src="${urlImages+obj.img[0].url.jpg.url[2]}" alt="${urlImages + obj.img[0].url.jpg.url[0]}">
+                                                            </picture> 
                                                                 <h5>${obj.name}</h5>
                                                                 </a>
                                                             </div>
@@ -165,17 +174,15 @@ $(function(){
 
         const arrArch = data["architecture"].information;
         arrArch.forEach( a => {
-            //console.log(a.img[0].url.jpg.url[0]);
-            console.log(a.img[0].url.jpg.art[0]);
             $(".containerCategory ul").append(`<li class="card">
                                                 <a href="./detail.html" id="arch${a.id}">
                                                     <picture>
-                                                        <source srcset="${urlImages+a.img[0].url.jpg.art[0]} 1x,
-                                                                        ${urlImages+a.img[0].url.jpg.art[1]} 2x,
-                                                                        ${urlImages+a.img[0].url.jpg.url[2]} 3x"
-                                                                        type="image/jpg">
-                                                        <source srcset="${urlImages+a.img[0].url[3]}" type="image/jpg">
-                                                        <img src="${a}" alt="${a.img[0].url}">
+                                                        <source srcset="${(Object.keys(a.img[0].url.webp).length == 2 ? a.img[0].url.webp.art[0] : a.img[0].url.webp.url[0])} 1x,
+                                                                        ${urlImages + (Object.keys(a.img[0].url.webp).length == 2 ? a.img[0].url.webp.art[0] : a.img[0].url.webp.url[0])} 2x"                                                                        type="image/webp">
+                                                        
+                                                        <source srcset="${(Object.keys(a.img[0].url.jpg).length == 2 ? a.img[0].url.jpg.art[0] : a.img[0].url.jpg.url[0])} 1x,
+                                                                        ${urlImages + (Object.keys(a.img[0].url.jpg).length == 2 ? a.img[0].url.jpg.art[0] : a.img[0].url.jpg.url[0])} 2x"                                                                        type="image/jpg">
+                                                        <img src="${urlImages+a.img[0].url.jpg.url[2]}" alt="${urlImages + a.img[0].url.jpg.url[0]}">
                                                     </picture> 
                                                     <h5>${a.name}</h5>
                                                 </a>
