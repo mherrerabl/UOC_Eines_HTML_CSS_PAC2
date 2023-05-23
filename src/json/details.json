@@ -104,19 +104,32 @@
                 ],
                 "img": [
                     {
-                        "url": [
-                            "architecture/nara_park/nara_park_1/nara_park_1_320.jpg",
-                            "architecture/nara_park/nara_park_1/nara_park_1_480.jpg",
-                            "architecture/nara_park/nara_park_1/nara_park_1_768.jpg",
-                            "architecture/nara_park/nara_park_1/nara_park_1_1024.jpg",
-                            "architecture/nara_park/nara_park_1/nara_park_1_1200.jpg",
-                            "architecture/nara_park/nara_park_1/nara_park_1_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/nara_park/nara_park_1/nara_park_1_320_art.jpg",
-                            "architecture/nara_park/nara_park_1/nara_park_1_480_art.jpg",
-                            "architecture/nara_park/nara_park_1/nara_park_1_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg",
+                                    "architecture/nara_park/nara_park_1/jpg/nara_park_1_768.jpg",
+                                    "architecture/nara_park/nara_park_1/jpg/nara_park_1_1152.jpg",
+                                    "architecture/nara_park/nara_park_1/jpg/nara_park_1_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/nara_park/nara_park_1/jpg/nara_park_1_384_art.jpg",
+                                    "architecture/nara_park/nara_park_1/jpg/nara_park_1_768_art.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/nara_park/nara_park_1/webp/nara_park_1_384.webp",
+                                    "architecture/nara_park/nara_park_1/webp/nara_park_1_768.webp",
+                                    "architecture/nara_park/nara_park_1/webp/nara_park_1_1152.webp",
+                                    "architecture/nara_park/nara_park_1/webp/nara_park_1_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/nara_park/nara_park_1/webp/nara_park_1_384_art.webp",
+                                    "architecture/nara_park/nara_park_1/webp/nara_park_1_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": "Parc Nara",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -124,19 +137,32 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/nara_park/nara_park_2/nara_park_2_320.jpg",
-                            "architecture/nara_park/nara_park_2/nara_park_2_480.jpg",
-                            "architecture/nara_park/nara_park_2/nara_park_2_768.jpg",
-                            "architecture/nara_park/nara_park_2/nara_park_2_1024.jpg",
-                            "architecture/nara_park/nara_park_2/nara_park_2_1200.jpg",
-                            "architecture/nara_park/nara_park_2/nara_park_2_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/nara_park/nara_park_2/nara_park_2_320_art.jpg",
-                            "architecture/nara_park/nara_park_2/nara_park_2_480_art.jpg",
-                            "architecture/nara_park/nara_park_2/nara_park_2_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/nara_park/nara_park_2/jpg/nara_park_2_384.jpg",
+                                    "architecture/nara_park/nara_park_2/jpg/nara_park_2_768.jpg",
+                                    "architecture/nara_park/nara_park_2/jpg/nara_park_2_1152.jpg",
+                                    "architecture/nara_park/nara_park_2/jpg/nara_park_2_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/nara_park/nara_park_2/jpg/nara_park_2_384_art.jpg",
+                                    "architecture/nara_park/nara_park_2/jpg/nara_park_2_768_art.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/nara_park/nara_park_2/webp/nara_park_2_384.webp",
+                                    "architecture/nara_park/nara_park_2/webp/nara_park_2_768.webp",
+                                    "architecture/nara_park/nara_park_2/webp/nara_park_2_1152.webp",
+                                    "architecture/nara_park/nara_park_2/webp/nara_park_2_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/nara_park/nara_park_2/webp/nara_park_2_384_art.webp",
+                                    "architecture/nara_park/nara_park_2/webp/nara_park_2_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": "Cèrvols del Parc Nara",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -144,19 +170,32 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/nara_park/nara_park_3/nara_park_3_320.jpg",
-                            "architecture/nara_park/nara_park_3/nara_park_3_480.jpg",
-                            "architecture/nara_park/nara_park_3/nara_park_3_768.jpg",
-                            "architecture/nara_park/nara_park_3/nara_park_3_1024.jpg",
-                            "architecture/nara_park/nara_park_3/nara_park_3_1200.jpg",
-                            "architecture/nara_park/nara_park_3/nara_park_3_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/nara_park/nara_park_3/nara_park_3_320_art.jpg",
-                            "architecture/nara_park/nara_park_3/nara_park_3_480_art.jpg",
-                            "architecture/nara_park/nara_park_3/nara_park_3_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/nara_park/nara_park_3/jpg/nara_park_3_384.jpg",
+                                    "architecture/nara_park/nara_park_3/jpg/nara_park_3_768.jpg",
+                                    "architecture/nara_park/nara_park_3/jpg/nara_park_3_1152.jpg",
+                                    "architecture/nara_park/nara_park_3/jpg/nara_park_3_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/nara_park/nara_park_3/jpg/nara_park_3_384_art.jpg",
+                                    "architecture/nara_park/nara_park_3/jpg/nara_park_3_768_art.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/nara_park/nara_park_3/webp/nara_park_3_384.webp",
+                                    "architecture/nara_park/nara_park_3/webp/nara_park_3_768.webp",
+                                    "architecture/nara_park/nara_park_3/webp/nara_park_3_1152.webp",
+                                    "architecture/nara_park/nara_park_3/webp/nara_park_3_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/nara_park/nara_park_3/webp/nara_park_3_384_art.webp",
+                                    "architecture/nara_park/nara_park_3/webp/nara_park_3_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": "Casa del te en el Parc Nara",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -177,34 +216,57 @@
                 ],
                 "img": [
                     {
-                        "url": [
-                            "architecture/todai-ji/todai-ji_1/todai-ji_1_320.jpg",
-                            "architecture/todai-ji/todai-ji_1/todai-ji_1_480.jpg",
-                            "architecture/todai-ji/todai-ji_1/todai-ji_1_768.jpg",
-                            "architecture/todai-ji/todai-ji_1/todai-ji_1_1024.jpg",
-                            "architecture/todai-ji/todai-ji_1/todai-ji_1_1200.jpg",
-                            "architecture/todai-ji/todai-ji_1/todai-ji_1_1800.jpg"
-                        ],
-                        "art": "Temple Tōdai-ji",
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_384.jpg",
+                                    "architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_768.jpg",
+                                    "architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_1152.jpg",
+                                    "architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_1800.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/todai-ji/todai-ji_1/webp/todai-ji_1_384.webp",
+                                    "architecture/todai-ji/todai-ji_1/webp/todai-ji_1_768.webp",
+                                    "architecture/todai-ji/todai-ji_1/webp/todai-ji_1_1152.webp",
+                                    "architecture/todai-ji/todai-ji_1/webp/todai-ji_1_1800.webp"
+                                ]
+                            }
+                        },
+                        "alt": "Temple Tōdai-ji",
                         "attribution": {
                             "author": "Wikimedia Commons",
                             "url": "https://commons.wikimedia.org/wiki/File:T%C5%8Ddai-ji_Kon-d%C5%8D.jpg"
                         }
                     },
                     {
-                        "url": [
-                            "architecture/todai-ji/todai-ji_2/todai-ji_2_320.jpg",
-                            "architecture/todai-ji/todai-ji_2/todai-ji_2_480.jpg",
-                            "architecture/todai-ji/todai-ji_2/todai-ji_2_768.jpg",
-                            "architecture/todai-ji/todai-ji_2/todai-ji_2_1024.jpg",
-                            "architecture/todai-ji/todai-ji_2/todai-ji_2_1200.jpg",
-                            "architecture/todai-ji/todai-ji_2/todai-ji_2_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/todai-ji/todai-ji_2/todai-ji_2_320_art.jpg",
-                            "architecture/todai-ji/todai-ji_2/todai-ji_2_480_art.jpg",
-                            "architecture/todai-ji/todai-ji_2/todai-ji_2_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/todai-ji/todai-ji_2/jpg/todai-ji_2_384.jpg",
+                                    "architecture/todai-ji/todai-ji_2/jpg/todai-ji_2_768.jpg",
+                                    "architecture/todai-ji/todai-ji_2/jpg/todai-ji_2_1152.jpg",
+                                    "architecture/todai-ji/todai-ji_2/jpg/todai-ji_2_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/todai-ji/todai-ji_2/jpg/todai-ji_2_384_art.jpg",
+                                    "architecture/todai-ji/todai-ji_2/jpg/todai-ji_2_768_art.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/todai-ji/todai-ji_2/webp/todai-ji_2_384.webp",
+                                    "architecture/todai-ji/todai-ji_2/webp/todai-ji_2_768.webp",
+                                    "architecture/todai-ji/todai-ji_2/webp/todai-ji_2_1152.webp",
+                                    "architecture/todai-ji/todai-ji_2/webp/todai-ji_2_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/todai-ji/todai-ji_2/webp/todai-ji_2_384_art.webp",
+                                    "architecture/todai-ji/todai-ji_2/webp/todai-ji_2_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": "Estatua de Virūpākṣa, un dels quatre Reis Celestials",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -212,19 +274,32 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/todai-ji/todai-ji_3/todai-ji_3_320.jpg",
-                            "architecture/todai-ji/todai-ji_3/todai-ji_3_480.jpg",
-                            "architecture/todai-ji/todai-ji_3/todai-ji_3_768.jpg",
-                            "architecture/todai-ji/todai-ji_3/todai-ji_3_1024.jpg",
-                            "architecture/todai-ji/todai-ji_3/todai-ji_3_1200.jpg",
-                            "architecture/todai-ji/todai-ji_3/todai-ji_3_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/todai-ji/todai-ji_3/todai-ji_3_320_art.jpg",
-                            "architecture/todai-ji/todai-ji_3/todai-ji_3_480_art.jpg",
-                            "architecture/todai-ji/todai-ji_3/todai-ji_3_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/todai-ji/todai-ji_3/jpg/todai-ji_3_384.jpg",
+                                    "architecture/todai-ji/todai-ji_3/jpg/todai-ji_3_768.jpg",
+                                    "architecture/todai-ji/todai-ji_3/jpg/todai-ji_3_1152.jpg",
+                                    "architecture/todai-ji/todai-ji_3/jpg/todai-ji_3_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/todai-ji/todai-ji_3/jpg/todai-ji_3_384_art.jpg",
+                                    "architecture/todai-ji/todai-ji_3/jpg/todai-ji_3_768_art.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/todai-ji/todai-ji_3/webp/todai-ji_3_384.webp",
+                                    "architecture/todai-ji/todai-ji_3/webp/todai-ji_3_768.webp",
+                                    "architecture/todai-ji/todai-ji_3/webp/todai-ji_3_1152.webp",
+                                    "architecture/todai-ji/todai-ji_3/webp/todai-ji_3_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/todai-ji/todai-ji_3/webp/todai-ji_3_384_art.webp",
+                                    "architecture/todai-ji/todai-ji_3/webp/todai-ji_3_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": "Estatua del Gran Buda",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -254,34 +329,58 @@
                 ],
                 "img": [
                     {
-                        "url": [
-                            "architecture/kasuga-taisha/kasuga-taisha_1/kasuga-taisha_1_320.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_1/kasuga-taisha_1_480.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_1/kasuga-taisha_1_768.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_1/kasuga-taisha_1_1024.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_1/kasuga-taisha_1_1200.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_1/kasuga-taisha_1_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/kasuga-taisha/kasuga-taisha_1/kasuga-taisha_1_320_art.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_1/kasuga-taisha_1_480_art.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_1/kasuga-taisha_1_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/jpg/kasuga-taisha_1_384.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/jpg/kasuga-taisha_1_768.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/jpg/kasuga-taisha_1_1152.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/jpg/kasuga-taisha_1_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/jpg/kasuga-taisha_1_384_art.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/jpg/kasuga-taisha_1_768_art.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/webp/kasuga-taisha_1_384.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/webp/kasuga-taisha_1_768.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/webp/kasuga-taisha_1_1152.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/webp/kasuga-taisha_1_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/webp/kasuga-taisha_1_384_art.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_1/webp/kasuga-taisha_1_768_art.webp"
+                                ]
+                            }
+                            
+                        },
                         "alt": "Santuari Kasuga Taisha",
                         "attribution": {
                             "author": "Wikimedia Commons",
-                            "url": "https://commons.wikimedia.org/wiki/File:Kasuga-taisha11bs3200.jpg"
+                            "url": "https://commons.wikimedia.org/wiki/File:Kasuga-taisha,_chumon-2.jpg"
                         }
                     },
                     {
-                        "url": [
-                            "architecture/kasuga-taisha/kasuga-taisha_2/kasuga-taisha_2_320.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_2/kasuga-taisha_2_480.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_2/kasuga-taisha_2_768.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_2/kasuga-taisha_2_1024.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_2/kasuga-taisha_2_1200.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_2/kasuga-taisha_2_1800.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/kasuga-taisha/kasuga-taisha_2/jpg/kasuga-taisha_2_384.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_2/jpg/kasuga-taisha_2_768.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_2/jpg/kasuga-taisha_2_1152.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_2/jpg/kasuga-taisha_2_1800.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/kasuga-taisha/kasuga-taisha_2/webp/kasuga-taisha_2_384.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_2/webp/kasuga-taisha_2_768.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_2/webp/kasuga-taisha_2_1152.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_2/webp/kasuga-taisha_2_1800.webp"
+                                ]
+                            }
+                        },
                         "alt": "Camí del Santuari Kasuga Taisha",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -289,14 +388,32 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/kasuga-taisha/kasuga-taisha_3/kasuga-taisha_3_320.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_3/kasuga-taisha_3_480.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_3/kasuga-taisha_3_768.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_3/kasuga-taisha_3_1024.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_3/kasuga-taisha_3_1200.jpg",
-                            "architecture/kasuga-taisha/kasuga-taisha_3/kasuga-taisha_3_1800.jpg"
-                        ],
+                        "url": {       
+                            "jpg": {
+                                "url": [
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/jpg/kasuga-taisha_3_384.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/jpg/kasuga-taisha_3_768.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/jpg/kasuga-taisha_3_1152.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/jpg/kasuga-taisha_3_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/jpg/kasuga-taisha_3_384_art.jpg",
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/jpg/kasuga-taisha_3_768_art.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url":[
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/webp/kasuga-taisha_3_384.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/webp/kasuga-taisha_3_768.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/webp/kasuga-taisha_3_1152.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/webp/kasuga-taisha_3_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/webp/kasuga-taisha_3_384_art.webp",
+                                    "architecture/kasuga-taisha/kasuga-taisha_3/webp/kasuga-taisha_3_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": "Fanals del Santuari Kasuga Taisha",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -324,19 +441,32 @@
                 ],
                 "img": [
                     {
-                        "url": [
-                            "architecture/kofukuji/kofukuji_1/kofukuji_1_320.jpg",
-                            "architecture/kofukuji/kofukuji_1/kofukuji_1_480.jpg",
-                            "architecture/kofukuji/kofukuji_1/kofukuji_1_768.jpg",
-                            "architecture/kofukuji/kofukuji_1/kofukuji_1_1024.jpg",
-                            "architecture/kofukuji/kofukuji_1/kofukuji_1_1200.jpg",
-                            "architecture/kofukuji/kofukuji_1/kofukuji_1_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/kofukuji/kofukuji_1/kofukuji_1_320_art.jpg",
-                            "architecture/kofukuji/kofukuji_1/kofukuji_1_480_art.jpg",
-                            "architecture/kofukuji/kofukuji_1/kofukuji_1_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_384.jpg",
+                                    "architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_768.jpg",
+                                    "architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_1152.jpg",
+                                    "architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_384_art.jpg",
+                                    "architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_768_art.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/kofukuji/kofukuji_1/webp/kofukuji_1_384.webp",
+                                    "architecture/kofukuji/kofukuji_1/webp/kofukuji_1_768.webp",
+                                    "architecture/kofukuji/kofukuji_1/webp/kofukuji_1_1152.webp",
+                                    "architecture/kofukuji/kofukuji_1/webp/kofukuji_1_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/kofukuji/kofukuji_1/webp/kofukuji_1_384_art.webp",
+                                    "architecture/kofukuji/kofukuji_1/webp/kofukuji_1_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": "Temple Kōfukuji",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -344,14 +474,24 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/kofukuji/kofukuji_2/kofukuji_2_320.jpg",
-                            "architecture/kofukuji/kofukuji_2/kofukuji_2_480.jpg",
-                            "architecture/kofukuji/kofukuji_2/kofukuji_2_768.jpg",
-                            "architecture/kofukuji/kofukuji_2/kofukuji_2_1024.jpg",
-                            "architecture/kofukuji/kofukuji_2/kofukuji_2_1200.jpg",
-                            "architecture/kofukuji/kofukuji_2/kofukuji_2_1800.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/kofukuji/kofukuji_2/jpg/kofukuji_2_384.jpg",
+                                    "architecture/kofukuji/kofukuji_2/jpg/kofukuji_2_768.jpg",
+                                    "architecture/kofukuji/kofukuji_2/jpg/kofukuji_2_1152.jpg",
+                                    "architecture/kofukuji/kofukuji_2/jpg/kofukuji_2_1800.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/kofukuji/kofukuji_2/webp/kofukuji_2_384.webp",
+                                    "architecture/kofukuji/kofukuji_2/webp/kofukuji_2_768.webp",
+                                    "architecture/kofukuji/kofukuji_2/webp/kofukuji_2_1152.webp",
+                                    "architecture/kofukuji/kofukuji_2/webp/kofukuji_2_1800.webp"
+                                ]
+                            }
+                        },
                         "alt": "Chū-kondō, Saló Daurat Central",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -359,14 +499,24 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/kofukuji/kofukuji_3/kofukuji_3_320.jpg",
-                            "architecture/kofukuji/kofukuji_3/kofukuji_3_480.jpg",
-                            "architecture/kofukuji/kofukuji_3/kofukuji_3_768.jpg",
-                            "architecture/kofukuji/kofukuji_3/kofukuji_3_1024.jpg",
-                            "architecture/kofukuji/kofukuji_3/kofukuji_3_1200.jpg",
-                            "architecture/kofukuji/kofukuji_3/kofukuji_3_1800.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/kofukuji/kofukuji_3/jpg/kofukuji_3_384.jpg",
+                                    "architecture/kofukuji/kofukuji_3/jpg/kofukuji_3_768.jpg",
+                                    "architecture/kofukuji/kofukuji_3/jpg/kofukuji_3_1152.jpg",
+                                    "architecture/kofukuji/kofukuji_3/jpg/kofukuji_3_1800.jpg"
+                                ]
+                            },
+                            "webp": {
+                                "url": [
+                                    "architecture/kofukuji/kofukuji_3/webp/kofukuji_3_384.webp",
+                                    "architecture/kofukuji/kofukuji_3/webp/kofukuji_3_768.webp",
+                                    "architecture/kofukuji/kofukuji_3/webp/kofukuji_3_1152.webp",
+                                    "architecture/kofukuji/kofukuji_3/webp/kofukuji_3_1800.webp"
+                                ]
+                            }
+                        },
                         "alt": "Tō-kondō, Saló Daurat del Est",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -394,19 +544,32 @@
                 ],
                 "img": [
                     {
-                        "url": [
-                            "architecture/horyu-ji/horyu-ji_1/horyu-ji_1_320.jpg",
-                            "architecture/horyu-ji/horyu-ji_1/horyu-ji_1_480.jpg",
-                            "architecture/horyu-ji/horyu-ji_1/horyu-ji_1_768.jpg",
-                            "architecture/horyu-ji/horyu-ji_1/horyu-ji_1_1024.jpg",
-                            "architecture/horyu-ji/horyu-ji_1/horyu-ji_1_1200.jpg",
-                            "architecture/horyu-ji/horyu-ji_1/horyu-ji_1_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/horyu-ji/horyu-ji_1/horyu-ji_1_320_art.jpg",
-                            "architecture/horyu-ji/horyu-ji_1/horyu-ji_1_480_art.jpg",
-                            "architecture/horyu-ji/horyu-ji_1/horyu-ji_1_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_384.jpg",
+                                    "architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_768.jpg",
+                                    "architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_1152.jpg",
+                                    "architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_384_art.jpg",
+                                    "architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_768_art.jpg"
+                                ]
+                            },
+                            "art": {
+                                "url": [
+                                    "architecture/horyu-ji/horyu-ji_1/webp/horyu-ji_1_384.webp",
+                                    "architecture/horyu-ji/horyu-ji_1/webp/horyu-ji_1_768.webp",
+                                    "architecture/horyu-ji/horyu-ji_1/webp/horyu-ji_1_1152.webp",
+                                    "architecture/horyu-ji/horyu-ji_1/webp/horyu-ji_1_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/horyu-ji/horyu-ji_1/webp/horyu-ji_1_384_art.webp",
+                                    "architecture/horyu-ji/horyu-ji_1/webp/horyu-ji_1_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": "Temple Hōryū-ji",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -414,14 +577,24 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/horyu-ji/horyu-ji_2/horyu-ji_2_320.jpg",
-                            "architecture/horyu-ji/horyu-ji_2/horyu-ji_2_480.jpg",
-                            "architecture/horyu-ji/horyu-ji_2/horyu-ji_2_768.jpg",
-                            "architecture/horyu-ji/horyu-ji_2/horyu-ji_2_1024.jpg",
-                            "architecture/horyu-ji/horyu-ji_2/horyu-ji_2_1200.jpg",
-                            "architecture/horyu-ji/horyu-ji_2/horyu-ji_2_1800.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/horyu-ji/horyu-ji_2/jpg/horyu-ji_2_384.jpg",
+                                    "architecture/horyu-ji/horyu-ji_2/jpg/horyu-ji_2_768.jpg",
+                                    "architecture/horyu-ji/horyu-ji_2/jpg/horyu-ji_2_1152.jpg",
+                                    "architecture/horyu-ji/horyu-ji_2/jpg/horyu-ji_2_1800.jpg"
+                                ]
+                            },
+                            "webp" : {
+                                "url": [
+                                    "architecture/horyu-ji/horyu-ji_2/webp/horyu-ji_2_384.webp",
+                                    "architecture/horyu-ji/horyu-ji_2/webp/horyu-ji_2_768.webp",
+                                    "architecture/horyu-ji/horyu-ji_2/webp/horyu-ji_2_1152.webp",
+                                    "architecture/horyu-ji/horyu-ji_2/webp/horyu-ji_2_1800.webp"
+                                ]
+                            }
+                        },
                         "alt": "Dormitori Oest del Temple Hōryū-ji",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -429,19 +602,32 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/horyu-ji/horyu-ji_3/horyu-ji_3_320.jpg",
-                            "architecture/horyu-ji/horyu-ji_3/horyu-ji_3_480.jpg",
-                            "architecture/horyu-ji/horyu-ji_3/horyu-ji_3_768.jpg",
-                            "architecture/horyu-ji/horyu-ji_3/horyu-ji_3_1024.jpg",
-                            "architecture/horyu-ji/horyu-ji_3/horyu-ji_3_1200.jpg",
-                            "architecture/horyu-ji/horyu-ji_3/horyu-ji_3_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/horyu-ji/horyu-ji_3/horyu-ji_3_320_art.jpg",
-                            "architecture/horyu-ji/horyu-ji_3/horyu-ji_3_480_art.jpg",
-                            "architecture/horyu-ji/horyu-ji_3/horyu-ji_3_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/horyu-ji/horyu-ji_3/jpg/horyu-ji_3_384.jpg",
+                                    "architecture/horyu-ji/horyu-ji_3/jpg/horyu-ji_3_768.jpg",
+                                    "architecture/horyu-ji/horyu-ji_3/jpg/horyu-ji_3_1152.jpg",
+                                    "architecture/horyu-ji/horyu-ji_3/jpg/horyu-ji_3_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/horyu-ji/horyu-ji_3/jpg/horyu-ji_3_384_art.jpg",
+                                    "architecture/horyu-ji/horyu-ji_3/jpg/horyu-ji_3_768_art.jpg"
+                                ]
+                            },
+                            "webp" : {
+                                "url": [
+                                    "architecture/horyu-ji/horyu-ji_3/webp/horyu-ji_3_384.webp",
+                                    "architecture/horyu-ji/horyu-ji_3/webp/horyu-ji_3_768.webp",
+                                    "architecture/horyu-ji/horyu-ji_3/webp/horyu-ji_3_1152.webp",
+                                    "architecture/horyu-ji/horyu-ji_3/webp/horyu-ji_3_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/horyu-ji/horyu-ji_3/webp/horyu-ji_3_384_art.webp",
+                                    "architecture/horyu-ji/horyu-ji_3/webp/horyu-ji_3_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": "Daikōdō",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -471,19 +657,32 @@
                 ],
                 "img": [
                     {
-                        "url": [
-                            "architecture/heijo-kyu/heijo-kyu_1/heijo-kyu_1_320.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_1/heijo-kyu_1_480.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_1/heijo-kyu_1_768.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_1/heijo-kyu_1_1024.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_1/heijo-kyu_1_1200.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_1/heijo-kyu_1_1800.jpg"
-                        ],
-                        "art": [
-                            "architecture/heijo-kyu/heijo-kyu_1/heijo-kyu_1_320_art.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_1/heijo-kyu_1_480_art.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_1/heijo-kyu_1_768_art.jpg"
-                        ],
+                        "url": {
+                            "jpg": {
+                                "url": [
+                                    "architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_384.jpg",
+                                    "architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_768.jpg",
+                                    "architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_1152.jpg",
+                                    "architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_1800.jpg"
+                                ],
+                                "art": [
+                                    "architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_384_art.jpg",
+                                    "architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_768_art.jpg"
+                                ]
+                            },
+                            "webp" : {
+                                "url": [
+                                    "architecture/heijo-kyu/heijo-kyu_1/webp/heijo-kyu_1_384.webp",
+                                    "architecture/heijo-kyu/heijo-kyu_1/webp/heijo-kyu_1_768.webp",
+                                    "architecture/heijo-kyu/heijo-kyu_1/webp/heijo-kyu_1_1152.webp",
+                                    "architecture/heijo-kyu/heijo-kyu_1/webp/heijo-kyu_1_1800.webp"
+                                ],
+                                "art": [
+                                    "architecture/heijo-kyu/heijo-kyu_1/webp/heijo-kyu_1_384_art.webp",
+                                    "architecture/heijo-kyu/heijo-kyu_1/webp/heijo-kyu_1_768_art.webp"
+                                ]
+                            }
+                        },
                         "alt": " Daigokuden, edifici principal del Palau Heijō-Kyu",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -491,14 +690,24 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/heijo-kyu/heijo-kyu_2/heijo-kyu_2_320.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_2/heijo-kyu_2_480.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_2/heijo-kyu_2_768.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_2/heijo-kyu_2_1024.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_2/heijo-kyu_2_1200.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_2/heijo-kyu_2_1800.jpg"      
-                        ],
+                        "url": {
+                            "jpg": {
+                                    "url": [
+                                    "architecture/heijo-kyu/heijo-kyu_2/jpg/heijo-kyu_2_384.jpg",
+                                    "architecture/heijo-kyu/heijo-kyu_2/jpg/heijo-kyu_2_768.jpg",
+                                    "architecture/heijo-kyu/heijo-kyu_2/jpg/heijo-kyu_2_1152.jpg",
+                                    "architecture/heijo-kyu/heijo-kyu_2/jpg/heijo-kyu_2_1800.jpg"        
+                                ]
+                            },
+                            "webp" : {
+                                "url": [
+                                    "architecture/heijo-kyu/heijo-kyu_2/webp/heijo-kyu_2_384.webp",
+                                    "architecture/heijo-kyu/heijo-kyu_2/webp/heijo-kyu_2_768.webp",
+                                    "architecture/heijo-kyu/heijo-kyu_2/webp/heijo-kyu_2_1152.webp",
+                                    "architecture/heijo-kyu/heijo-kyu_2/webp/heijo-kyu_2_1800.webp"  
+                                ]
+                            }
+                        },
                         "alt": "Pati frontal del primer Daigokuden",
                         "attribution": {
                             "author": "Wikimedia Commons",
@@ -506,13 +715,20 @@
                         }
                     },
                     {
-                        "url": [
-                            "architecture/heijo-kyu/heijo-kyu_3/heijo-kyu_3_480.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_3/heijo-kyu_3_768.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_3/heijo-kyu_3_1024.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_3/heijo-kyu_3_1200.jpg",
-                            "architecture/heijo-kyu/heijo-kyu_3/heijo-kyu_3_1800.jpg"      
-                        ],
+                        "url": {
+                            "jpg": [
+                                "architecture/heijo-kyu/heijo-kyu_3/jpg/heijo-kyu_3_384.jpg",
+                                "architecture/heijo-kyu/heijo-kyu_3/jpg/heijo-kyu_3_768.jpg",
+                                "architecture/heijo-kyu/heijo-kyu_3/jpg/heijo-kyu_3_1152.jpg",
+                                "architecture/heijo-kyu/heijo-kyu_3/jpg/heijo-kyu_3_1800.jpg"      
+                            ],
+                            "webp" : [
+                                "architecture/heijo-kyu/heijo-kyu_3/webp/heijo-kyu_3_384.webp",
+                                "architecture/heijo-kyu/heijo-kyu_3/webp/heijo-kyu_3_768.webp",
+                                "architecture/heijo-kyu/heijo-kyu_3/webp/heijo-kyu_3_1152.webp",
+                                "architecture/heijo-kyu/heijo-kyu_3/webp/heijo-kyu_3_1800.webp"      
+                            ]
+                        },
                         "alt": "Jardí Tōin Teien",
                         "attribution": {
                             "author": "Wikimedia Commons",

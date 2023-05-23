@@ -165,16 +165,18 @@ $(function(){
 
         const arrArch = data["architecture"].information;
         arrArch.forEach( a => {
+            //console.log(a.img[0].url.jpg.url[0]);
+            console.log(a.img[0].url.jpg.art[0]);
             $(".containerCategory ul").append(`<li class="card">
                                                 <a href="./detail.html" id="arch${a.id}">
                                                     <picture>
-                                                        <source srcset="${urlImages+a.img[0].url[5]}?as=webp" type="image/webp" media="(min-width: 1800px)">
-                                                        <source srcset="${urlImages+a.img[0].url[4]}?as=webp" type="image/webp"  media="(min-width: 1200px)">
-                                                        <source srcset="${urlImages+a.img[0].url[3]}?as=webp" type="image/webp"  media="(min-width: 1024px)">
-                                                        <source srcset="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[2] : urlImages+a.img[0].art[2]}?as=webp" type="image/webp"  media="(min-width: 768px)">
-                                                        <source srcset="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[1] : urlImages+a.img[0].art[1]}?as=webp" type="image/webp"  media="(min-width: 480px)">
-                                                        <img src="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[0] : urlImages+a.img[0].art[0]}" alt="${a.img[0].url}">
-                                                    </picture>  
+                                                        <source srcset="${urlImages+a.img[0].url.jpg.art[0]} 1x,
+                                                                        ${urlImages+a.img[0].url.jpg.art[1]} 2x,
+                                                                        ${urlImages+a.img[0].url.jpg.url[2]} 3x"
+                                                                        type="image/jpg">
+                                                        <source srcset="${urlImages+a.img[0].url[3]}" type="image/jpg">
+                                                        <img src="${a}" alt="${a.img[0].url}">
+                                                    </picture> 
                                                     <h5>${a.name}</h5>
                                                 </a>
                                                 </li>`);
