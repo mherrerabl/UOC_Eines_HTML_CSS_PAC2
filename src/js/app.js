@@ -5,6 +5,10 @@ import data from '../json/details.json';
 //register();
 
 $(function(){
+    /**********GENEREAL VARIABLES***********/
+    const urlImages = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/";
+
+
     /**********GENEREAL FUNCTIONS***********/
     //Modifica la variable de la categoria clicada
     function setCategory(el) {
@@ -140,7 +144,17 @@ $(function(){
 
 
 
-
+/**
+<picture>
+    <source srcset="${urlImages+a.img[0].url[5]}" media="(min-width: 1800px)">
+    <source srcset="${urlImages+a.img[0].url[4]}" media="(min-width: 1200px)">
+    <source srcset="${urlImages+a.img[0].url[3]}" media="(min-width: 1024px)">
+    <source srcset="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[2] : urlImages+a.img[0].art[2]}" media="(min-width: 768px)">
+    <source srcset="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[1] : urlImages+a.img[0].art[1]}" media="(min-width: 480px)">
+    <img src="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[0] : urlImages+a.img[0].art[0]}" alt="${a.img[0].url}">
+</picture>
+ 
+ */
 
     /*****CATEGORY*****/
     //Crea el contingut de la pàgina
@@ -153,7 +167,14 @@ $(function(){
         arrArch.forEach( a => {
             $(".containerCategory ul").append(`<li class="card">
                                                 <a href="./detail.html" id="arch${a.id}">
-                                                    <img src="${a.img[0].url}" alt="${a.img[0].url}">
+                                                    <picture>
+                                                        <source srcset="${urlImages+a.img[0].url[5]}?as=webp" type="image/webp" media="(min-width: 1800px)">
+                                                        <source srcset="${urlImages+a.img[0].url[4]}?as=webp" type="image/webp"  media="(min-width: 1200px)">
+                                                        <source srcset="${urlImages+a.img[0].url[3]}?as=webp" type="image/webp"  media="(min-width: 1024px)">
+                                                        <source srcset="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[2] : urlImages+a.img[0].art[2]}?as=webp" type="image/webp"  media="(min-width: 768px)">
+                                                        <source srcset="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[1] : urlImages+a.img[0].art[1]}?as=webp" type="image/webp"  media="(min-width: 480px)">
+                                                        <img src="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[0] : urlImages+a.img[0].art[0]}" alt="${a.img[0].url}">
+                                                    </picture>  
                                                     <h5>${a.name}</h5>
                                                 </a>
                                                 </li>`);
