@@ -176,7 +176,7 @@ a.btn{
 }
 
 .indexHeader .slimNav{
-    background-color: rgba(255, 255, 255,0.6);
+    background-color: rgba(255, 255, 255,0.5);
 }
 
 .logo{
@@ -252,9 +252,6 @@ a.btn{
 /**Slider Header2**/
 .containerHeader {
     height: 30vw;
-}
-
-.containerHeader nav .dropdown i{
 }
 
 
@@ -361,14 +358,14 @@ footer > div:last-child li a{
     text-align:center;
 }
 
-.containerIndex > section:first-child > p{
+.containerIndex > section:first-child > div > p{
     margin-top: 15px;
     text-align: center;
     font-size: 3rem;
     font-family: 'Encode Sans SC', sans-serif;
 }
 
-.containerIndex > section:first-child > p span{
+.containerIndex > section:first-child > div > p span{
     display: block;
     margin-top: 15px;
     font-size: 2rem;
@@ -528,7 +525,7 @@ swiper-container swiper-slide h5{
 }
 
 .containerDetail .accommodation a{
-    text-decoration: underline var(--main2Color) 2px;
+    text-decoration: underline var(--mainColor) 2px;
     display: inline-block;
     margin-bottom: 25px;
 }
