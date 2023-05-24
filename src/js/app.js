@@ -1,13 +1,16 @@
 //IMPORT
 import * as $  from "jquery";
 import data from '../json/details.json';
-//import { register } from 'swiper/element/swiper-element-bundle'; //Error intern en el document
-//register();
+
 
 $(function(){
     /**********GENEREAL VARIABLES***********/
     const urlImages = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/";
-
+    
+    /**Modifica el color del SVG del logo**/
+    setTimeout(() => {
+        $(".logo").children("object")[0].contentDocument.querySelector("svg").style.color = "#006612"
+    }, 100);
 
     /**********GENEREAL FUNCTIONS***********/
     //Modifica la variable de la categoria clicada
@@ -245,7 +248,14 @@ $(function(){
                                                                         ${urlImages + food.img.type.webp.url[2]} 3x,
                                                                         ${urlImages + food.img.type.webp.url[3]} 5x"
                                                                 type="image/webp">
-                                                                <img src="${food.img.type.webp.url[2]}" alt="${food.alt}"/>
+
+                                                                <source srcset="${urlImages + food.img.type.jpg.url[0]} 1x,
+                                                                        ${urlImages + food.img.type.jpg.url[1]} 2x,
+                                                                        ${urlImages + food.img.type.jpg.url[2]} 3x,
+                                                                        ${urlImages + food.img.type.jpg.url[3]} 5x"
+                                                                type="image/jpg">
+
+                                                                <img src="${food.img.type.jpg.url[2]}" alt="${food.alt}"/>
                                                             </picture>
                                                             <figcaption><a class="figcaptionLink" href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
                                                         </figure>
@@ -382,17 +392,17 @@ $(function(){
 
     /*****LOGO HOVER*****/ 
     $(".logo:not(.logoIndex)").on("mouseenter", function(event){
-        const logo32 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-32-hover.png";
-        const logo50 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-50-hover.png";
-        const logo100 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-100-hover.png";
-        $(event.currentTarget).children("img")[0].srcset = `${logo32} 129w, ${logo50} 200w, ${logo100} 415w`;
+        const objectEl = $(event.currentTarget).children("object")[0];
+        const documentEl = objectEl.contentDocument;
+        const svgEl = documentEl.querySelector("svg");
+        svgEl.style.color = "#B3102E";
     });
 
     $(".logo:not(.logoIndex)").on("mouseleave", function(event){
-        const logo32 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-32.png";
-        const logo50 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-50.png";
-        const logo100 = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/src/img/logo/logo-100.png";
-        $(event.currentTarget).children("img")[0].srcset = `${logo32} 129w, ${logo50} 200w, ${logo100} 415w`;
+        const objectEl = $(event.currentTarget).children("object")[0];
+        const documentEl = objectEl.contentDocument;
+        const svgEl = documentEl.querySelector("svg");
+        svgEl.style.color = "#006612";
     });
 
 

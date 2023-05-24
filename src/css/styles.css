@@ -28,7 +28,13 @@ body{
     max-width: 1200px;
 }
 
-header h1, footer h1{
+header h1{
+    font-size: 7vw;
+    font-family: 'Aboreto', cursive;
+    color: var(--mainColor);
+}
+
+footer h1{
     font-size: 4rem;
     font-family: 'Aboreto', cursive;
     color: var(--mainColor);
@@ -179,10 +185,18 @@ a.btn{
     background-color: rgba(255, 255, 255,0.5);
 }
 
+object{
+    width: 25vw;
+    max-width: 125px;
+    max-height:100%;
+    pointer-events: none;
+}
+
 .logo{
     display: flex;
     align-items: center;
-    margin: 25px;
+    margin-top: 15px;
+    margin-left: 15px;
     text-decoration: none;
 }
 
@@ -191,7 +205,7 @@ a.btn{
 }
 
 .logo h1{
-    margin-left: 15px;
+    margin-left: 5px;
 }
 
 .logoHover{
@@ -235,7 +249,7 @@ a.btn{
 .slideshow img {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: none;
 }
 
@@ -348,15 +362,13 @@ footer > div:last-child li a{
 
 .containerIndex > section:first-child > div {   
     margin: 25px 0px;
-    padding-top: 100px;
-    padding-bottom: 2px;
-    background-image: url(/src/img/home/temple.jpg);
-    background-position: center;
+    padding-bottom: 25px;
     clip-path: polygon(50% 3%, 97% 27%, 95% 97%, 5% 97%, 3% 27%);
 }
-
+.containerIndex > section:first-child img{
+    width: 100%;
+}
 .containerIndex > section:first-child > div > div{
-    backdrop-filter: blur(3px); 
     width: 80%;
     margin: 0 auto;
     text-align:center;
@@ -378,6 +390,7 @@ footer > div:last-child li a{
     font-size: 3rem;
     padding: 25px;
     font-family: 'Encode Sans SC', sans-serif;
+    margin: 0;
 }
 
 .containerIndex > section:first-child > div > div > p span{
@@ -630,7 +643,9 @@ swiper-container swiper-slide h5{
 
  
     /*****INDEX*****/
-    
+    .containerIndex > section:first-child > div img {   
+        clip-path: polygon(50% 6%, 96% 37%, 95% 95%, 5% 95%, 4% 37%);
+    }
 
     /*****CATEGORY*****/
     .containerCategory > ul{
@@ -642,22 +657,22 @@ swiper-container swiper-slide h5{
         height: 35vw;
         max-width: 100%;
     }
-
-    .containerIndex > section:first-child > div {   
-        clip-path: polygon(50% 4.5%, 97% 28%, 95% 95%, 5% 95%, 3% 28%);
-    }
     
 }
 
 @media screen and (min-width: 850px){
    /*****HEADER*****/
+    header h1{
+        font-size: 4rem;
+    }
+
     .indexHeader .dropdown{
         display: none;
     }
 
     .indexHeader nav .mainNav{
         display: grid;
-        padding: 25px 60px 25px 40px;
+        padding: 5px 60px 25px 40px;
     }
 
     .logo{
@@ -701,9 +716,10 @@ swiper-container swiper-slide h5{
         margin-bottom: 70px;
     }
     
-    .containerIndex > section:first-child > div {   
-        clip-path: polygon(50% 5%, 97% 29%, 95% 95%, 5% 95%, 3% 29%);
+    .containerIndex > section:first-child > div img {   
+        clip-path: polygon(50% 6%, 96% 37%, 95% 95%, 5% 95%, 4% 37%);
     }
+
 
     /*****CATEGORY*****/
     .containerCategory > ul{
@@ -862,6 +878,9 @@ swiper-container swiper-slide h5{
         margin: 50px;
     }
 
+    .containerIndex > section:first-child > div img {   
+        clip-path: polygon(50% 5%, 96.5% 35%, 95.5% 95%, 4.5% 95%, 3.5% 35%);
+    }
 }
     
 
@@ -879,6 +898,11 @@ swiper-container swiper-slide h5{
     .indexHeader{
         max-height: 700px;
     }
+    
+    .indexHeader nav .mainNav{
+        padding-top: 25px;
+    }
+
     .indexHeader .mainNav ul{
         grid-column-start: 3;
     }

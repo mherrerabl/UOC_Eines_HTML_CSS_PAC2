@@ -13,20 +13,13 @@
     <script type="module" src="js/app.js"></script>
     <title>Hōmon Nara</title>
 </head>
-<body>
+<body>  
     <header class="indexHeader">
         <nav>
             <div class="mainNav">
                 <div class="logo logoIndex">
-                    <img srcset="/src/img/logo/logo-32.png 129w,
-                                /src/img/logo/logo-50.png 200w,
-                                /src/img/logo/logo-100.png 415w"
-                    sizes="(max-width: 480px) 20vw,
-                            (max-width: 850px) 15vw,
-                            (max-width: 1200px) 10vw,
-                            (min-width: 1201px) 150px"
-                    src="/src/img/logo/logo-100.png" alt="logotip">
-                <h1>Nara</h1>
+                    <object data="img/logo/logo-50.svg" type="image/svg+xml" class="objectSvg"></object>
+                    <h1>Nara</h1>
                 </div>
         
                 <div class="dropdown">
@@ -43,7 +36,8 @@
             </div>     
         </nav>
         <div class="slideshow">
-            <img srcset="/src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_384.jpg 384w,
+            <img src="/src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_384.jpg" 
+            srcset="/src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_384.jpg 384w,
                         /src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_768.jpg 768w,
                         /src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_1152.jpg 1152w,
                         /src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_1920.jpg 1920w"
@@ -51,11 +45,12 @@
                         (max-width: 768px) 100vw, 
                         (max-width: 1152px) 100vw,
                         1200px"
-                src="/src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_1152.jpg" 
+                
                 alt="Palau Heijō-Kyu"
                 class="mySlides">
 
-            <img srcset="img/architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg 384w,
+            <img src="img/architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg"
+                srcset="img/architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg 384w,
                         img/architecture/nara_park/nara_park_1/jpg/nara_park_1_768.jpg 768w,
                         img/architecture/nara_park/nara_park_1/jpg/nara_park_1_1152.jpg 1152w,
                         img/architecture/nara_park/nara_park_1/jpg/nara_park_1_1920.jpg 1920w"
@@ -63,11 +58,11 @@
                         (max-width: 768px) 100vw,
                         (max-width: 1152px) 100vw,
                         1200px"
-                 src="img/architecture/nara_park/nara_park_1/jpg/nara_park_1_1152.jpg" 
                  alt="Parc Nara" 
                  class="mySlides">
 
-            <img srcset="img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_384.jpg 384w,
+            <img  src="img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_384.jpg"
+                srcset="img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_384.jpg 384w,
                         img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_768.jpg 768w,
                         img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_1152.jpg 1152w,
                         img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_1920.jpg 1920w"
@@ -75,11 +70,11 @@
                         (max-width: 768px) 100vw,
                         (max-width: 1152px) 100vw,
                         1200px"
-                 src="img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_1152.jpg" 
                  alt="Temple Hōryū-ji" 
                  class="mySlides">
 
-            <img srcset="img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_384.jpg 384w,
+            <img src="img/architecture/kofukuji/kofukuji_1//jpg/kofukuji_1_384.jpg"
+                srcset="img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_384.jpg 384w,
                         img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_768.jpg 768w,
                         img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_1152.jpg 1152w,
                         img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_1920.jpg 1920w"
@@ -87,7 +82,6 @@
                         (max-width: 768px) 100vw,
                         (max-width: 1152px) 100vw,
                         1200px"
-                 src="img/architecture/kofukuji/kofukuji_1//jpg/kofukuji_1_1152.jpg" 
                  alt="Temple Kōfuku-ji" 
                  class="mySlides">
         </div>
@@ -98,11 +92,18 @@
     <main class="containerIndex">
         <section>
             <div>
-                <div>
-                    <div class="logoName">
-                        <h1>Hōmon</h1>
-                        <p>Nara</p>
-                    </div>
+                <img src="img/index/background_384.jpg" 
+                    srcset="img/index/background_384.jpg?as=webp 384w,
+                        img/index/background_384.jpg 384w,
+                        img/index/background_768.jpg?as=webp 768w,
+                        img/index/background_768.jpg 768w,
+                        img/index/background_1200.jpg?as=webp 1200w,
+                        img/index/background_1200.jpg 1200w"
+                    sizes="(max-width: 384px) 100vw,
+                        (max-width: 849px) 100vw,
+                        (min-width: 850px) 80vw"
+                    alt="Dibuix d'un temple japonès">
+                <div> 
                     <p><q lang="es">Viajamos para cambiar, no de lugar, sino de ideas.</q> <span>Hippolyte Taine</span></p>
                 </div>
             </div>
@@ -136,14 +137,7 @@
     <footer>
         <div>
             <div class="logo logoIndex">
-                <img srcset="/src/img/logo/logo-32.png 129w,
-                            /src/img/logo/logo-50.png 200w,
-                            /src/img/logo/logo-100.png 415w"
-                sizes="(max-width: 480px) 20vw,
-                        (max-width: 850px) 15vw,
-                        (max-width: 1200px) 10vw,
-                        (min-width: 1201px) 150px"
-                src="/src/img/logo/logo-100.png" alt="logotip">
+                <object data="img/logo/logo-50.svg" type="image/svg+xml"></object>
                 <h1>Nara</h1>
             </div>
         </div>
