@@ -51,7 +51,24 @@
             {
                 "name": "Narazuke",
                 "description": "El sake té una història molt llarga al Japó, sobretot a Nara. La majoria d'experts coincideixen que el primer sake, conegut com a “sake de temple”, i moltes de les tècniques modernes per destil·lar-lo són originàries de Nara. Un dels problemes que sorgien en destil·lar aquesta beguda era el pòsit. I, per descomptat, no es podia desaprofitar res que provingués d'un temple sargat, per això el sediment que quedava en produir Sake es feia servir per fer adobats d'un sabor únic. Es triguen aproximadament tres anys a fer aquests adobats.",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Sake-Soy_Marinated_Sablefish_%283466997813%29.jpg",
+                "img": {
+                    "type": {
+                        "jpg":{
+                            "url": ["src/img/gastronomy/narazuke/jpg/narazuke_384.jpg",
+                                    "src/img/gastronomy/narazuke/jpg/narazuke_768.jpg",
+                                    "src/img/gastronomy/narazuke/jpg/narazuke_1152.jpg",
+                                    "src/img/gastronomy/narazuke/jpg/narazuke_1920.jpg"
+                            ]
+                        },
+                        "webp": {
+                            "url": ["src/img/gastronomy/narazuke/webp/narazuke_384.webp",
+                                    "src/img/gastronomy/narazuke/webp/narazuke_768.webp",
+                                    "src/img/gastronomy/narazuke/webp/narazuke_1152.webp",
+                                    "src/img/gastronomy/narazuke/webp/narazuke_1920.webp"
+                            ]
+                        }
+                    }
+                },
                 "alt": "Narazuke",
                 "attribution": {
                     "author": "Wikimedia Commons",
@@ -61,7 +78,24 @@
             {
                 "name": "Chagayu",
                 "description": "A més de la producció de sake, Nara és també tradicionalment conegut pel seu te verd, especialment el llegendari te Yamato el qual es creu que prové dels anys 800-810. Per a una de les coses que antigament es feia servir més aquesta beguda és per fer unes farinetes d'arròs anomenades Chagayu. Se sol fer amb te verd però també es poden trobar variacions amb te fulla, sencha o fins i tot bancha.",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Cha_Gayu_20141001.jpg/640px-Cha_Gayu_20141001.jpg",
+                "img": {
+                    "type": {
+                        "jpg":{
+                            "url": ["src/img/gastronomy/chagayu/jpg/chagayu_384.jpg",
+                                    "src/img/gastronomy/chagayu/jpg/chagayu_768.jpg",
+                                    "src/img/gastronomy/chagayu/jpg/chagayu_1152.jpg",
+                                    "src/img/gastronomy/chagayu/jpg/chagayu_1920.jpg"
+                            ]
+                        },
+                        "webp": {
+                            "url": ["src/img/gastronomy/chagayu/webp/chagayu_384.webp",
+                                    "src/img/gastronomy/chagayu/webp/chagayu_768.webp",
+                                    "src/img/gastronomy/chagayu/webp/chagayu_1152.webp",
+                                    "src/img/gastronomy/chagayu/webp/chagayu_1920.webp"
+                            ]
+                        }
+                    }
+                },
                 "alt": "Chagayu",
                 "attribution": {
                     "author": "Wikimedia Commons",
@@ -71,7 +105,24 @@
             {
                 "name": "Kuzumochi",
                 "description": "Un dels aperitius més populars del Japó és el mochi, petits pastissos d'arròs normalment coberts per una pasta de mongeta dolça. Aquest aperitiu té una llarga història a Nara i fins i tot pots arribar a veure actualment multituds al voltant de botigues com Nakatanidou per presenciar com preparen el mochi de la forma tradicional, usant un martell de fusta per aixafar l'arròs i donar-li forma.",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Kuzumochi_001.jpg",
+                "img": {
+                    "type": {
+                        "jpg":{
+                            "url": ["src/img/gastronomy/kuzumochi/jpg/kuzumochi_384.jpg",
+                                    "src/img/gastronomy/kuzumochi/jpg/kuzumochi_768.jpg",
+                                    "src/img/gastronomy/kuzumochi/jpg/kuzumochi_1152.jpg",
+                                    "src/img/gastronomy/kuzumochi/jpg/kuzumochi_1920.jpg"
+                            ]
+                        },
+                        "webp": {
+                            "url": ["src/img/gastronomy/kuzumochi/webp/kuzumochi_384.webp",
+                                    "src/img/gastronomy/kuzumochi/webp/kuzumochi_768.webp",
+                                    "src/img/gastronomy/kuzumochi/webp/kuzumochi_1152.webp",
+                                    "src/img/gastronomy/kuzumochi/webp/kuzumochi_1920.webp"
+                            ]
+                        }
+                    }
+                    },
                 "alt": "Kuzumochi",
                 "attribution": {
                     "author": "Wikimedia Commons",
@@ -81,7 +132,24 @@
             {
                 "name": "Miwa Somen",
                 "description": "L'aigua de l'àrea de Miwa és considerada una de les més pures de tot el Japó. Cada any hi ha grups de gent que pugen a la Muntanya Miwa només per poder-la provar. Encara que sigui deliciosa per si sola també li donen un altre ús, combinada amb farina i sal creen un tipus únic de fideus anomenats Miwa Somen. Es poden reconèixer per la forma prima i el sabor suau. Com que el seu sabor és molt subtil se solen menjar amb salsa de soja, brou i sake dolç acompanyats amb algues, confitats, gingebre i altres espècies que potencien el seu sabor. Pots trobar aquest plat servit fred o calent.",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Miwa_somen_01.jpg",
+                "img": {
+                    "type": {
+                        "jpg":{
+                            "url": ["src/img/gastronomy/miwa-somen/jpg/miwa-somen_384.jpg",
+                                    "src/img/gastronomy/miwa-somen/jpg/miwa-somen_768.jpg",
+                                    "src/img/gastronomy/miwa-somen/jpg/miwa-somen_1152.jpg",
+                                    "src/img/gastronomy/miwa-somen/jpg/miwa-somen_1920.jpg"
+                            ]
+                        },
+                        "webp": {
+                            "url": ["src/img/gastronomy/miwa-somen/webp/miwa-somen_384.webp",
+                                    "src/img/gastronomy/miwa-somen/webp/miwa-somen_768.webp",
+                                    "src/img/gastronomy/miwa-somen/webp/miwa-somen_1152.webp",
+                                    "src/img/gastronomy/miwa-somen/webp/miwa-somen_1920.webp"
+                            ]
+                        }
+                    }
+                },
                 "alt": "Miwa Somen",
                 "attribution": {
                     "author": "Wikimedia Commons",
@@ -104,7 +172,7 @@
                 ],
                 "img": [
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg",
@@ -137,7 +205,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/nara_park/nara_park_2/jpg/nara_park_2_384.jpg",
@@ -170,7 +238,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/nara_park/nara_park_3/jpg/nara_park_3_384.jpg",
@@ -216,7 +284,7 @@
                 ],
                 "img": [
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_384.jpg",
@@ -241,7 +309,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/todai-ji/todai-ji_2/jpg/todai-ji_2_384.jpg",
@@ -274,7 +342,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/todai-ji/todai-ji_3/jpg/todai-ji_3_384.jpg",
@@ -329,7 +397,7 @@
                 ],
                 "img": [
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/kasuga-taisha/kasuga-taisha_1/jpg/kasuga-taisha_1_384.jpg",
@@ -363,7 +431,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/kasuga-taisha/kasuga-taisha_2/jpg/kasuga-taisha_2_384.jpg",
@@ -388,7 +456,7 @@
                         }
                     },
                     {
-                        "url": {       
+                        "type": {       
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/kasuga-taisha/kasuga-taisha_3/jpg/kasuga-taisha_3_384.jpg",
@@ -441,7 +509,7 @@
                 ],
                 "img": [
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_384.jpg",
@@ -474,7 +542,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/kofukuji/kofukuji_2/jpg/kofukuji_2_384.jpg",
@@ -499,7 +567,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/kofukuji/kofukuji_3/jpg/kofukuji_3_384.jpg",
@@ -544,7 +612,7 @@
                 ],
                 "img": [
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_384.jpg",
@@ -577,7 +645,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/horyu-ji/horyu-ji_2/jpg/horyu-ji_2_384.jpg",
@@ -602,7 +670,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/horyu-ji/horyu-ji_3/jpg/horyu-ji_3_384.jpg",
@@ -657,7 +725,7 @@
                 ],
                 "img": [
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                 "url": [
                                     "src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_384.jpg",
@@ -690,7 +758,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": {
                                     "url": [
                                     "src/img/architecture/heijo-kyu/heijo-kyu_2/jpg/heijo-kyu_2_384.jpg",
@@ -715,7 +783,7 @@
                         }
                     },
                     {
-                        "url": {
+                        "type": {
                             "jpg": [
                                 "src/img/architecture/heijo-kyu/heijo-kyu_3/jpg/heijo-kyu_3_384.jpg",
                                 "src/img/architecture/heijo-kyu/heijo-kyu_3/jpg/heijo-kyu_3_768.jpg",

@@ -341,27 +341,18 @@ footer > div:last-child li a{
 }
 
 /**Section 1**/
-.containerIndex .logoName{
-    text-align: right;
-    font-weight: 900;
-    padding: 0;
-}
-
-.logoName p{
-    text-align: end;
-}
-
 .containerIndex > section:first-child{
     clip-path: polygon(50% 0%, 100% 25%, 98% 100%, 2% 100%, 0% 25%);
-    background-color: burlywood;
+    background-color: #eecfac;
 }
 
 .containerIndex > section:first-child > div {   
     margin: 25px 0px;
     padding-top: 100px;
+    padding-bottom: 2px;
     background-image: url(/src/img/home/temple.jpg);
     background-position: center;
-    clip-path: polygon(50% 4%, 98% 27%, 96% 96%, 4% 96%, 2% 27%);
+    clip-path: polygon(50% 3%, 97% 27%, 95% 97%, 5% 97%, 3% 27%);
 }
 
 .containerIndex > section:first-child > div > div{
@@ -369,6 +360,17 @@ footer > div:last-child li a{
     width: 80%;
     margin: 0 auto;
     text-align:center;
+}
+
+.containerIndex .logoName{
+    text-align: right;
+    font-weight: 900;
+    padding: 0;
+    display: inline-block;
+}
+
+.logoName p{
+    text-align: end;
 }
 
 .containerIndex > section:first-child > div > div > p{
@@ -640,6 +642,10 @@ swiper-container swiper-slide h5{
         height: 35vw;
         max-width: 100%;
     }
+
+    .containerIndex > section:first-child > div {   
+        clip-path: polygon(50% 4.5%, 97% 28%, 95% 95%, 5% 95%, 3% 28%);
+    }
     
 }
 
@@ -688,7 +694,16 @@ swiper-container swiper-slide h5{
 
 
     /*****INDEX*****/
-   
+    .containerIndex > section:first-child{
+        width: 75vw;
+        max-width: 1000px;
+        margin: auto;
+        margin-bottom: 70px;
+    }
+    
+    .containerIndex > section:first-child > div {   
+        clip-path: polygon(50% 5%, 97% 29%, 95% 95%, 5% 95%, 3% 29%);
+    }
 
     /*****CATEGORY*****/
     .containerCategory > ul{
@@ -846,6 +861,7 @@ swiper-container swiper-slide h5{
     .containerIndex{
         margin: 50px;
     }
+
 }
     
 
@@ -874,6 +890,10 @@ swiper-container swiper-slide h5{
    /*****INDEX*****/
     .containerIndex {
         margin: 100px 0;
+    }
+
+    .containerIndex > section:first-child > div {   
+        clip-path: polygon(50% 5%, 98% 29%, 96% 95%, 4% 95%, 2% 29%);
     }
 }
 
