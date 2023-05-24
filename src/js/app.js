@@ -135,12 +135,12 @@ $(function(){
                                                             <div class="card cardSwiper">
                                                                 <a id="arch${obj.id}" href="./detail.html" >
                                                                 <picture>
-                                                                <source srcset="${urlImages + (Object.keys(obj.img[0].url.webp).length == 2 ? obj.img[0].url.webp.art[0] : obj.img[0].url.webp.url[0])} 1x,
-                                                                                ${urlImages + (Object.keys(obj.img[0].url.webp).length == 2 ? obj.img[0].url.webp.art[0] : obj.img[0].url.webp.url[0])} 2x"
+                                                                <source srcset="${urlImages + (Object.keys(obj.img[0].url.webp).length === 2 ? obj.img[0].url.webp.art[0] : obj.img[0].url.webp.url[0])} 1x,
+                                                                                ${urlImages + (Object.keys(obj.img[0].url.webp).length === 2 ? obj.img[0].url.webp.art[1] : obj.img[0].url.webp.url[1])} 2x"
                                                                                 type="image/webp">
                                                                 
-                                                                <source srcset="${(Object.keys(obj.img[0].url.jpg).length == 2 ? obj.img[0].url.jpg.art[0] : obj.img[0].url.jpg.url[0])} 1x,
-                                                                                ${urlImages + (Object.keys(obj.img[0].url.jpg).length == 2 ? obj.img[0].url.jpg.art[0] : obj.img[0].url.jpg.url[0])} 2x"
+                                                                <source srcset="${(Object.keys(obj.img[0].url.jpg).length === 2 ? obj.img[0].url.jpg.art[0] : obj.img[0].url.jpg.url[0])} 1x,
+                                                                                ${urlImages + (Object.keys(obj.img[0].url.jpg).length === 2 ? obj.img[0].url.jpg.art[1] : obj.img[0].url.jpg.url[1])} 2x"
                                                                                 type="image/jpg">
                                                                 <img src="${urlImages+obj.img[0].url.jpg.url[2]}" alt="${urlImages + obj.img[0].url.jpg.url[0]}">
                                                             </picture> 
@@ -152,18 +152,6 @@ $(function(){
     }
 
 
-
-/**
-<picture>
-    <source srcset="${urlImages+a.img[0].url[5]}" media="(min-width: 1800px)">
-    <source srcset="${urlImages+a.img[0].url[4]}" media="(min-width: 1200px)">
-    <source srcset="${urlImages+a.img[0].url[3]}" media="(min-width: 1024px)">
-    <source srcset="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[2] : urlImages+a.img[0].art[2]}" media="(min-width: 768px)">
-    <source srcset="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[1] : urlImages+a.img[0].art[1]}" media="(min-width: 480px)">
-    <img src="${Object.keys(a.img[0]).length === 3 ? urlImages+a.img[0].url[0] : urlImages+a.img[0].art[0]}" alt="${a.img[0].url}">
-</picture>
- 
- */
 
     /*****CATEGORY*****/
     //Crea el contingut de la pàgina
@@ -177,11 +165,11 @@ $(function(){
             $(".containerCategory ul").append(`<li class="card">
                                                 <a href="./detail.html" id="arch${a.id}">
                                                     <picture>
-                                                        <source srcset="${(Object.keys(a.img[0].url.webp).length == 2 ? a.img[0].url.webp.art[0] : a.img[0].url.webp.url[0])} 1x,
-                                                                        ${urlImages + (Object.keys(a.img[0].url.webp).length == 2 ? a.img[0].url.webp.art[0] : a.img[0].url.webp.url[0])} 2x"                                                                        type="image/webp">
+                                                        <source srcset="${(Object.keys(a.img[0].url.webp).length === 2 ? a.img[0].url.webp.art[0] : a.img[0].url.webp.url[0])} 1x,
+                                                                        ${urlImages + (Object.keys(a.img[0].url.webp).length === 2 ? a.img[0].url.webp.art[1] : a.img[0].url.webp.url[1])} 2x"                                                                        type="image/webp">
                                                         
-                                                        <source srcset="${(Object.keys(a.img[0].url.jpg).length == 2 ? a.img[0].url.jpg.art[0] : a.img[0].url.jpg.url[0])} 1x,
-                                                                        ${urlImages + (Object.keys(a.img[0].url.jpg).length == 2 ? a.img[0].url.jpg.art[0] : a.img[0].url.jpg.url[0])} 2x"                                                                        type="image/jpg">
+                                                        <source srcset="${(Object.keys(a.img[0].url.jpg).length === 2 ? a.img[0].url.jpg.art[0] : a.img[0].url.jpg.url[0])} 1x,
+                                                                        ${urlImages + (Object.keys(a.img[0].url.jpg).length === 2 ? a.img[0].url.jpg.art[1] : a.img[0].url.jpg.url[1])} 2x"                                                                        type="image/jpg">
                                                         <img src="${urlImages+a.img[0].url.jpg.url[2]}" alt="${urlImages + a.img[0].url.jpg.url[0]}">
                                                     </picture> 
                                                     <h5>${a.name}</h5>
@@ -265,7 +253,7 @@ $(function(){
             const objArch =  arrArch.filter(arch => arch.id === idArch);
             const objArch2 =  arrArch.filter(arch => arch.id !== idArch);
             const title = `<h2>${objArch[0].name}</h2>`;
-            
+
             //Modifica el breadcrumb
             $(".breadcrumbs p .currentPage").replaceWith(`<a href="category.html">${breadcrumbCategory}</a>`);
             $(".breadcrumbs p").append(`<span class="separator">></span><span class="currentPage">${objArch[0].name}</span>`);
@@ -274,15 +262,26 @@ $(function(){
             $(".containerDetail article").append(title);
 
             //Contingut bàsic. 3 paràgrafs i 2 imatges.
+            console.log(objArch[0].img[0].url.webp);
             let content = `<p>${objArch[0].description[0]}</p>
                             <figure>
-                                <img src="${objArch[0].img[0].url}" alt="${objArch[0].img[0].alt}">
+                            <picture>
+                                <source media="(min-width: 850px)" srcset="${urlImages + objArch[0].img[0].url.webp.url[2]} 3x, ${urlImages + objArch[0].img[0].url.webp.url[3]} 5x">
+                                <source media="(max-width: 849px)" srcset="${urlImages + (Object.keys(objArch[0].img[0].url.webp).length === 2 ? objArch[0].img[0].url.webp.art[0] : objArch[0].img[0].url.webp.url[0])} 1x, ${urlImages + (Object.keys(objArch[0].img[0].url.webp).length === 2 ? objArch[0].img[0].url.webp.art[1] : objArch[0].img[0].url.webp.url[1])} 2x">
+
+                                <img src="${urlImages + objArch[0].img[0].url.jpg.art[0]}" alt="${objArch[0].img[0].alt}">
+                            </picture>
                                 <figcaption><a class="figcaptionLink" href="${objArch[0].img[0].attribution.url}">${objArch[0].img[0].attribution.author}</a></figcaption>
                             </figure>
                             <p>${objArch[0].description[1]}</p>
                             <p>${objArch[0].description[2]}</p>
                             <figure>
-                                <img src="${objArch[0].img[1].url}" alt="${objArch[0].img[1].alt}">
+                            <picture>
+                                <source media="(min-width: 850px)" srcset="${urlImages + objArch[0].img[1].url.webp.url[2]} 3x, ${urlImages + objArch[0].img[1].url.webp.url[3]} 5x">
+                                <source media="(max-width: 849px)" srcset="${urlImages + (Object.keys(objArch[0].img[1].url.webp).length === 2 ? objArch[0].img[1].url.webp.art[0] : objArch[0].img[1].url.webp.url[0])} 1x, ${urlImages + (Object.keys(objArch[0].img[1].url.webp).length === 2 ? objArch[0].img[1].url.webp.art[1] : objArch[0].img[1].url.webp.url[1])} 2x">
+
+                                <img src="${urlImages + (Object.keys(objArch[0].img[1].url.webp).length === 2 ? objArch[0].img[1].url.jpg.art[0] : objArch[0].img[1].url.jpg.url[0])}}" alt="${objArch[0].img[1].alt}">
+                            </picture>
                                 <figcaption><a class="figcaptionLink" href="${objArch[0].img[1].attribution.url}">${objArch[0].img[1].attribution.author}</a></figcaption>
                             </figure>`;
 
@@ -302,7 +301,12 @@ $(function(){
                     $(".containerDetail article ul").append(`<li>${li}</li>`);
                 });
                 $(".containerDetail article").append(`<figure>
-                                                        <img src="${objArch[0].img[2].url}" alt="${objArch[0].img[2].url}">
+                                                        <picture>
+                                                            <source media="(min-width: 850px)" srcset="${urlImages + objArch[0].img[2].url.webp.url[2]} 3x, ${urlImages + objArch[0].img[2].url.webp.url[3]} 5x">
+                                                            <source media="(max-width: 849px)" srcset="${urlImages + (Object.keys(objArch[0].img[2].url.webp).length === 2 ? objArch[0].img[2].url.webp.art[0] : objArch[0].img[2].url.webp.url[0])} 1x, ${urlImages + (Object.keys(objArch[0].img[2].url.webp).length === 2 ? objArch[0].img[2].url.webp.art[1] : objArch[0].img[2].url.webp.url[1])} 2x">
+
+                                                            <img src="${urlImages + objArch[0].img[2].url.jpg.art[0]}" alt="${objArch[0].img[2].alt}">
+                                                        </picture>
                                                         <figcaption><a class="figcaptionLink" href="${objArch[0].img[2].attribution.url}">${objArch[0].img[2].attribution.author}</a></figcaption>
                                                     </figure>`);
             }
@@ -318,7 +322,9 @@ $(function(){
             //Crea un swiper amb la resta de punts d'interès
             $(".containerDetail").append(`<section>
                                             <h2>Altres Punts d'interès</h2>
-                                            <swiper-container class="swiperDetail" space-between="25" grab-cursor="true" navigation="true" slides-per-view="1"></swiper-container>
+                                            <div class="divSwiper">
+                                                <swiper-container class="swiperDetail" space-between="25" grab-cursor="true" navigation="true" slides-per-view="1"></swiper-container>
+                                            </div>
                                         </section>`);
             objArch2.forEach( obj => {
                 $(".containerDetail .swiperDetail").append(`<swiper-slide class="card">
