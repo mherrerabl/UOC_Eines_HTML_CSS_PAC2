@@ -83,13 +83,12 @@ $(function(){
     function contentImagesArchitecture(obj) {
         return `<picture>
                     <source media="(min-width: 850px)" 
-                            srcset="${chooseImage(obj, 2)}?as=webp 3x,
-                                    ${chooseImage(obj, 3)}?as=webp 5x" 
+                            srcset="${chooseImage(obj, 2)}?as=webp" 
                             type="image/webp">
-                    <source media="(min-width: 384px)" 
+                    <source media="(min-width: 480px)" 
                             srcset="${chooseImage(obj, 1)}?as=webp" 
                             type="image/webp">
-                    <source media="(max-width: 383px)" 
+                    <source media="(max-width: 479px)" 
                             srcset="${chooseImage(obj, 0)}?as=webp" 
                             type="image/webp">
                     
@@ -97,10 +96,10 @@ $(function(){
                             srcset="${chooseImage(obj, 2)} 3x,
                                     ${chooseImage(obj, 3)} 5x" 
                             type="image/jpg">
-                    <source media="(min-width: 384px)" 
+                    <source media="(min-width: 480px)" 
                             srcset="${chooseImage(obj, 1)}" 
                             type="image/jpg">
-                    <source media="(max-width: 383px)" 
+                    <source media="(max-width: 479px)" 
                             srcset="${chooseImage(obj, 0)}" 
                             type="image/jpg">
 
