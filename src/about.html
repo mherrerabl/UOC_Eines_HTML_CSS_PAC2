@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/favicon.ico"/>
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="module" src="js/app.js"></script>
@@ -12,11 +11,11 @@
 </head>
 <body>
     <header class="indexHeader containerHeader">
-        <nav class="slimNav">
+        <nav>
             <div class="mainNav">
                 <a href="./index.html" class="logo">
-                    <object data="img/logo/logo-50.svg" type="image/svg+xml"></object>
-                    <h1>Nara</h1>
+                    <h1>Hōmon</h1>
+                    <p>Nara</p>
                 </a>
                 <div class="dropdown">
                     <div class="iconMenu">
@@ -31,34 +30,11 @@
                 </ul>
             </div>     
         </nav>
-        <div class="slideHeaderSlim">
-            <picture class="mySlides">
-                <source media="(max-width: 383px)" srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_384.jpg">
-                <source media="(max-width: 768px)" srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_768.jpg">
-                <source media="(min-width: 769px)" srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_1152.jpg">   
-                <img src="img/slider_slim/heijo-kyu_1/heijo-kyu_1_384.jpg" alt="Palau Heijō-Kyu" >
-            </picture>
-
-            <picture class="mySlides">
-                <source media="(max-width: 383px)" srcset="img/slider_slim/nara_park_1/nara_park_1_384.jpg">
-                <source media="(max-width: 768px)" srcset="img/slider_slim/nara_park_1/nara_park_1_768.jpg">
-                <source media="(min-width: 769px)" srcset="img/slider_slim/nara_park_1/nara_park_1_1152.jpg">   
-                <img src="img/slider_slim/nara_park_1/nara_park_1_384.jpg" alt="Palau Heijō-Kyu" >
-            </picture>
-
-            <picture class="mySlides">
-                <source media="(max-width: 383px)" srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_384.jpg">
-                <source media="(max-width: 768px)" srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_768.jpg">
-                <source media="(min-width: 769px)" srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_1152.jpg">   
-                <img src="img/slider_slim/horyu-ji_1/horyu-ji_1_384.jpg" alt="Palau Heijō-Kyu" >
-            </picture>
-
-            <picture class="mySlides">
-                <source media="(max-width: 383px)" srcset="img/slider_slim/kofukuji_1/kofukuji_1_384.jpg">
-                <source media="(max-width: 768px)" srcset="img/slider_slim/kofukuji_1/kofukuji_1_768.jpg">
-                <source media="(min-width: 769px)" srcset="img/slider_slim/kofukuji_1/kofukuji_1_1152.jpg">   
-                <img src="img/slider_slim/kofukuji_1/kofukuji_1_384.jpg" alt="Palau Heijō-Kyu" >
-            </picture>
+        <div class="slideshow">
+            <img src="img/slider/Heijo_Palace_Daigokuden.jpg" alt="Palau Heijō-Kyu" class="mySlides">
+            <img src="img/slider/Nara_Park.jpg" alt="Parc Nara" class="mySlides">
+            <img src="img/slider/Horyu-ji.jpg" alt="Temple Hōryū-ji" class="mySlides">
+            <img src="img/slider/Kofukuji.jpg" alt="Temple Kōfuku-ji" class="mySlides">
         </div>
     </header>
     
@@ -71,43 +47,11 @@
         <article class="containerAbout">
             <h2>Coneix Nara</h2>
             <div>
-                <div>
-                    <p>Nara és l'actual capital de la prefectura de Nara. Aquesta zona japonesa existeix des de fa milers d'anys, però no va ser fins al 1887 que es va formar oficialment, un cop separada de la prefectura d'Osaka. </p>
-                    <figure>
-                        <img src="img/map/map_384.jpg" 
-                            srcset="img/map/map_384.jpg?as=webp 1x,
-                                    img/map/map_384.jpg 1x,
-                                    img/map/map_768.jpg?as=webp 2x,
-                                    img/map/map_768.jpg 2x,
-                                    img/map/map_1152.jpg?as=webp 3x,
-                                    img/map/map_1152.jpg 3x"
-                            sizes="(max-width: 849px) 100w,
-                                    (min-width: 850px) 50vw"
-                            alt="Mapa amb la prefectura de Nara marcada">
-                        <figcaption><a class="figcaptionLink" href="https://commons.wikimedia.org/wiki/File:Map_of_Japan_with_highlight_on_29_Nara_prefecture.svg">Wikimedia Commons</a></figcaption>
-                    </figure>
-                </div>
-                    <div>
-                        <h3>Bandera de Nara</h3>
-                        <div class="divSvg">
-                            <svg version="1.1"
-                                    baseProfile="full"
-                                    width="200" height="200"
-                                    xmlns="http://www.w3.org/2000/svg">
-
-                                <rect width="100%" height="100%" fill="#ffffff" />
-
-                                <circle cx="100" cy="100" r="80" fill="#5b1c1f" class="svg_1"/>
-                                <circle cx="49.5" cy="100" r="28" fill="#ffffff" class="svg_3"/>
-                                
-                                <rect  x="15" y="99" width="10px" height="4px" fill="#ffffff" class="svg_4"/>
-                                <rect  x="50" y="85" width="152px" height="30px" fill="#5b1c1f" class="svg_2"/>
-
-                            </svg>
-                        </div>
-                     </div>
-                </div>
-                
+                <p>Nara és l'actual capital de la prefectura de Nara. Aquesta zona japonesa existeix des de fa milers d'anys, però no va ser fins al 1887 que es va formar oficialment, un cop separada de la prefectura d'Osaka. </p>
+                <figure>
+                    <img src="./img/Map_of_Nara.png" alt="Mapa amb la prefectura de Nara marcada">
+                    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Map_of_Japan_with_highlight_on_29_Nara_prefecture.svg">Wikimedia Commons</a></figcaption>
+                </figure>
             </div>
             
             <section>
@@ -119,19 +63,8 @@
                     Molts d'aquests llocs d'interès estan encara en ús. Un exemple és Tōdai-ji, actualment l'edifici construït amb fusta més gran del món i que acull la estàtua de bronze més gran de Buda feta fins als nostres dies.
                 </p>
                 <figure>
-                    <img src="img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_384.jpg" 
-                            srcset="img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_384.jpg?as=webp 1x
-                                    img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_384.jpg 1x,
-                                    img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_768.jpg?as=webp 2x,
-                                    img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_768.jpg 2x,
-                                    img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_1152.jpg?as=webp 3x
-                                    img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_1152.jpg 3x,
-                                    img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_1920.jpg?as=webp 5x,
-                                    img/architecture/todai-ji/todai-ji_1/jpg/todai-ji_1_1920.jpg 5x"
-                            sizes="(max-width: 849px) 100w,
-                                    (min-width: 850px) 50vw"
-                            alt="Temple Tōdai-ji">
-                    <figcaption><a class="figcaptionLink" href="https://commons.wikimedia.org/wiki/File:T%C5%8Ddai-ji_Kon-d%C5%8D.jpg">Wikimedia Commons</a></figcaption>
+                    <img src="./img/Temple Todai-ji/Tōdai-ji_Kon-dō.jpg" alt="Temple Tōdai-ji">
+                    <figcaption><a href="https://commons.wikimedia.org/wiki/File:T%C5%8Ddai-ji_Kon-d%C5%8D.jpg">Wikimedia Commons</a></figcaption>
                 </figure>
                 <p>
                     Per aquell temps, el Japó havia augmentat les seves relacions diplomàtiques amb els seus veïns Xina i Corea, el que va provocar que s'acceptés la religió budista i la implantació d'alguns avenços culturals d'aquests territoris. 
@@ -160,19 +93,8 @@
                     <li>La seva arquitectura histórica (Santuari Kasuga o Santuari Ōmiwa)</li>
                 </ul>
                 <figure>
-                    <img src="img/architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg" 
-                            srcset="img/architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg?as=webp 1x,
-                                    img/architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg 1x,
-                                    img/architecture/nara_park/nara_park_1/jpg/nara_park_1_768.jpg?as=webp 2x,
-                                    img/architecture/nara_park/nara_park_1/jpg/nara_park_1_768.jpg 2x,
-                                    img/architecture/nara_park/nara_park_1/jpg/nara_park_1_1152.jpg?as=webp 3x,
-                                    img/architecture/nara_park/nara_park_1/jpg/nara_park_1_1152.jpg 3x,
-                                    img/architecture/nara_park/nara_park_1/jpg/nara_park_1_1920.jpg?as=webp 5x,
-                                    img/architecture/nara_park/nara_park_1/jpg/nara_park_1_1920.jpg 5x"
-                            sizes="(max-width: 849px) 100w,
-                                    (min-width: 850px) 50vw"
-                            alt="Parc Nara">
-                    <figcaption><a class="figcaptionLink" href="https://commons.wikimedia.org/wiki/File:Nara_Park_-_panoramio_(2).jpg">Wikimedia Commons</a></figcaption>
+                    <img src="./img/Parc de Nara/Nara_Park.jpg" alt="Parc Nara">
+                    <figcaption><a href="https://commons.wikimedia.org/wiki/File:Nara_Park_-_panoramio_(2).jpg">Wikimedia Commons</a></figcaption>
                 </figure>
                 
             </section>
@@ -183,8 +105,8 @@
     <footer>
         <div>
             <a href="./index.html" class="logo">
-                <object data="img/logo/logo-50.svg" type="image/svg+xml"></object>
-            <h1>Nara</h1>
+                <h1>Hōmon</h1>
+                <p>Nara</p>
             </a>
         </div>
         <div>

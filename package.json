@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "dev": "parcel",
-    "build": "parcel build --no-content-hash",
+    "build": "parcel build",
     "clean": "rimraf dist .parcel-cache"
   },
   "devDependencies": {

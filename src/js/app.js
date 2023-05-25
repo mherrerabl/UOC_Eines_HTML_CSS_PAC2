@@ -1,12 +1,11 @@
 //IMPORT
 import * as $  from "jquery";
 import data from '../json/details.json';
+//import { register } from 'swiper/element/swiper-element-bundle'; //Error intern en el document
+//register();
 
 
 $(function(){
-    /**********GENEREAL VARIABLES***********/
-    const urlImages = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/";
-
     /**********GENEREAL FUNCTIONS***********/
     //Modifica la variable de la categoria clicada
     function setCategory(el) {
@@ -25,9 +24,9 @@ $(function(){
     }
 
     //Crea el mapa segons la latitud i l'altitud
-    function createMap(el, latitude, altitude, img, alt, title, zoom){
+    function createMap(el, lat, alt, img, title, zoom){
         const mapOptions = {
-            center: [latitude, altitude],
+            center: [lat, alt],
             zoom: zoom
         }
     
@@ -37,13 +36,14 @@ $(function(){
         
         let markerOptions = {
             title: "Prefectrua de Nara",
-            clickable: true
+            clickable: true,
+            draggable: true
         }
-        const marker = new L.Marker([latitude, altitude], markerOptions);
+        const marker = new L.Marker([lat, alt], markerOptions);
         if(img === ""){
             marker.bindPopup('<p style="text-align: center">'+title+'</p>').openPopup();
         }else{
-            marker.bindPopup('<img style="width: 200px" src="'+img+'" alt="'+alt+'"><p style="text-align: center">'+title+'</p>').openPopup();
+            marker.bindPopup('<img style="width: 200px" src="'+img+'"><p style="text-align: center">'+title+'</p>').openPopup();
         }
         marker.addTo(map);
     }
@@ -62,60 +62,6 @@ $(function(){
         }
     }
 
-    //Retorna la url de la imatge segons si te art direction o no
-    function chooseImage(obj, indexUrl){
-        if(Object.keys(obj.type.jpg).length === 2 && indexUrl < 2){
-            return urlImages + obj.type.jpg.art[indexUrl];
-        }else{
-            return urlImages + obj.type.jpg.url[indexUrl];
-        }
-    }
-
-    //Contingut swipers
-    function contentImageCard(obj) {
-        return `<img src="${chooseImage(obj, 1)}"
-                    srcset="${chooseImage(obj, 0)}?as=webp 1x,
-                            ${chooseImage(obj, 0)} 1x,
-                            ${chooseImage(obj, 1)}?as=webp 2x,
-                            ${chooseImage(obj, 1)} 2x"
-                    sizes="(max-width: 384px) 100vw,
-                            (max-width: 799px) 50vw,
-                            (min-width: 800px) 33vw"
-                    alt="${obj.alt}">`
-    }
-    //Contingut imatges dels punts d'interès (pàgina Detail)
-    function contentImagesArchitecture(obj) {
-        return `<picture>
-                                    <source media="(min-width: 850px)" 
-                                            srcset="${chooseImage(obj, 2)}?as=webp 3x,
-                                                    ${chooseImage(obj, 3)}?as=webp 5x" 
-                                            type="image/webp">
-                                    <source media="(min-width: 384px)" 
-                                            srcset="${chooseImage(obj, 1)}?as=webp" 
-                                            type="image/webp">
-                                    <source media="(max-width: 383px)" 
-                                            srcset="${chooseImage(obj, 0)}?as=webp" 
-                                            type="image/webp">
-                                    
-                                    <source media="(min-width: 850px)" 
-                                            srcset="${chooseImage(obj, 2)} 3x,
-                                                    ${chooseImage(obj, 3)} 5x" 
-                                            type="image/jpg">
-                                    <source media="(min-width: 384px)" 
-                                            srcset="${chooseImage(obj, 1)}" 
-                                            type="image/jpg">
-                                    <source media="(max-width: 383px)" 
-                                            srcset="${chooseImage(obj, 0)}" 
-                                            type="image/jpg">
-
-                                    <img src="${chooseImage(obj, 0)}" alt="${obj.alt}">
-                                </picture>`
-    }
-
-
-
-
-    /************************************PAGES CONTENT************************************/
     /*****HEADER*****/
     //Menu
     //Inserta el menú desplegable, el mostra. Quan es tanca, s'esborra
@@ -162,7 +108,7 @@ $(function(){
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
-    x[slideIndex-1].style.display = "inline-block";
+    x[slideIndex-1].style.display = "block";
     }
 
     let n = 1;
@@ -178,21 +124,24 @@ $(function(){
     /*****INDEX*****/
     //Afegeix el mapa a la pàgina principal i el swiper dels punts d'interès
     if($(".containerIndex")[0]){
-        const arrArch = data["architecture"].information;
-      
-        createMap('mapIndex', 34.413836863583136, 135.86368042265963, `${urlImages + arrArch[1].img[0].type.jpg.url[0]}`, `${arrArch[1].img[0].alt}`, "Prefectura de Nara", 10);
+        createMap('mapIndex', 34.413836863583136, 135.86368042265963, "https://upload.wikimedia.org/wikipedia/commons/2/2f/T%C5%8Ddai-ji_Kon-d%C5%8D.jpg", "Prefectura de Nara", 10);
         
+        const arrArch = data["architecture"].information;
         arrArch.forEach( obj => {
             $(".containerIndex .swiperIndex").append(`<swiper-slide>
-                                                            <div class="card cardSwiper">
-                                                                <a id="arch${obj.id}" href="./detail.html" >
-                                                                ${contentImageCard(obj.img[0])}
+                                                            <div>
+                                                                <a id="arch${obj.id}" href="./detail.html" class="card">
+                                                                <img src="${obj.img[0].url}" alt="${obj.img[0].alt}">
                                                                 <h5>${obj.name}</h5>
                                                                 </a>
                                                             </div>
                                                         </swiper-slide>`);
-            });
+        });
     }
+
+
+
+
 
     /*****CATEGORY*****/
     //Crea el contingut de la pàgina
@@ -202,11 +151,11 @@ $(function(){
         $(".container").prepend(breadcrumb);
 
         const arrArch = data["architecture"].information;
-        arrArch.forEach( obj => {
+        arrArch.forEach( a => {
             $(".containerCategory ul").append(`<li class="card">
-                                                <a href="./detail.html" id="arch${obj.id}">
-                                                    ${contentImageCard(obj.img[0])}
-                                                    <h5>${obj.name}</h5>
+                                                <a href="./detail.html" id="arch${a.id}">
+                                                    <img src="${a.img[0].url}" alt="${a.img[0].url}">
+                                                    <h5>${a.name}</h5>
                                                 </a>
                                                 </li>`);
         });
@@ -271,19 +220,8 @@ $(function(){
                                                         <h3>${food.name}</h3>
                                                         <p>${food.description}</p>
                                                         <figure>
-                                                        <img src="${chooseImage(food.img, 1)}"
-                                                            srcset="${chooseImage(food.img, 0)}?as=webp 1x,
-                                                                    ${chooseImage(food.img, 0)} 1x,
-                                                                    ${chooseImage(food.img, 1)}?as=webp 2x,
-                                                                    ${chooseImage(food.img, 1)} 2x,
-                                                                    ${chooseImage(food.img, 2)}?as=webp 3x,
-                                                                    ${chooseImage(food.img, 2)} 3x,
-                                                                    ${chooseImage(food.img, 3)}?as=webp 5x,
-                                                                    ${chooseImage(food.img, 3)} 5x"
-                                                            sizes="(max-width: 849px) 100vw,
-                                                                    (min-width: 850px) 40vw"
-                                                            alt="${food.img.alt}">
-                                                            <figcaption><a class="figcaptionLink" href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
+                                                            <img src="${food.img}" alt="${food.alt}">
+                                                            <figcaption><a href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
                                                         </figure>
                                                         
                                                     </section>`);
@@ -298,7 +236,7 @@ $(function(){
             const objArch =  arrArch.filter(arch => arch.id === idArch);
             const objArch2 =  arrArch.filter(arch => arch.id !== idArch);
             const title = `<h2>${objArch[0].name}</h2>`;
-
+            
             //Modifica el breadcrumb
             $(".breadcrumbs p .currentPage").replaceWith(`<a href="category.html">${breadcrumbCategory}</a>`);
             $(".breadcrumbs p").append(`<span class="separator">></span><span class="currentPage">${objArch[0].name}</span>`);
@@ -309,14 +247,14 @@ $(function(){
             //Contingut bàsic. 3 paràgrafs i 2 imatges.
             let content = `<p>${objArch[0].description[0]}</p>
                             <figure>
-                                ${contentImagesArchitecture(objArch[0].img[0])}
-                                <figcaption><a class="figcaptionLink" href="${objArch[0].img[0].attribution.url}">${objArch[0].img[0].attribution.author}</a></figcaption>
+                                <img src="${objArch[0].img[0].url}" alt="${objArch[0].img[0].alt}">
+                                <figcaption><a href="${objArch[0].img[0].attribution.url}">${objArch[0].img[0].attribution.author}</a></figcaption>
                             </figure>
                             <p>${objArch[0].description[1]}</p>
                             <p>${objArch[0].description[2]}</p>
                             <figure>
-                                ${contentImagesArchitecture(objArch[0].img[1])}
-                                <figcaption><a class="figcaptionLink" href="${objArch[0].img[1].attribution.url}">${objArch[0].img[1].attribution.author}</a></figcaption>
+                                <img src="${objArch[0].img[1].url}" alt="${objArch[0].img[1].alt}">
+                                <figcaption><a href="${objArch[0].img[1].attribution.url}">${objArch[0].img[1].attribution.author}</a></figcaption>
                             </figure>`;
 
             //Si te un quart pràgraf, s'afegeix
@@ -335,8 +273,8 @@ $(function(){
                     $(".containerDetail article ul").append(`<li>${li}</li>`);
                 });
                 $(".containerDetail article").append(`<figure>
-                                                        ${contentImagesArchitecture(objArch[0].img[2])}
-                                                        <figcaption><a class="figcaptionLink" href="${objArch[0].img[2].attribution.url}">${objArch[0].img[2].attribution.author}</a></figcaption>
+                                                        <img src="${objArch[0].img[2].url}" alt="${objArch[0].img[2].url}">
+                                                        <figcaption><a href="${objArch[0].img[2].attribution.url}">${objArch[0].img[2].attribution.author}</a></figcaption>
                                                     </figure>`);
             }
             
@@ -344,23 +282,20 @@ $(function(){
             $(".containerDetail article").append(`<section>
                                             <h3>Ubicació</h3>
                                             <div class="architectureMap" id="mapDetail${objArch[0].id}"></div>
-                                        </section>`
-            );
-         
-            createMap(`mapDetail${objArch[0].id}`, objArch[0].latitude, objArch[0].altitude, urlImages+(objArch[0].img[0].type.jpg.url[0]), objArch[0].img[0].alt, objArch[0].name, 15);
+                                        </section>`);
+
+            createMap(`mapDetail${objArch[0].id}`, objArch[0].latitude, objArch[0].altitude, objArch[0].img[0].url, objArch[0].name, 15);
             
             //Crea un swiper amb la resta de punts d'interès
             $(".containerDetail").append(`<section>
                                             <h2>Altres Punts d'interès</h2>
-                                            <div class="divSwiper">
-                                                <swiper-container class="swiperDetail" space-between="25" grab-cursor="true" navigation="true" slides-per-view="1"></swiper-container>
-                                            </div>
+                                            <swiper-container class="swiperDetail" space-between="25" grab-cursor="true" navigation="true" slides-per-view="1"></swiper-container>
                                         </section>`);
             objArch2.forEach( obj => {
-                $(".containerDetail .swiperDetail").append(`<swiper-slide>
-                                                                <div class="card cardSwiper">
-                                                                    <a id="arch${obj.id}" href="./detail.html">
-                                                                    ${contentImageCard(obj.img[0])}
+                $(".containerDetail .swiperDetail").append(`<swiper-slide class="card">
+                                                                <div>
+                                                                    <a id="arch${obj.id}" href="./detail.html" class="card">
+                                                                    <img src="${obj.img[0].url}" alt="${obj.img[0].alt}">
                                                                     <h5>${obj.name}</h5>
                                                                     </a>
                                                                 </div>
@@ -380,21 +315,6 @@ $(function(){
     setCategory(".indexHeader a");
     setCategory("footer a");
 
-
-    /*****LOGO HOVER*****/ 
-    $(".logo:not(.logoIndex)").on("mouseenter", function(event){
-        const objectEl = $(event.currentTarget).children("object")[0];
-        const documentEl = objectEl.contentDocument;
-        const svgEl = documentEl.querySelector("svg");
-        svgEl.style.color = "#B3102E";
-    });
-
-    $(".logo:not(.logoIndex)").on("mouseleave", function(event){
-        const objectEl = $(event.currentTarget).children("object")[0];
-        const documentEl = objectEl.contentDocument;
-        const svgEl = documentEl.querySelector("svg");
-        svgEl.style.color = "#006612";
-    });
 
 
     //Modifica el nombre de slide que es mostren en pantalla segons la mida de la pantalla

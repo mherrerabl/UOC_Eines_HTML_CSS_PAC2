@@ -7,21 +7,19 @@
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="/favicon.ico"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script type="module" src="js/app.js"></script>
     <title>Hōmon Nara</title>
 </head>
-<body>  
+<body>
     <header class="indexHeader">
         <nav>
             <div class="mainNav">
-                <div class="logo logoIndex">
-                    <object data="img/logo/logo-50.svg" type="image/svg+xml" class="objectSvg"></object>
-                    <h1>Nara</h1>
+                <div class="logo">
+                    <h1>Hōmon</h1>
+                    <p>Nara</p>
                 </div>
-        
                 <div class="dropdown">
                     <div class="iconMenu">
                         <i class="fa-solid fa-bars fa-2xl"></i>
@@ -35,55 +33,11 @@
                 </ul>
             </div>     
         </nav>
-        <div class="slideHeader">
-            <img src="/src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_384.jpg" 
-            srcset="/src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_384.jpg 384w,
-                        /src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_768.jpg 768w,
-                        /src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_1152.jpg 1152w,
-                        /src/img/architecture/heijo-kyu/heijo-kyu_1/jpg/heijo-kyu_1_1920.jpg 1920w"
-                sizes="(max-width: 382px) 100vw, 
-                        (max-width: 768px) 100vw, 
-                        (max-width: 1152px) 100vw,
-                        (min-width: 1153px) 100vw"
-                
-                alt="Palau Heijō-Kyu"
-                class="mySlides">
-
-            <img src="img/architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg"
-                srcset="img/architecture/nara_park/nara_park_1/jpg/nara_park_1_384.jpg 384w,
-                        img/architecture/nara_park/nara_park_1/jpg/nara_park_1_768.jpg 768w,
-                        img/architecture/nara_park/nara_park_1/jpg/nara_park_1_1152.jpg 1152w,
-                        img/architecture/nara_park/nara_park_1/jpg/nara_park_1_1920.jpg 1920w"
-                 sizes="(max-width: 384px) 100vw,
-                        (max-width: 768px) 100vw,
-                        (max-width: 1152px) 100vw,
-                        (min-width: 1153px) 100vw"
-                 alt="Parc Nara" 
-                 class="mySlides">
-
-            <img  src="img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_384.jpg"
-                srcset="img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_384.jpg 384w,
-                        img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_768.jpg 768w,
-                        img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_1152.jpg 1152w,
-                        img/architecture/horyu-ji/horyu-ji_1/jpg/horyu-ji_1_1920.jpg 1920w"
-                 sizes="(max-width: 384px) 100vw,
-                        (max-width: 768px) 100vw,
-                        (max-width: 1152px) 100vw,
-                        (min-width: 1153px) 100vw"
-                 alt="Temple Hōryū-ji" 
-                 class="mySlides">
-
-            <img src="img/architecture/kofukuji/kofukuji_1//jpg/kofukuji_1_384.jpg"
-                srcset="img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_384.jpg 384w,
-                        img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_768.jpg 768w,
-                        img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_1152.jpg 1152w,
-                        img/architecture/kofukuji/kofukuji_1/jpg/kofukuji_1_1920.jpg 1920w"
-                 sizes="(max-width: 384px) 100vw,
-                        (max-width: 768px) 100vw,
-                        (max-width: 1152px) 100vw,
-                        (min-width: 1153px) 100vw"
-                 alt="Temple Kōfuku-ji" 
-                 class="mySlides">
+         <div class="slideshow">
+            <img src="img/slider/Heijo_Palace_Daigokuden.jpg" alt="Palau Heijō-Kyu" class="mySlides">
+            <img src="img/slider/Nara_Park.jpg" alt="Parc Nara" class="mySlides">
+            <img src="img/slider/Horyu-ji.jpg" alt="Temple Hōryū-ji" class="mySlides">
+            <img src="img/slider/Kofukuji.jpg" alt="Temple Kōfuku-ji" class="mySlides">
         </div>
     </header>
 
@@ -91,23 +45,11 @@
 
     <main class="containerIndex">
         <section>
-            <div>
-                <img src="img/index/background_384.jpg" 
-                    srcset="img/index/background_384.jpg?as=webp 384w,
-                        img/index/background_384.jpg 384w,
-                        img/index/background_768.jpg?as=webp 768w,
-                        img/index/background_768.jpg 768w,
-                        img/index/background_1200.jpg?as=webp 1200w,
-                        img/index/background_1200.jpg 1200w"
-                    sizes="(max-width: 384px) 100vw,
-                        (max-width: 849px) 100vw,
-                        (min-width: 850px) 80vw"
-                    alt="Dibuix d'un temple japonès">
-                <div> 
-                    <p><q lang="es">Viajamos para cambiar, no de lugar, sino de ideas.</q> <span>Hippolyte Taine</span></p>
-                </div>
+            <div class="logo">
+                <h1>Hōmon</h1>
+                <p>Nara</p>
             </div>
-            
+            <p><q lang="es">Viajamos para cambiar, no de lugar, sino de ideas.</q> <span>Hippolyte Taine</span></p>
         </section>
 
         <section class="about">
@@ -128,18 +70,16 @@
         <section class="categories">
             <h2>Punts d'interès</h2>
 
-            <div class="divSwiper">
-                <swiper-container class="swiperIndex" space-between="25" grab-cursor="true"  navigation="true" slides-per-view="1"></swiper-container>
-            </div>
-            
+            <swiper-container class="swiperIndex" space-between="25" grab-cursor="true"  navigation="true" slides-per-view="1">
+            </swiper-container>
         </section>
     </main>
     <footer>
         <div>
-            <div class="logo logoIndex">
-                <object data="img/logo/logo-50.svg" type="image/svg+xml"></object>
-                <h1>Nara</h1>
-            </div>
+            <a href="./index.html" class="logo">
+                <h1>Hōmon</h1>
+                <p>Nara</p>
+            </a>
         </div>
         <div>
             <h4>Mapa de la web</h4>
