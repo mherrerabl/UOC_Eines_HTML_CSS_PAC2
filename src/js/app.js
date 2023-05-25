@@ -6,11 +6,6 @@ import data from '../json/details.json';
 $(function(){
     /**********GENEREAL VARIABLES***********/
     const urlImages = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/";
-    
-    /**Modifica el color del SVG del logo**/
-    setTimeout(() => {
-        $(".logo").children("object")[0].contentDocument.querySelector("svg").style.color = "#006612"
-    }, 100);
 
     /**********GENEREAL FUNCTIONS***********/
     //Modifica la variable de la categoria clicada
@@ -67,6 +62,60 @@ $(function(){
         }
     }
 
+    //Retorna la url de la imatge segons si te art direction o no
+    function chooseImage(obj, indexUrl){
+        if(Object.keys(obj.type.jpg).length === 2 && indexUrl < 2){
+            return urlImages + obj.type.jpg.art[indexUrl];
+        }else{
+            return urlImages + obj.type.jpg.url[indexUrl];
+        }
+    }
+
+    //Contingut swipers
+    function contentImageCard(obj) {
+        return `<img src="${chooseImage(obj, 1)}"
+                    srcset="${chooseImage(obj, 0)}?as=webp 1x,
+                            ${chooseImage(obj, 0)} 1x,
+                            ${chooseImage(obj, 1)}?as=webp 2x,
+                            ${chooseImage(obj, 1)} 2x"
+                    sizes="(max-width: 384px) 100vw,
+                            (max-width: 799px) 50vw,
+                            (min-width: 800px) 33vw"
+                    alt="${obj.alt}">`
+    }
+    //Contingut imatges dels punts d'interès (pàgina Detail)
+    function contentImagesArchitecture(obj) {
+        return `<picture>
+                                    <source media="(min-width: 850px)" 
+                                            srcset="${chooseImage(obj, 2)}?as=webp 3x,
+                                                    ${chooseImage(obj, 3)}?as=webp 5x" 
+                                            type="image/webp">
+                                    <source media="(min-width: 384px)" 
+                                            srcset="${chooseImage(obj, 1)}?as=webp" 
+                                            type="image/webp">
+                                    <source media="(max-width: 383px)" 
+                                            srcset="${chooseImage(obj, 0)}?as=webp" 
+                                            type="image/webp">
+                                    
+                                    <source media="(min-width: 850px)" 
+                                            srcset="${chooseImage(obj, 2)} 3x,
+                                                    ${chooseImage(obj, 3)} 5x" 
+                                            type="image/jpg">
+                                    <source media="(min-width: 384px)" 
+                                            srcset="${chooseImage(obj, 1)}" 
+                                            type="image/jpg">
+                                    <source media="(max-width: 383px)" 
+                                            srcset="${chooseImage(obj, 0)}" 
+                                            type="image/jpg">
+
+                                    <img src="${chooseImage(obj, 0)}" alt="${obj.alt}">
+                                </picture>`
+    }
+
+
+
+
+    /************************************PAGES CONTENT************************************/
     /*****HEADER*****/
     //Menu
     //Inserta el menú desplegable, el mostra. Quan es tanca, s'esborra
@@ -113,7 +162,7 @@ $(function(){
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
-    x[slideIndex-1].style.display = "block";
+    x[slideIndex-1].style.display = "inline-block";
     }
 
     let n = 1;
@@ -122,7 +171,7 @@ $(function(){
         slideHeader(slideIndex += 1);
         n++;
         n > 4 ? n = 1 : n;
-    }, 5000);
+    }, 50000);
 
 
 
@@ -137,24 +186,13 @@ $(function(){
             $(".containerIndex .swiperIndex").append(`<swiper-slide>
                                                             <div class="card cardSwiper">
                                                                 <a id="arch${obj.id}" href="./detail.html" >
-                                                                <picture>
-                                                                    <source srcset="${urlImages + (Object.keys(obj.img[0].type.webp).length === 2 ? obj.img[0].type.webp.art[0] : obj.img[0].type.webp.url[0])} 1x,
-                                                                                    ${urlImages + (Object.keys(obj.img[0].type.webp).length === 2 ? obj.img[0].type.webp.art[1] : obj.img[0].type.webp.url[1])} 2x"
-                                                                                    type="image/webp">
-                                                                    
-                                                                    <source srcset="${(Object.keys(obj.img[0].type.jpg).length === 2 ? obj.img[0].type.jpg.art[0] : obj.img[0].type.jpg.url[0])} 1x,
-                                                                                    ${urlImages + (Object.keys(obj.img[0].type.jpg).length === 2 ? obj.img[0].type.jpg.art[1] : obj.img[0].type.jpg.url[1])} 2x"
-                                                                                    type="image/jpg">
-                                                                    <img src="${urlImages+obj.img[0].type.jpg.url[2]}" alt="${urlImages + obj.img[0].type.jpg.url[0]}">
-                                                                </picture> 
+                                                                ${contentImageCard(obj.img[0])}
                                                                 <h5>${obj.name}</h5>
                                                                 </a>
                                                             </div>
                                                         </swiper-slide>`);
-        });
+            });
     }
-
-
 
     /*****CATEGORY*****/
     //Crea el contingut de la pàgina
@@ -167,14 +205,7 @@ $(function(){
         arrArch.forEach( obj => {
             $(".containerCategory ul").append(`<li class="card">
                                                 <a href="./detail.html" id="arch${obj.id}">
-                                                    <picture>
-                                                        <source srcset="${(Object.keys(obj.img[0].type.webp).length === 2 ? obj.img[0].type.webp.art[0] : obj.img[0].type.webp.url[0])} 1x,
-                                                                        ${urlImages + (Object.keys(obj.img[0].type.webp).length === 2 ? obj.img[0].type.webp.art[1] : obj.img[0].type.webp.url[1])} 2x"                                                                        type="image/webp">
-                                                        
-                                                        <source srcset="${(Object.keys(obj.img[0].type.jpg).length === 2 ? obj.img[0].type.jpg.art[0] : obj.img[0].type.jpg.url[0])} 1x,
-                                                                        ${urlImages + (Object.keys(obj.img[0].type.jpg).length === 2 ? obj.img[0].type.jpg.art[1] : obj.img[0].type.jpg.url[1])} 2x"                                                                        type="image/jpg">
-                                                        <img src="${urlImages+obj.img[0].type.jpg.url[2]}" alt="${urlImages + obj.img[0].type.jpg.url[0]}">
-                                                    </picture> 
+                                                    ${contentImageCard(obj.img[0])}
                                                     <h5>${obj.name}</h5>
                                                 </a>
                                                 </li>`);
@@ -236,27 +267,22 @@ $(function(){
             $(".containerDetail article").append(title);
 
             objFoods.forEach( food => {
-                console.log(food.img.type.webp.url[0]);
-                console.log(food.img.type.jpg.url[0]);
                 $(".containerDetail article").append(`<section>
                                                         <h3>${food.name}</h3>
                                                         <p>${food.description}</p>
                                                         <figure>
-                                                             <picture>
-                                                                <source srcset="${urlImages + food.img.type.webp.url[0]} 1x,
-                                                                        ${urlImages + food.img.type.webp.url[1]} 2x,
-                                                                        ${urlImages + food.img.type.webp.url[2]} 3x,
-                                                                        ${urlImages + food.img.type.webp.url[3]} 5x"
-                                                                type="image/webp">
-
-                                                                <source srcset="${urlImages + food.img.type.jpg.url[0]} 1x,
-                                                                        ${urlImages + food.img.type.jpg.url[1]} 2x,
-                                                                        ${urlImages + food.img.type.jpg.url[2]} 3x,
-                                                                        ${urlImages + food.img.type.jpg.url[3]} 5x"
-                                                                type="image/jpg">
-
-                                                                <img src="${food.img.type.jpg.url[2]}" alt="${food.alt}"/>
-                                                            </picture>
+                                                        <img src="${chooseImage(food.img, 1)}"
+                                                            srcset="${chooseImage(food.img, 0)}?as=webp 1x,
+                                                                    ${chooseImage(food.img, 0)} 1x,
+                                                                    ${chooseImage(food.img, 1)}?as=webp 2x,
+                                                                    ${chooseImage(food.img, 1)} 2x,
+                                                                    ${chooseImage(food.img, 2)}?as=webp 3x,
+                                                                    ${chooseImage(food.img, 2)} 3x,
+                                                                    ${chooseImage(food.img, 3)}?as=webp 5x,
+                                                                    ${chooseImage(food.img, 3)} 5x"
+                                                            sizes="(max-width: 849px) 100vw,
+                                                                    (min-width: 850px) 40vw"
+                                                            alt="${food.img.alt}">
                                                             <figcaption><a class="figcaptionLink" href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
                                                         </figure>
                                                         
@@ -281,32 +307,15 @@ $(function(){
             $(".containerDetail article").append(title);
 
             //Contingut bàsic. 3 paràgrafs i 2 imatges.
-            console.log(objArch[0].img[0].type.webp);
             let content = `<p>${objArch[0].description[0]}</p>
                             <figure>
-                                <picture>
-                                    <source media="(min-width: 850px)" srcset="${urlImages + objArch[0].img[0].type.webp.url[2]} 3x, ${urlImages + objArch[0].img[0].type.webp.url[3]} 5x" type="image/webp">
-                                    <source media="(max-width: 849px)" srcset="${urlImages + (Object.keys(objArch[0].img[0].type.webp).length === 2 ? objArch[0].img[0].type.webp.art[0] : objArch[0].img[0].type.webp.url[0])} 1x, ${urlImages + (Object.keys(objArch[0].img[0].type.webp).length === 2 ? objArch[0].img[0].type.webp.art[1] : objArch[0].img[0].type.webp.url[1])} 2x" type="image/webp">
-
-                                    <source media="(min-width: 850px)" srcset="${urlImages + objArch[0].img[0].type.jpg.url[2]} 3x, ${urlImages + objArch[0].img[0].type.jpg.url[3]} 5x" type="image/jpg">
-                                    <source media="(max-width: 849px)" srcset="${urlImages + (Object.keys(objArch[0].img[0].type.jpg).length === 2 ? objArch[0].img[0].type.jpg.art[0] : objArch[0].img[0].type.jpg.url[0])} 1x, ${urlImages + (Object.keys(objArch[0].img[0].type.jpg).length === 2 ? objArch[0].img[0].type.jpg.art[1] : objArch[0].img[0].type.jpg.url[1])} 2x" type="image/jpg">
-
-                                    <img src="${urlImages + (Object.keys(objArch[0].img[0].type.jpg).length === 2 ? objArch[0].img[0].type.jpg.art[0] : objArch[0].img[0].type.jpg.url[0])}" alt="${objArch[0].img[0].alt}">
-                                </picture>
+                                ${contentImagesArchitecture(objArch[0].img[0])}
                                 <figcaption><a class="figcaptionLink" href="${objArch[0].img[0].attribution.url}">${objArch[0].img[0].attribution.author}</a></figcaption>
                             </figure>
                             <p>${objArch[0].description[1]}</p>
                             <p>${objArch[0].description[2]}</p>
                             <figure>
-                                <picture>
-                                    <source media="(min-width: 850px)" srcset="${urlImages + objArch[0].img[1].type.webp.url[2]} 3x, ${urlImages + objArch[0].img[1].type.webp.url[3]} 5x" type="image/webp">
-                                    <source media="(max-width: 849px)" srcset="${urlImages + (Object.keys(objArch[0].img[1].type.webp).length === 2 ? objArch[0].img[1].type.webp.art[0] : objArch[0].img[1].type.webp.url[0])} 1x, ${urlImages + (Object.keys(objArch[0].img[1].type.webp).length === 2 ? objArch[0].img[1].type.webp.art[1] : objArch[0].img[1].type.webp.url[1])} 2x" type="image/webp">
-
-                                    <source media="(min-width: 850px)" srcset="${urlImages + objArch[0].img[1].type.jpg.url[2]} 3x, ${urlImages + objArch[0].img[1].type.jpg.url[3]} 5x" type="image/jpg">
-                                    <source media="(max-width: 849px)" srcset="${urlImages + (Object.keys(objArch[0].img[1].type.jpg).length === 2 ? objArch[0].img[1].type.jpg.art[0] : objArch[0].img[1].type.jpg.url[0])} 1x, ${urlImages + (Object.keys(objArch[0].img[1].type.jpg).length === 2 ? objArch[0].img[1].type.jpg.art[1] : objArch[0].img[1].type.jpg.url[1])} 2x" type="image/jpg">
-
-                                    <img src="${urlImages + (Object.keys(objArch[0].img[1].type.jpg).length === 2 ? objArch[0].img[1].type.jpg.art[0] : objArch[0].img[1].type.jpg.url[0])}" alt="${objArch[0].img[1].alt}">
-                                </picture>
+                                ${contentImagesArchitecture(objArch[0].img[1])}
                                 <figcaption><a class="figcaptionLink" href="${objArch[0].img[1].attribution.url}">${objArch[0].img[1].attribution.author}</a></figcaption>
                             </figure>`;
 
@@ -326,15 +335,7 @@ $(function(){
                     $(".containerDetail article ul").append(`<li>${li}</li>`);
                 });
                 $(".containerDetail article").append(`<figure>
-                                                        <picture>
-                                                            <source media="(min-width: 850px)" srcset="${urlImages + objArch[0].img[2].type.webp.url[2]} 3x, ${urlImages + objArch[0].img[2].type.webp.url[3]} 5x" type="image/webp">
-                                                            <source media="(max-width: 849px)" srcset="${urlImages + (Object.keys(objArch[0].img[2].type.webp).length === 2 ? objArch[0].img[2].type.webp.art[0] : objArch[0].img[2].type.webp.url[0])} 1x, ${urlImages + (Object.keys(objArch[0].img[2].type.webp).length === 2 ? objArch[0].img[2].type.webp.art[1] : objArch[0].img[2].type.webp.url[1])} 2x" type="image/webp">
-
-                                                            <source media="(min-width: 850px)" srcset="${urlImages + objArch[0].img[2].type.jpg.url[2]} 3x, ${urlImages + objArch[0].img[2].type.jpg.url[3]} 5x" type="image/jpg">
-                                                            <source media="(max-width: 849px)" srcset="${urlImages + (Object.keys(objArch[0].img[2].type.jpg).length === 2 ? objArch[0].img[2].type.jpg.art[0] : objArch[0].img[2].type.jpg.url[0])} 1x, ${urlImages + (Object.keys(objArch[0].img[2].type.jpg).length === 2 ? objArch[0].img[2].type.jpg.art[1] : objArch[0].img[2].type.jpg.url[1])} 2x" type="image/jpg">
-
-                                                            <img src="${urlImages + (Object.keys(objArch[0].img[2].type.jpg).length === 2 ? objArch[0].img[2].type.jpg.art[0] : objArch[0].img[2].type.jpg.url[0])}" alt="${objArch[0].img[2].alt}">
-                                                        </picture>
+                                                        ${contentImagesArchitecture(objArch[0].img[2])}
                                                         <figcaption><a class="figcaptionLink" href="${objArch[0].img[2].attribution.url}">${objArch[0].img[2].attribution.author}</a></figcaption>
                                                     </figure>`);
             }
@@ -356,20 +357,10 @@ $(function(){
                                             </div>
                                         </section>`);
             objArch2.forEach( obj => {
-                console.log((Object.keys(obj.img[0].type.webp).length === 2 ? obj.img[0].type.webp.art[0] : obj.img[0].type.webp.url[0]));
                 $(".containerDetail .swiperDetail").append(`<swiper-slide>
                                                                 <div class="card cardSwiper">
                                                                     <a id="arch${obj.id}" href="./detail.html">
-                                                                    <picture>
-                                                                        <source srcset="${urlImages + (Object.keys(obj.img[0].type.webp).length === 2 ? obj.img[0].type.webp.art[0] : obj.img[0].type.webp.url[0])} 1x,
-                                                                                        ${urlImages + (Object.keys(obj.img[0].type.webp).length === 2 ? obj.img[0].type.webp.art[1] : obj.img[0].type.webp.url[1])} 2x"
-                                                                                        type="image/webp">
-                                                                        
-                                                                        <source srcset="${(Object.keys(obj.img[0].type.jpg).length === 2 ? obj.img[0].type.jpg.art[0] : obj.img[0].type.jpg.url[0])} 1x,
-                                                                                        ${urlImages + (Object.keys(obj.img[0].type.jpg).length === 2 ? obj.img[0].type.jpg.art[1] : obj.img[0].type.jpg.url[1])} 2x"
-                                                                                        type="image/jpg">
-                                                                        <img src="${urlImages+obj.img[0].type.jpg.url[1]}" alt="${urlImages + obj.img[0].type.jpg.url[0]}">
-                                                                    </picture> 
+                                                                    ${contentImageCard(obj.img[0])}
                                                                     <h5>${obj.name}</h5>
                                                                     </a>
                                                                 </div>

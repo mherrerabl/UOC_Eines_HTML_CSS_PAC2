@@ -14,8 +14,9 @@
     <header class="indexHeader containerHeader">
         <nav class="slimNav">
             <div class="mainNav">
-                <object data="img/logo/logo-50.svg" type="image/svg+xml"></object>
-                <h1>Nara</h1>
+                <a href="./index.html" class="logo">
+                    <object data="img/logo/logo-50.svg" type="image/svg+xml"></object>
+                    <h1>Nara</h1>
                 </a>
                 <div class="dropdown">
                     <div class="iconMenu">
@@ -30,51 +31,35 @@
                 </ul>
             </div>     
         </nav>
-        <div class="slideshow">
-            <img srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_384.jpg 384w,
-                        img/slider_slim/heijo-kyu_1/heijo-kyu_1_768.jpg 768w,
-                        img/slider_slim/heijo-kyu_1/heijo-kyu_1_1152.jpg 1152w,
-                        img/slider_slim/heijo-kyu_1/heijo-kyu_1_1920.jpg 1920w"
-                sizes="(max-width: 384px) 100vw,
-                        (max-width: 768px) 100vw,
-                        (max-width: 1152px) 100vw,
-                        (max-width: 1920px) 100vw"
-                 src="img/slider_slim/heijo-kyu_1/heijo-kyu_1_1152.jpg" 
-                 alt="Palau Heijō-Kyu" 
-                 class="mySlides">
-            <img srcset="img/slider_slim/nara_park_1/nara_park_1_384.jpg 384w,
-                        img/slider_slim/nara_park_1/nara_park_1_768.jpg 768w,
-                        img/slider_slim/nara_park_1/nara_park_1_1152.jpg 1152w,
-                        img/slider_slim/nara_park_1/nara_park_1_1920.jpg 1920w"
-                 sizes="(max-width: 384px) 100vw,
-                        (max-width: 768px) 100vw,
-                        (max-width: 1152px) 100vw,
-                        (max-width: 1920px) 100vw"
-                 src="img/slider_slim/nara_park_1/nara_park_1_1152.jpg" 
-                 alt="Parc Nara" 
-                 class="mySlides">
-            <img srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_384.jpg 384w,
-                        img/slider_slim/horyu-ji_1/horyu-ji_1_768.jpg 768w,
-                        img/slider_slim/horyu-ji_1/horyu-ji_1_1152.jpg 1152w,
-                        img/slider_slim/horyu-ji_1/horyu-ji_1_1920.jpg 1920w"
-                 sizes="(max-width: 384px) 100vw,
-                        (max-width: 768px) 100vw,
-                        (max-width: 1152px) 100vw,
-                        (max-width: 1920px) 100vw"
-                 src="img/slider_slim/horyu-ji_1/horyu-ji_1_1152.jpg" 
-                 alt="Temple Hōryū-ji" 
-                 class="mySlides">
-            <img srcset="img/slider_slim/kofukuji_1/kofukuji_1_384.jpg 384w,
-                        img/slider_slim/kofukuji_1/kofukuji_1_768.jpg 768w,
-                        img/slider_slim/kofukuji_1/kofukuji_1_1152.jpg 1152w,
-                        img/slider_slim/kofukuji_1/kofukuji_1_1920.jpg 1920w"
-                 sizes="(max-width: 384px) 100vw,
-                        (max-width: 768px) 100vw,
-                        (max-width: 1152px) 100vw,
-                        (max-width: 1920px) 100vw"
-                 src="img/slider_slim/kofukuji_1/kofukuji_1_1152.jpg" 
-                 alt="Temple Kōfuku-ji" 
-                 class="mySlides">
+       
+        <div>
+            <picture class="mySlides">
+                <source media="(max-width: 383px)" srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_384.jpg">
+                <source media="(max-width: 768px)" srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_768.jpg">
+                <source media="(min-width: 769px)" srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_1152.jpg">   
+                <img src="img/slider_slim/heijo-kyu_1/heijo-kyu_1_384.jpg" alt="Palau Heijō-Kyu" >
+            </picture>
+
+            <picture class="mySlides">
+                <source media="(max-width: 383px)" srcset="img/slider_slim/nara_park_1/nara_park_1_384.jpg">
+                <source media="(max-width: 768px)" srcset="img/slider_slim/nara_park_1/nara_park_1_768.jpg">
+                <source media="(min-width: 769px)" srcset="img/slider_slim/nara_park_1/nara_park_1_1152.jpg">   
+                <img src="img/slider_slim/nara_park_1/nara_park_1_384.jpg" alt="Palau Heijō-Kyu" >
+            </picture>
+
+            <picture class="mySlides">
+                <source media="(max-width: 383px)" srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_384.jpg">
+                <source media="(max-width: 768px)" srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_768.jpg">
+                <source media="(min-width: 769px)" srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_1152.jpg">   
+                <img src="img/slider_slim/horyu-ji_1/horyu-ji_1_384.jpg" alt="Palau Heijō-Kyu" >
+            </picture>
+
+            <picture class="mySlides">
+                <source media="(max-width: 383px)" srcset="img/slider_slim/kofukuji_1/kofukuji_1_384.jpg">
+                <source media="(max-width: 768px)" srcset="img/slider_slim/kofukuji_1/kofukuji_1_768.jpg">
+                <source media="(min-width: 769px)" srcset="img/slider_slim/kofukuji_1/kofukuji_1_1152.jpg">   
+                <img src="img/slider_slim/kofukuji_1/kofukuji_1_384.jpg" alt="Palau Heijō-Kyu" >
+            </picture>
         </div>
     </header>
     
@@ -90,7 +75,7 @@
         <div>
             <a href="./index.html" class="logo">
                 <object data="img/logo/logo-50.svg" type="image/svg+xml"></object>
-            <h1>Nara</h1>
+                <h1>Nara</h1>
             </a>
         </div>
         <div>

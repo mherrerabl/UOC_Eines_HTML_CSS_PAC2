@@ -240,13 +240,13 @@ object{
 }
 
 /**Slider HeaderIndex**/
-.indexHeader .slideshow {
+.indexHeader .slideHeader {
     position: relative;
     width: 100%;
     height: inherit;
 }
 
-.slideshow img {
+.slideHeader img {
     position: absolute;
     width: 100%;
     height: auto;
@@ -266,6 +266,14 @@ object{
 /**Slider Header2**/
 .containerHeader {
     height: 30vw;
+}
+
+.slideHeaderSlim picture{
+    min-width: 100%;
+}
+
+.slideHeaderSlim img{
+    min-width: inherit;
 }
 
 
@@ -439,7 +447,7 @@ swiper-slide picture {
     display: block;
 }
 
-swiper-slide picture source, swiper-slide picture img {
+swiper-slide img {
     width: 100%;
     height: 200px; 
 }
@@ -1071,20 +1079,3 @@ footer a:hover i, footer a:active i, footer a:focus i{
 
 }
 
-/*.loader {
-  background: linear-gradient(to right, rgb(22, 113, 202) 50%, transparent 50%);
-  animation: spin 1s infinite linear;
-}
-.loader:before {
-  display: block;
-  content: '';
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90px;
-  height: 90px;
-  background: #222;
-  border-radius: 50%;
-}
-*/
