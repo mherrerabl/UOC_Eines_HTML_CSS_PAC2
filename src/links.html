@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico"/>
     <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="css/styles.css">
     <script type="module" src="js/app.js"></script>
@@ -11,12 +12,12 @@
 </head>
 <body>
     <header class="indexHeader containerHeader">
-        <nav>
+        <nav class="slimNav">
             <div class="mainNav">
-                <a href="./index.html" class="logo">
-                    <h1>Hōmon</h1>
-                    <p>Nara</p>
+                <object data="img/logo/logo-50.svg" type="image/svg+xml"></object>
+                <h1>Nara</h1>
                 </a>
+            
                 <div class="dropdown">
                     <div class="iconMenu">
                         <i class="fa-solid fa-bars fa-2xl"></i>
@@ -30,11 +31,34 @@
                 </ul>
             </div>     
         </nav>
-         <div class="slideshow">
-            <img src="img/slider/Heijo_Palace_Daigokuden.jpg" alt="Palau Heijō-Kyu" class="mySlides">
-            <img src="img/slider/Nara_Park.jpg" alt="Parc Nara" class="mySlides">
-            <img src="img/slider/Horyu-ji.jpg" alt="Temple Hōryū-ji" class="mySlides">
-            <img src="img/slider/Kofukuji.jpg" alt="Temple Kōfuku-ji" class="mySlides">
+        <div>
+            <picture class="mySlides">
+                <source media="(max-width: 383px)" srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_384.jpg">
+                <source media="(max-width: 768px)" srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_768.jpg">
+                <source media="(min-width: 769px)" srcset="img/slider_slim/heijo-kyu_1/heijo-kyu_1_1152.jpg">   
+                <img src="img/slider_slim/heijo-kyu_1/heijo-kyu_1_384.jpg" alt="Palau Heijō-Kyu" >
+            </picture>
+
+            <picture class="mySlides">
+                <source media="(max-width: 383px)" srcset="img/slider_slim/nara_park_1/nara_park_1_384.jpg">
+                <source media="(max-width: 768px)" srcset="img/slider_slim/nara_park_1/nara_park_1_768.jpg">
+                <source media="(min-width: 769px)" srcset="img/slider_slim/nara_park_1/nara_park_1_1152.jpg">   
+                <img src="img/slider_slim/nara_park_1/nara_park_1_384.jpg" alt="Palau Heijō-Kyu" >
+            </picture>
+
+            <picture class="mySlides">
+                <source media="(max-width: 383px)" srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_384.jpg">
+                <source media="(max-width: 768px)" srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_768.jpg">
+                <source media="(min-width: 769px)" srcset="img/slider_slim/horyu-ji_1/horyu-ji_1_1152.jpg">   
+                <img src="img/slider_slim/horyu-ji_1/horyu-ji_1_384.jpg" alt="Palau Heijō-Kyu" >
+            </picture>
+
+            <picture class="mySlides">
+                <source media="(max-width: 383px)" srcset="img/slider_slim/kofukuji_1/kofukuji_1_384.jpg">
+                <source media="(max-width: 768px)" srcset="img/slider_slim/kofukuji_1/kofukuji_1_768.jpg">
+                <source media="(min-width: 769px)" srcset="img/slider_slim/kofukuji_1/kofukuji_1_1152.jpg">   
+                <img src="img/slider_slim/kofukuji_1/kofukuji_1_384.jpg" alt="Palau Heijō-Kyu" >
+            </picture>
         </div>
     </header>
     
@@ -82,7 +106,7 @@
                 <li>Wikimedia Commons. (24 de Novembre de 2022). <i>File:Tōdai-ji hdsr IMG 3844.jpg</i> <a href="https://commons.wikimedia.org/wiki/File:T%C5%8Ddai-ji_hdsr_IMG_3844.jpg">https://commons.wikimedia.org/wiki/File:T%C5%8Ddai-ji_hdsr_IMG_3844.jpg</a></li>
                 <li>Wikimedia Commons. (30 de Juliol de 2022). <i>File:Daibutsu Grand bouddha - Tōdai-ji - Nara.jpg</i> <a href="https://commons.wikimedia.org/wiki/File:Daibutsu_Grand_bouddha_-_T%C5%8Ddai-ji_-_Nara.jpg">https://commons.wikimedia.org/wiki/File:Daibutsu_Grand_bouddha_-_T%C5%8Ddai-ji_-_Nara.jpg</a></li>
 
-                <li>Wikimedia Commons. (6 de Setembre de 2020). <i>File:Kasuga-taisha11bs3200.jpg</i> <a href="https://commons.wikimedia.org/wiki/File:Kasuga-taisha11bs3200.jpg">https://commons.wikimedia.org/wiki/File:Kasuga-taisha11bs3200.jpg</a></li>
+                <li>Wikimedia Commons. (25 de Març de 2020). <i>File:Kasuga-taisha, chumon-2.jpg</i> <a href="https://commons.wikimedia.org/wiki/File:Kasuga-taisha,_chumon-2.jpg">https://commons.wikimedia.org/wiki/File:Kasuga-taisha,_chumon-2.jpg</a></li>
                 <li>Wikimedia Commons. (6 de Setembre de 2020). <i>File:Kasuga-taisha02st3200.jpg</i> <a href="https://commons.wikimedia.org/wiki/File:Kasuga-taisha02st3200.jpg">https://commons.wikimedia.org/wiki/File:Kasuga-taisha02st3200.jpg</a></li>
                 <li>Wikimedia Commons. (3 de Febrer de 2021). <i>File:Kasuga Shrine lanterns-01.jpg</i> <a href="https://commons.wikimedia.org/wiki/File:Kasuga_Shrine_lanterns-01.jpg">https://commons.wikimedia.org/wiki/File:Kasuga_Shrine_lanterns-01.jpg</a></li>
 
@@ -98,15 +122,26 @@
                 <li>Wikimedia Commons. (21 de Setembre de 2020). <i>File:第一次大極殿・前庭(Front Courtyard).JPG</i> <a href="https://commons.wikimedia.org/wiki/File:%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%A7%E6%A5%B5%E6%AE%BF%E3%83%BB%E5%89%8D%E5%BA%AD(Front_Courtyard).JPG">https://commons.wikimedia.org/wiki/File:%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%A7%E6%A5%B5%E6%AE%BF%E3%83%BB%E5%89%8D%E5%BA%AD(Front_Courtyard).JPG</a></li>
                 <li>Wikimedia Commons. (2 de Setembre de 2020). <i>File:Toin Teien.jpg</i> <a href="https://commons.wikimedia.org/wiki/File:Toin_Teien.jpg">https://commons.wikimedia.org/wiki/File:Toin_Teien.jpg</a></li>
 
+                <li>pikisuperstar (Freepik). <i>Templo japonés degradado con lago</i> <a href="https://www.freepik.es/vector-gratis/templo-japones-degradado-lago_9925870.htm#query=nara%20japon&position=23&from_view=search&track=ais">https://www.freepik.es/vector-gratis/templo-japones-degradado-lago_9925870.htm#query=nara%20japon&position=23&from_view=search&track=ais</a></li>
+
             </ul>
+
+            <h3>Logotip</h3>
+            <ul>
+                <li>catalyststuff (Freepik). <i>Lindo perro shiba inu con ilustración de dibujos animados de traje japonés.</i> <a href="https://www.freepik.es/vector-gratis/lindo-perro-shiba-inu-ilustracion-dibujos-animados-traje-japones_13038023.htm#page=2&query=japon&position=5&from_view=search&track=sph">https://www.freepik.es/vector-gratis/lindo-perro-shiba-inu-ilustracion-dibujos-animados-traje-japones_13038023.htm#page=2&query=japon&position=5&from_view=search&track=sph</a></li>
+                <li>callmetak (Freepik). <i>Festival de verano japonés vectorial símbolo logotipo traducción de texto festival de verano.</i> <a href="https://www.freepik.es/vector-gratis/festival-verano-japones-vectorial-simbolo-logotipo-traduccion-texto-festival-verano_40062252.htm#query=Tablilla%20votiva%20japonesa&position=33&from_view=author">https://www.freepik.es/vector-gratis/festival-verano-japones-vectorial-simbolo-logotipo-traduccion-texto-festival-verano_40062252.htm#query=Tablilla%20votiva%20japonesa&position=33&from_view=author</a></li>
+                <li>callmetak (Freepik). <i>Tableta de imagen votiva japonesa con el año de la caligrafía kanji del buey.</i> <a href="https://www.freepik.es/vector-gratis/tableta-imagen-votiva-japonesa-ano-caligrafia-kanji-buey_34617596.htm#page=3&query=japonesa&position=16&from_view=author">https://www.freepik.es/vector-gratis/tableta-imagen-votiva-japonesa-ano-caligrafia-kanji-buey_34617596.htm#page=3&query=japonesa&position=16&from_view=author</a></li>
+
+            </ul>
+            
         </section>
     </main>
 
     <footer>
         <div>
             <a href="./index.html" class="logo">
-                <h1>Hōmon</h1>
-                <p>Nara</p>
+                <object data="img/logo/logo-50.svg" type="image/svg+xml"></object>
+            <h1>Nara</h1>
             </a>
         </div>
         <div>
