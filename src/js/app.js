@@ -64,7 +64,12 @@ $(function(){
 
     //Retorna la url de la imatge segons si te art direction o no
     function chooseImage(obj, indexUrl){
-        if(Object.keys(obj.type.jpg).length === 2 && indexUrl < 2){
+       /* if(Object.keys(obj.type.jpg).length === 2 && indexUrl < 2){
+            return urlImages + obj.type.jpg.art[indexUrl];
+        }else{
+            return urlImages + obj.type.jpg.url[indexUrl];
+        }*/
+        if(obj.type.jpg.art != undefined && indexUrl < 2){
             return urlImages + obj.type.jpg.art[indexUrl];
         }else{
             return urlImages + obj.type.jpg.url[indexUrl];
@@ -73,9 +78,10 @@ $(function(){
 
     //Contingut swipers
     function contentImageCard(obj) {
-        return `<img src="${chooseImage(obj, 1)}"
-                    srcset="${chooseImage(obj, 0)}?as=webp 1x,
-                            ${chooseImage(obj, 1)}?as=webp 2x"
+        return `<img src="${urlImages + obj.type.jpg.dpi[0]}"
+                    srcset="${urlImages + obj.type.jpg.dpi[0]}?as=webp 1x,
+                            ${urlImages + obj.type.jpg.dpi[1]}?as=webp 2x,
+                            ${urlImages + obj.type.jpg.dpi[2]}?as=webp 3x"
 
                     alt="${obj.alt}">`;
     }
