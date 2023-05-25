@@ -931,17 +931,17 @@ swiper-container swiper-slide h5{
 /*****HOVER AND ACTIVE****/
 /**general links (s'exclou el logotip, els cards del swiper i els cards de la pàgina categories**/
 a:hover:not(.logo, .card){
-    text-decoration: underline var(--main2Color) 2px;
-    background-position: 0;
+    text-decoration: underline var(--main2Color) 2px !important;
+    background-position: 0 !important;
 }
 
 a:hover:not(.logo, .menu a)::before, a:focus:not(.logo, .menu a)::before {
-    width:100%;
+    width:100% !important;
 }
 
 a:active:not(.logo, .menu a), a:focus:not(.logo, .menu a) {
-    background-image: linear-gradient(to right, var(--mainColor), var(--mainColor) 50%, var(--mainColor) 50%);
-    text-decoration: underline var(--mainColor) 2px;
+    background-image: linear-gradient(to right, var(--mainColor), var(--mainColor) 50%, var(--mainColor) 50%) !important;
+    text-decoration: underline var(--mainColor) 2px !important;
 }
 
 a:active:not(.logo, .menu a)::before  {
@@ -950,9 +950,6 @@ a:active:not(.logo, .menu a)::before  {
 }
 
 /**Logo**/
-a.logo:hover{
-    text-decoration: none !important;
-}
 a.logo:hover h1{
     color: var(--main2Color);
     font-weight: 700;
