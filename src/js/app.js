@@ -268,8 +268,19 @@ $(function(){
                                                         <h3>${food.name}</h3>
                                                         <p>${food.description}</p>
                                                         <figure>
-                                                            <img src="${food.img}" alt="${food.alt}">
-                                                            <figcaption><a href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
+                                                        <img src="${chooseImage(food.img, 1)}"
+                                                            srcset="${chooseImage(food.img, 0)}?as=webp 1x,
+                                                                    ${chooseImage(food.img, 0)} 1x,
+                                                                    ${chooseImage(food.img, 1)}?as=webp 2x,
+                                                                    ${chooseImage(food.img, 1)} 2x,
+                                                                    ${chooseImage(food.img, 2)}?as=webp 3x,
+                                                                    ${chooseImage(food.img, 2)} 3x,
+                                                                    ${chooseImage(food.img, 3)}?as=webp 5x,
+                                                                    ${chooseImage(food.img, 3)} 5x"
+                                                            sizes="(max-width: 849px) 100vw,
+                                                                    (min-width: 850px) 40vw"
+                                                            alt="${food.img.alt}">
+                                                            <figcaption><a class="figcaptionLink" href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
                                                         </figure>
                                                         
                                                     </section>`);
@@ -284,7 +295,7 @@ $(function(){
             const objArch =  arrArch.filter(arch => arch.id === idArch);
             const objArch2 =  arrArch.filter(arch => arch.id !== idArch);
             const title = `<h2>${objArch[0].name}</h2>`;
-            
+
             //Modifica el breadcrumb
             $(".breadcrumbs p .currentPage").replaceWith(`<a href="category.html">${breadcrumbCategory}</a>`);
             $(".breadcrumbs p").append(`<span class="separator">></span><span class="currentPage">${objArch[0].name}</span>`);
@@ -295,14 +306,14 @@ $(function(){
             //Contingut bàsic. 3 paràgrafs i 2 imatges.
             let content = `<p>${objArch[0].description[0]}</p>
                             <figure>
-                                <img src="${objArch[0].img[0].url}" alt="${objArch[0].img[0].alt}">
-                                <figcaption><a href="${objArch[0].img[0].attribution.url}">${objArch[0].img[0].attribution.author}</a></figcaption>
+                                ${contentImagesArchitecture(objArch[0].img[0])}
+                                <figcaption><a class="figcaptionLink" href="${objArch[0].img[0].attribution.url}">${objArch[0].img[0].attribution.author}</a></figcaption>
                             </figure>
                             <p>${objArch[0].description[1]}</p>
                             <p>${objArch[0].description[2]}</p>
                             <figure>
-                                <img src="${objArch[0].img[1].url}" alt="${objArch[0].img[1].alt}">
-                                <figcaption><a href="${objArch[0].img[1].attribution.url}">${objArch[0].img[1].attribution.author}</a></figcaption>
+                                ${contentImagesArchitecture(objArch[0].img[1])}
+                                <figcaption><a class="figcaptionLink" href="${objArch[0].img[1].attribution.url}">${objArch[0].img[1].attribution.author}</a></figcaption>
                             </figure>`;
 
             //Si te un quart pràgraf, s'afegeix
@@ -321,8 +332,8 @@ $(function(){
                     $(".containerDetail article ul").append(`<li>${li}</li>`);
                 });
                 $(".containerDetail article").append(`<figure>
-                                                        <img src="${objArch[0].img[2].url}" alt="${objArch[0].img[2].url}">
-                                                        <figcaption><a href="${objArch[0].img[2].attribution.url}">${objArch[0].img[2].attribution.author}</a></figcaption>
+                                                        ${contentImagesArchitecture(objArch[0].img[2])}
+                                                        <figcaption><a class="figcaptionLink" href="${objArch[0].img[2].attribution.url}">${objArch[0].img[2].attribution.author}</a></figcaption>
                                                     </figure>`);
             }
             
@@ -330,20 +341,23 @@ $(function(){
             $(".containerDetail article").append(`<section>
                                             <h3>Ubicació</h3>
                                             <div class="architectureMap" id="mapDetail${objArch[0].id}"></div>
-                                        </section>`);
-
-            createMap(`mapDetail${objArch[0].id}`, objArch[0].latitude, objArch[0].altitude, objArch[0].img[0].url, objArch[0].name, 15);
+                                        </section>`
+            );
+         
+            createMap(`mapDetail${objArch[0].id}`, objArch[0].latitude, objArch[0].altitude, urlImages+(objArch[0].img[0].type.jpg.url[0]), objArch[0].img[0].alt, objArch[0].name, 15);
             
             //Crea un swiper amb la resta de punts d'interès
             $(".containerDetail").append(`<section>
                                             <h2>Altres Punts d'interès</h2>
-                                            <swiper-container class="swiperDetail" space-between="25" grab-cursor="true" navigation="true" slides-per-view="1"></swiper-container>
+                                            <div class="divSwiper">
+                                                <swiper-container class="swiperDetail" space-between="25" grab-cursor="true" navigation="true" slides-per-view="1"></swiper-container>
+                                            </div>
                                         </section>`);
             objArch2.forEach( obj => {
-                $(".containerDetail .swiperDetail").append(`<swiper-slide class="card">
-                                                                <div>
-                                                                    <a id="arch${obj.id}" href="./detail.html" class="card">
-                                                                    <img src="${obj.img[0].url}" alt="${obj.img[0].alt}">
+                $(".containerDetail .swiperDetail").append(`<swiper-slide>
+                                                                <div class="card cardSwiper">
+                                                                    <a id="arch${obj.id}" href="./detail.html">
+                                                                    ${contentImageCard(obj.img[0])}
                                                                     <h5>${obj.name}</h5>
                                                                     </a>
                                                                 </div>
@@ -357,7 +371,6 @@ $(function(){
         detailClicked  = $(this).attr('id');
         localStorage.setItem("detail", detailClicked);
     });
-
     /*****NAV*****/
     //Modifica la variable clickedCategory
     setCategory(".indexHeader a");
