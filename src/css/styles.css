@@ -51,7 +51,7 @@ footer h1{
 
 h2{
     font-size: 3rem;
-    word-break: break-word;
+    overflow-wrap: break-word;
     font-family: 'Encode Sans SC', sans-serif;
     margin-bottom: 25px;
 }
@@ -60,7 +60,7 @@ h3{
     font-size: 2.5rem;
     font-weight: 500;
     text-decoration: underline;
-    word-break: break-word;
+    overflow-wrap: break-word;
     font-family: 'Encode Sans SC', sans-serif;
 }
 
@@ -87,7 +87,7 @@ li{
 
 a:not(.logo, .card a, .menu a){
     text-decoration: none;
-    word-break: break-word;
+    overflow-wrap: break-word;
     background-image: linear-gradient(to right, var(--main2Color),  var(--main2Color) 50%, #000 50%);
     background-size: 200% 100%;
     background-position: -100%;
@@ -95,7 +95,7 @@ a:not(.logo, .card a, .menu a){
     padding: 5px 0;
     position: relative;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
     transition: all 0.3s ease-in-out;
 }
 a:not(.logo, .card a, .menu a):before {
@@ -337,7 +337,7 @@ footer > div:last-child li{
 }
 
 footer > div:last-child li a{
-    color: var(--background);
+    color: var(--background) !important;
     font-weight: 500;
     background-image: linear-gradient(to right, var(--main2Color), var(--main2Color) 50%, var(--background) 50%)
 }
@@ -851,7 +851,7 @@ swiper-container swiper-slide h5{
     
 }
 
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
     .logoName h1, .logoName p {
         font-size: 4rem;
     }
