@@ -392,15 +392,16 @@ footer > div:last-child li a{
     text-align: end;
 }
 
-.containerIndex > section:first-child > div > div > p{
+.containerIndex > section:first-child > div > h2 {
     text-align: center;
     font-size: 3rem;
     padding: 25px;
     font-family: 'Encode Sans SC', sans-serif;
     margin: 0;
+    font-weight: 400;
 }
 
-.containerIndex > section:first-child > div > div > p span{
+.containerIndex > section:first-child > div > h2 > span{
     display: block;
     margin-top: 15px;
     font-size: 2rem;

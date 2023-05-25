@@ -75,12 +75,8 @@ $(function(){
     function contentImageCard(obj) {
         return `<img src="${chooseImage(obj, 1)}"
                     srcset="${chooseImage(obj, 0)}?as=webp 1x,
-                            ${chooseImage(obj, 0)} 1x,
-                            ${chooseImage(obj, 1)}?as=webp 2x,
-                            ${chooseImage(obj, 1)} 2x"
-                    sizes="(max-width: 384px) 100vw,
-                            (max-width: 799px) 50vw,
-                            (min-width: 800px) 33vw"
+                            ${chooseImage(obj, 1)}?as=webp 2x"
+
                     alt="${obj.alt}">`;
     }
     //Contingut imatges dels punts d'interès (pàgina Detail)
@@ -120,9 +116,9 @@ $(function(){
     //Inserta el menú desplegable, el mostra. Quan es tanca, s'esborra
     const contentMenu = `<ul class="menuUl">
                             <li><a href="./about.html">Sobre Nara</a></li>
-                            <li><a id="architecture" href="./category.html">Punts d'interès</a></li>
-                            <li><a id="gastronomy" href="./detail.html">Gastronomia</a></li>
-                            <li><a id="accommodations" href="./detail.html">Allotjaments turístics</a></li>
+                            <li><a id="architecture3" href="category.html">Punts d'interès</a></li>
+                            <li><a id="gastronomy3" href="detail.html">Gastronomia</a></li>
+                            <li><a id="accommodations3" href="detail.html">Allotjaments turístics</a></li>
                         </ul>`;
 
     $(".iconMenu").on("click", function(){
@@ -270,17 +266,12 @@ $(function(){
                                                         <h3>${food.name}</h3>
                                                         <p>${food.description}</p>
                                                         <figure>
-                                                        <img src="${chooseImage(food.img, 1)}"
+                                                        <img src="${chooseImage(food.img, 3)}"
                                                             srcset="${chooseImage(food.img, 0)}?as=webp 1x,
-                                                                    ${chooseImage(food.img, 0)} 1x,
                                                                     ${chooseImage(food.img, 1)}?as=webp 2x,
-                                                                    ${chooseImage(food.img, 1)} 2x,
                                                                     ${chooseImage(food.img, 2)}?as=webp 3x,
-                                                                    ${chooseImage(food.img, 2)} 3x,
-                                                                    ${chooseImage(food.img, 3)}?as=webp 5x,
-                                                                    ${chooseImage(food.img, 3)} 5x"
-                                                            sizes="(max-width: 849px) 100vw,
-                                                                    (min-width: 850px) 40vw"
+                                                                    ${chooseImage(food.img, 3)}?as=webp 5x"
+
                                                             alt="${food.img.alt}">
                                                             <figcaption><a class="figcaptionLink" href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
                                                         </figure>
