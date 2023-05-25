@@ -112,6 +112,7 @@ $(function(){
 
 
 
+ /************************************PAGES CONTENT************************************/
     /*****HEADER*****/
     //Menu
     //Inserta el menú desplegable, el mostra. Quan es tanca, s'esborra
@@ -158,7 +159,7 @@ $(function(){
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
-    x[slideIndex-1].style.display = "block";
+    x[slideIndex-1].style.display = "inline-block";
     }
 
     let n = 1;
@@ -174,24 +175,21 @@ $(function(){
     /*****INDEX*****/
     //Afegeix el mapa a la pàgina principal i el swiper dels punts d'interès
     if($(".containerIndex")[0]){
-        createMap('mapIndex', 34.413836863583136, 135.86368042265963, "https://upload.wikimedia.org/wikipedia/commons/2/2f/T%C5%8Ddai-ji_Kon-d%C5%8D.jpg", "Prefectura de Nara", 10);
-        
         const arrArch = data["architecture"].information;
+      
+        createMap('mapIndex', 34.413836863583136, 135.86368042265963, `${urlImages + arrArch[1].img[0].type.jpg.url[0]}`, `${arrArch[1].img[0].alt}`, "Prefectura de Nara", 10);
+        
         arrArch.forEach( obj => {
             $(".containerIndex .swiperIndex").append(`<swiper-slide>
-                                                            <div>
-                                                                <a id="arch${obj.id}" href="./detail.html" class="card">
-                                                                <img src="${obj.img[0].url}" alt="${obj.img[0].alt}">
+                                                            <div class="card cardSwiper">
+                                                                <a id="arch${obj.id}" href="./detail.html" >
+                                                                ${contentImageCard(obj.img[0])}
                                                                 <h5>${obj.name}</h5>
                                                                 </a>
                                                             </div>
                                                         </swiper-slide>`);
-        });
+            });
     }
-
-
-
-
 
     /*****CATEGORY*****/
     //Crea el contingut de la pàgina
@@ -201,11 +199,11 @@ $(function(){
         $(".container").prepend(breadcrumb);
 
         const arrArch = data["architecture"].information;
-        arrArch.forEach( a => {
+        arrArch.forEach( obj => {
             $(".containerCategory ul").append(`<li class="card">
-                                                <a href="./detail.html" id="arch${a.id}">
-                                                    <img src="${a.img[0].url}" alt="${a.img[0].url}">
-                                                    <h5>${a.name}</h5>
+                                                <a href="./detail.html" id="arch${obj.id}">
+                                                    ${contentImageCard(obj.img[0])}
+                                                    <h5>${obj.name}</h5>
                                                 </a>
                                                 </li>`);
         });
