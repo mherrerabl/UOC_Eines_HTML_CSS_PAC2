@@ -169,7 +169,7 @@ a.btn{
     display: none;
 }
 
-.mainNav .navBigScreen a{
+.indexHeader nav .mainNav .navBigScreen > li > a{
     text-decoration: underline var(--mainColor) 2px;
 }
 
