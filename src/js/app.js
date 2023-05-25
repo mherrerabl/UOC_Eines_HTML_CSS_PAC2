@@ -12,7 +12,9 @@ $(function(){
     //Modifica la variable de la categoria clicada
     function setCategory(el) {
         $(el).on("click", function(event){
-            categoryClicked = event.target.id;
+            let nameCategory = event.target.id;
+            let category = nameCategory.substring(0, nameCategory.length-1);
+            categoryClicked = category;
             localStorage.setItem("category", categoryClicked);
         });
     }
@@ -227,7 +229,7 @@ $(function(){
         if(categoryClicked === "architecture"){
             breadcrumbCategory = "Punts d'interès";
         }else if(categoryClicked === "gastronomy"){
-            breadcrumbCategory = "Punts d'interès"
+            breadcrumbCategory = "Gastronomia"
         }else{
             breadcrumbCategory = "Allotjaments turístics"
         }

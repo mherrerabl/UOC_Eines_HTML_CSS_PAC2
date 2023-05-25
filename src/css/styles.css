@@ -34,7 +34,7 @@ header h1{
     color: var(--mainColor);
 }
 
-footer h1{
+footer h2{
     font-size: 4rem;
     font-family: 'Aboreto', cursive;
     color: var(--mainColor);
@@ -98,6 +98,7 @@ a:not(.logo, .card a, .menu a){
     color: transparent;
     transition: all 0.3s ease-in-out;
 }
+
 a:not(.logo, .card a, .menu a):before {
     content: '';
     background: var(--main2Color);
@@ -204,7 +205,7 @@ object{
     cursor: pointer;
 }
 
-.logo h1{
+.logo h1, .logo h2{
     margin-left: 5px;
 }
 
@@ -337,9 +338,8 @@ footer > div:last-child li{
 }
 
 footer > div:last-child li a{
-    color: var(--background) !important;
-    font-weight: 500;
-    background-image: linear-gradient(to right, var(--main2Color), var(--main2Color) 50%, var(--background) 50%)
+    font-weight: 600;
+    background-image: linear-gradient(to right, var(--main2Color), var(--main2Color) 50%, var(--background) 50%) !important;
 }
 
 /*****BREADCRUMBS*****/
