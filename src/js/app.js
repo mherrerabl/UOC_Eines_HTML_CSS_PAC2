@@ -371,11 +371,27 @@ $(function(){
         detailClicked  = $(this).attr('id');
         localStorage.setItem("detail", detailClicked);
     });
+
     /*****NAV*****/
     //Modifica la variable clickedCategory
     setCategory(".indexHeader a");
     setCategory("footer a");
 
+
+    /*****LOGO HOVER*****/ 
+    $(".logo:not(.logoIndex)").on("mouseenter", function(event){
+        const objectEl = $(event.currentTarget).children("object")[0];
+        const documentEl = objectEl.contentDocument;
+        const svgEl = documentEl.querySelector("svg");
+        svgEl.style.color = "#B3102E";
+    });
+
+    $(".logo:not(.logoIndex)").on("mouseleave", function(event){
+        const objectEl = $(event.currentTarget).children("object")[0];
+        const documentEl = objectEl.contentDocument;
+        const svgEl = documentEl.querySelector("svg");
+        svgEl.style.color = "#006612";
+    });
 
 
     //Modifica el nombre de slide que es mostren en pantalla segons la mida de la pantalla
@@ -386,5 +402,4 @@ $(function(){
         let wWidth = $(window).width();
         gridSwiper(wWidth);
     });
-
 });
