@@ -87,7 +87,7 @@ li{
 
 a:not(.logo, .card a, .menu a){
     text-decoration: none;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     background-image: linear-gradient(to right, var(--main2Color),  var(--main2Color) 50%, #000 50%);
     background-size: 200% 100%;
     background-position: -100%;
@@ -492,7 +492,7 @@ swiper-container swiper-slide h5{
     list-style-type: disc;
 }
 .containerLinks a:not(.breadcrumbs a){
-    color: blue;
+    background-image: linear-gradient(to right,var(--main2Color),var(--main2Color)50%,blue 50%) !important;
     text-decoration: underline;
 }
 
@@ -562,7 +562,7 @@ swiper-container swiper-slide h5{
 }
 
 .containerDetail .accommodation a{
-    text-decoration: underline var(--mainColor) 2px;
+    text-decoration: underline var(--mainColor) 2px !important;
     display: inline-block;
     margin-bottom: 25px;
 }
@@ -946,8 +946,8 @@ a:active:not(.logo, .menu a), a:focus:not(.logo, .menu a) {
 }
 
 a:active:not(.logo, .menu a)::before  {
-    width:100%;
-    background: var(--mainColor);
+    width:100% !important;
+    background: var(--mainColor) !important;
 }
 
 /**Logo**/

@@ -55,8 +55,7 @@
                     "type": {
                         "jpg":{
                             "url": ["src/img/gastronomy/narazuke/jpg/narazuke_480.jpg",
-                                    "src/img/gastronomy/narazuke/jpg/narazuke_850.jpg",
-                                    "src/img/gastronomy/narazuke/jpg/narazuke_1200.jpg"
+                                    "src/img/gastronomy/narazuke/jpg/narazuke_850.jpg"
                             ]
                         }
                     }
@@ -74,8 +73,7 @@
                     "type": {
                         "jpg":{
                             "url": ["src/img/gastronomy/chagayu/jpg/chagayu_480.jpg",
-                                    "src/img/gastronomy/chagayu/jpg/chagayu_850.jpg",
-                                    "src/img/gastronomy/chagayu/jpg/chagayu_1200.jpg"
+                                    "src/img/gastronomy/chagayu/jpg/chagayu_850.jpg"
                             ]
                         }
                     }
@@ -93,8 +91,7 @@
                     "type": {
                         "jpg":{
                             "url": ["src/img/gastronomy/kuzumochi/jpg/kuzumochi_480.jpg",
-                                    "src/img/gastronomy/kuzumochi/jpg/kuzumochi_850.jpg",
-                                    "src/img/gastronomy/kuzumochi/jpg/kuzumochi_1200.jpg"
+                                    "src/img/gastronomy/kuzumochi/jpg/kuzumochi_850.jpg"
                             ]
                         }
                     }
@@ -112,8 +109,7 @@
                     "type": {
                         "jpg":{
                             "url": ["src/img/gastronomy/miwa-somen/jpg/miwa-somen_480.jpg",
-                                    "src/img/gastronomy/miwa-somen/jpg/miwa-somen_850.jpg",
-                                    "src/img/gastronomy/miwa-somen/jpg/miwa-somen_1200.jpg"
+                                    "src/img/gastronomy/miwa-somen/jpg/miwa-somen_850.jpg"
                             ]
                         }
                     }

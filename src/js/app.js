@@ -64,11 +64,6 @@ $(function(){
 
     //Retorna la url de la imatge segons si te art direction o no
     function chooseImage(obj, indexUrl){
-       /* if(Object.keys(obj.type.jpg).length === 2 && indexUrl < 2){
-            return urlImages + obj.type.jpg.art[indexUrl];
-        }else{
-            return urlImages + obj.type.jpg.url[indexUrl];
-        }*/
         if(obj.type.jpg.art != undefined && indexUrl < 2){
             return urlImages + obj.type.jpg.art[indexUrl];
         }else{
@@ -99,8 +94,7 @@ $(function(){
                             type="image/webp">
                     
                     <source media="(min-width: 850px)" 
-                            srcset="${chooseImage(obj, 2)} 3x,
-                                    ${chooseImage(obj, 3)} 5x" 
+                            srcset="${chooseImage(obj, 2)}" 
                             type="image/jpg">
                     <source media="(min-width: 480px)" 
                             srcset="${chooseImage(obj, 1)}" 
@@ -271,16 +265,15 @@ $(function(){
                                                         <h3>${food.name}</h3>
                                                         <p>${food.description}</p>
                                                         <figure>
-                                                        <img src="${chooseImage(food.img, 3)}"
-                                                            srcset="${chooseImage(food.img, 0)}?as=webp 1x,
-                                                                    ${chooseImage(food.img, 1)}?as=webp 2x,
-                                                                    ${chooseImage(food.img, 2)}?as=webp 3x,
-                                                                    ${chooseImage(food.img, 3)}?as=webp 5x"
-
+                                                        <img src="${chooseImage(food.img, 1)}"
+                                                            srcset="${chooseImage(food.img, 0)}?as=webp 480w,
+                                                                    ${chooseImage(food.img, 1)}?as=webp 850w"
+                                                            sizes="(max-width: 849px) 100vw,
+                                                                    (min-width: 850px) 50vw"
                                                             alt="${food.img.alt}">
                                                             <figcaption><a class="figcaptionLink" href="${food.attribution.url}">${food.attribution.author}</a></figcaption>
                                                         </figure>
-                                                        
+
                                                     </section>`);
             });
                 
