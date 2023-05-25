@@ -171,7 +171,7 @@ $(function(){
         slideHeader(slideIndex += 1);
         n++;
         n > 4 ? n = 1 : n;
-    }, 50000);
+    }, 5000);
 
 
 
