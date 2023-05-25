@@ -28,12 +28,24 @@ body{
     max-width: 1200px;
 }
 
-.logo h1, .logo p, .logo a{
+header h1{
+    font-size: 7vw;
+    font-family: 'Aboreto', cursive;
+    color: var(--mainColor);
+}
+
+footer h1{
+    font-size: 4rem;
+    font-family: 'Aboreto', cursive;
+    color: var(--mainColor);
+}
+
+.logoName h1, .logoName p, .logoName a{
     font-size: 4rem;
     font-family: 'Aboreto', cursive;
 }
 
-.logo p{
+.logoName p{
     color: var(--mainColor);
 }
 
@@ -73,9 +85,29 @@ li{
     list-style: none;
 }
 
-a{
+a:not(.logo, .card a, .menu a){
     text-decoration: none;
     word-break: break-word;
+    background-image: linear-gradient(to right, var(--main2Color),  var(--main2Color) 50%, #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+a:not(.logo, .card a, .menu a):before {
+    content: '';
+    background: var(--main2Color);
+    display: block;
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.3s ease-in-out;
 }
 
 p{
@@ -84,7 +116,7 @@ p{
     margin-bottom: 25px;
 }
 
-.logo{
+.logoName{
     word-break: normal;
 }
 
@@ -101,7 +133,7 @@ figcaption{
     margin-top: 5px;
 }
 
-figcaption a{
+figure > figcaption > .figcaptionLink{
     font-size: 1.4rem;
     text-decoration: underline var(--mainColor) 2px;
 }
@@ -137,34 +169,54 @@ a.btn{
     display: none;
 }
 
-.navBigScreen a{
+.mainNav .navBigScreen a{
     text-decoration: underline var(--mainColor) 2px;
-}
-
-.logo{
-    text-align: right;
-    font-weight: 900;
-    display: inline-block;
-    padding-left: 15px;
-    padding-top: 15px;
-}
-
-.logo p{
-    text-align: end;
 }
 
 .indexHeader nav {
     position: absolute;
     z-index: 10;
-    background: linear-gradient(to top, rgba(255,0,0,0), rgba(82,82,82, 0.7));
     width: 100%;
-    height: 15vw;
+    height: 100%;
+    background: linear-gradient(to top, transparent, 50%, rgba(255, 255, 255, 0.7));
+}
+
+.indexHeader .slimNav{
+    background-color: rgba(255, 255, 255,0.5);
+}
+
+object{
+    width: 25vw;
+    max-width: 125px;
+    max-height:100%;
+    pointer-events: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.logo:not(.logoIndex){
+    cursor: pointer;
+}
+
+.logo h1{
+    margin-left: 5px;
+}
+
+.logoHover{
+    position: absolute;
+    opacity: 0;
 }
 
 .indexHeader nav .dropdown i{
     position: absolute;
     right: 25px;
-    bottom: -22vw;
+    bottom: 35px;
     cursor:pointer
 }
 
@@ -184,18 +236,19 @@ a.btn{
     height: 100%;
     padding: 7px 25px;
     display: block;
+    text-decoration: none;
 }
 
 /**Slider HeaderIndex**/
-.indexHeader .slideshow {
+.indexHeader .slideHeader {
     position: relative;
     width: 100%;
     height: inherit;
 }
-.slideshow img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+
+.slideHeader img {
+   /* position: absolute;*/
+    max-width: 100%;
     display: none;
 }
 
@@ -213,12 +266,13 @@ a.btn{
 .containerHeader {
     height: 30vw;
 }
-.slideshow img {
-    height: auto;
+
+.slideHeaderSlim picture{
+    min-width: 100%;
 }
 
-.containerHeader nav .dropdown i{
-    bottom: -5vw;
+.slideHeaderSlim img{
+    min-width: inherit;
 }
 
 
@@ -239,7 +293,7 @@ footer > div:first-child{
     margin: 15px auto;
 }
 
-footer > div .logo{
+footer > div .logoName{
     padding: 0;
 }
 
@@ -255,7 +309,7 @@ footer div:not(:last-child,:first-child){
 }
 
 footer div:not(:last-child,:first-child) a{
-    padding-left: 15px;
+    margin-left: 15px;
 
 }
 
@@ -267,23 +321,25 @@ footer div:first-child{
     padding-bottom: 0;
 }
 
-footer div:last-child{
+footer > div:last-child{
     background: var(--mainColor);
     padding: 15px 0;
 }
 
-footer div:last-child ul{
+footer > div:last-child ul{
     display: grid;
     grid-template-columns: auto;
 }
 
-footer div:last-child li{
+footer > div:last-child li{
     display: grid;
     justify-items: center;
 }
 
-footer div:last-child li a{
+footer > div:last-child li a{
     color: var(--background);
+    font-weight: 500;
+    background-image: linear-gradient(to right, var(--main2Color), var(--main2Color) 50%, var(--background) 50%)
 }
 
 /*****BREADCRUMBS*****/
@@ -306,27 +362,50 @@ footer div:last-child li a{
 }
 
 /**Section 1**/
-.containerIndex .logo{
-    padding: 0;
-}
 .containerIndex > section:first-child{
-    margin-top: 25px;
-    margin-bottom: 100px;
+    clip-path: polygon(50% 0%, 100% 25%, 98% 100%, 2% 100%, 0% 25%);
+    background-color: #eecfac;
+}
+
+.containerIndex > section:first-child > div {   
+    margin: 25px 0px;
+    padding-bottom: 25px;
+    clip-path: polygon(50% 3%, 97% 27%, 95% 97%, 5% 97%, 3% 27%);
+}
+.containerIndex > section:first-child img{
+    width: 100%;
+}
+.containerIndex > section:first-child > div > div{
+    width: 80%;
+    margin: 0 auto;
     text-align:center;
 }
 
-.containerIndex > section:first-child > p{
-    margin-top: 15px;
-    text-align: center;
-    font-size: 3rem;
-    font-family: 'Encode Sans SC', sans-serif;
+.containerIndex .logoName{
+    text-align: right;
+    font-weight: 900;
+    padding: 0;
+    display: inline-block;
 }
 
-.containerIndex > section:first-child > p span{
+.logoName p{
+    text-align: end;
+}
+
+.containerIndex > section:first-child > div > div > p{
+    text-align: center;
+    font-size: 3rem;
+    padding: 25px;
+    font-family: 'Encode Sans SC', sans-serif;
+    margin: 0;
+}
+
+.containerIndex > section:first-child > div > div > p span{
     display: block;
     margin-top: 15px;
     font-size: 2rem;
 }
+
 
 
 /**Section 2**/
@@ -341,26 +420,35 @@ footer div:last-child li a{
 }
 
 /**Section 3**/
-swiper-container{
-    width: 100%;
-    height: 90vw;
-    margin-bottom: 25px;
+.divSwiper{
+    overflow: hidden;
+    padding: 25px 0;
+    height: max-content;
 }
 
-swiper-container swiper-slide {
+swiper-container{
+    overflow: visible;
+    height: max-content;
+}
+
+swiper-slide{
+    height: max-content;
+}
+
+swiper-container .card {
+    display: block;
     text-align: center;
     background: var(--background);
+    padding-bottom: 35px;
 }
 
-swiper-container swiper-slide div{
-    height: 70%;
+swiper-slide picture {
+    display: block;
 }
 
 swiper-slide img {
-    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 200px; 
 }
 
 swiper-container swiper-slide h5{
@@ -473,7 +561,7 @@ swiper-container swiper-slide h5{
 }
 
 .containerDetail .accommodation a{
-    text-decoration: underline var(--main2Color) 2px;
+    text-decoration: underline var(--mainColor) 2px;
     display: inline-block;
     margin-bottom: 25px;
 }
@@ -498,33 +586,45 @@ swiper-container swiper-slide h5{
 
 
 
+.containerAbout .divSvg{
+    border: 15px groove black;
+    margin: 25px auto;
+    max-width: 350px;
+}
+
+.containerAbout svg{
+    display: block;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+
 /**********MEDIA QUERIES**********/
 @media screen and (max-width: 479px) {
     /**HEADER**/
-    header .logo h1, header .logo p{
+    header .logoName h1, header .logoName p{
         font-size: 3rem;
     }
+
     /**FOOTER**/
    
+    /**ABOUT**/
+    .containerAbout svg{
+        max-width: 85%;
+    }
 }
 
-@media screen and (min-width: 480px) and (max-width: 799px){
+@media screen and (min-width: 480px) and (max-width: 849px){
     /*****HEADER*****/
-    .indexHeader .logo{
-        padding: 25px;
-    }
 
-    .indexHeader nav .dropdown i{
-        bottom: -23vw;
-    }
 
     /**HEADER2**/
     .containerHeader{
         height: 25vw;
     }
-    .containerHeader nav .dropdown i{
-        bottom: -5vw;
-    }
+    
 
     /*****FOOTER*****/
     footer{
@@ -550,8 +650,8 @@ swiper-container swiper-slide h5{
 
  
     /*****INDEX*****/
-    swiper-container{
-        height: 50vw;
+    .containerIndex > section:first-child > div img {   
+        clip-path: polygon(50% 6%, 96% 37%, 95% 95%, 5% 95%, 4% 37%);
     }
 
     /*****CATEGORY*****/
@@ -567,31 +667,32 @@ swiper-container swiper-slide h5{
     
 }
 
-@media screen and (min-width: 800px){
+@media screen and (min-width: 850px){
    /*****HEADER*****/
+    header h1{
+        font-size: 4rem;
+    }
+
     .indexHeader .dropdown{
         display: none;
     }
 
-    .indexHeader .navBigScreen {
-        display: block;
-    }
-
     .indexHeader nav .mainNav{
         display: grid;
-        padding: 25px 60px 25px 40px;
+        padding: 5px 60px 25px 40px;
     }
 
-    .indexHeader .logo{
-        padding-left: 0;
-        width: 125px;
+    .logo{
+        margin: 0;
     }
 
     .indexHeader .mainNav ul{
+        display: block;
         align-items: center;
         display: flex;
         grid-column-start: 2;
-        justify-content: space-between;
+        justify-content: end;
+        gap: 20px;
     }
 
     /**HEADER2**/
@@ -615,10 +716,17 @@ swiper-container swiper-slide h5{
 
 
     /*****INDEX*****/
-    swiper-container{
-        height: 20vw;
-        max-height: 300px;
+    .containerIndex > section:first-child{
+        width: 75vw;
+        max-width: 1000px;
+        margin: auto;
+        margin-bottom: 70px;
     }
+    
+    .containerIndex > section:first-child > div img {   
+        clip-path: polygon(50% 6%, 96% 37%, 95% 95%, 5% 95%, 4% 37%);
+    }
+
 
     /*****CATEGORY*****/
     .containerCategory > ul{
@@ -702,8 +810,8 @@ swiper-container swiper-slide h5{
 
     .containerAbout > div{
        display: grid;
-       grid-template-columns: auto auto;
-       grid-gap: 25px;
+       grid-template-columns: auto 50%;
+       grid-gap: 50px;
     }
 
     .containerAbout div > p{
@@ -711,8 +819,7 @@ swiper-container swiper-slide h5{
     }
 
     .containerAbout div > figure img{
-        width: 500px;
-        height: 300px;
+        max-height: 200px;
     }
 
     .containerAbout section {
@@ -745,7 +852,7 @@ swiper-container swiper-slide h5{
 }
 
 @media screen and (min-width: 1024) {
-    .logo h1, .logo p {
+    .logoName h1, .logoName p {
         font-size: 4rem;
     }
 
@@ -769,9 +876,17 @@ swiper-container swiper-slide h5{
         font-size: 1.8rem;
     }
 
+    .mainNav .logoName img{
+        margin-right: 25px;
+    }
+
     /*****INDEX*****/
     .containerIndex{
         margin: 50px;
+    }
+
+    .containerIndex > section:first-child > div img {   
+        clip-path: polygon(50% 5%, 96.5% 35%, 95.5% 95%, 4.5% 95%, 3.5% 35%);
     }
 }
     
@@ -783,14 +898,23 @@ swiper-container swiper-slide h5{
     }
 
     /*****HEADER*****/
+    .containerHeader{
+        height: 200px;
+    }
+
     .indexHeader{
         max-height: 700px;
     }
+    
+    .indexHeader nav .mainNav{
+        padding-top: 25px;
+    }
+
     .indexHeader .mainNav ul{
         grid-column-start: 3;
     }
   
-    .indexHeader .logo{
+    .indexHeader .logoName{
         width: 175px;
     }
 
@@ -798,19 +922,42 @@ swiper-container swiper-slide h5{
     .containerIndex {
         margin: 100px 0;
     }
+
+    .containerIndex > section:first-child > div {   
+        clip-path: polygon(50% 5%, 98% 29%, 96% 95%, 4% 95%, 2% 29%);
+    }
 }
 
 /*****HOVER AND ACTIVE****/
 /**general links (s'exclou el logotip, els cards del swiper i els cards de la pàgina categories**/
-a:hover:not(.logo, .card, .card a){
+a:hover:not(.logo, .card){
     text-decoration: underline var(--main2Color) 2px;
+    background-position: 0;
 }
 
-a:active:not(.logo, .card, .card a, .menu a), a:focus:not(.logo, .card, .card a, .menu a) {
+a:hover:not(.logo, .menu a)::before, a:focus:not(.logo, .menu a)::before {
+    width:100%;
+}
+
+a:active:not(.logo, .menu a), a:focus:not(.logo, .menu a) {
+    background-image: linear-gradient(to right, var(--mainColor), var(--mainColor) 50%, var(--mainColor) 50%);
+    text-decoration: underline var(--mainColor) 2px;
+}
+
+a:active:not(.logo, .menu a)::before  {
+    width:100%;
+    background: var(--mainColor);
+}
+
+/**Logo**/
+a.logo:hover{
+    text-decoration: none !important;
+}
+a.logo:hover h1{
     color: var(--main2Color);
-    text-decoration: underline var(--main2Color) 2px;
+    font-weight: 700;
 }
-
+   
 /**links header menu**/
 .menu li a:hover{
     text-decoration: none;
@@ -820,7 +967,7 @@ a:active:not(.logo, .card, .card a, .menu a), a:focus:not(.logo, .card, .card a,
 
 .menu li a:active, .menu li a:focus{
     color: var(--background);
-    background: var(--main2Color);
+    background: var(--mainColor);
 }
 
 .dropdown .iconMenu i:hover{
@@ -831,6 +978,7 @@ a:active:not(.logo, .card, .card a, .menu a), a:focus:not(.logo, .card, .card a,
     color: var(--mainColor);
 }
 
+
 /**links footer**/
 footer a:hover i, footer a:active i, footer a:focus i{
     color: var(--main2Color);
@@ -838,37 +986,95 @@ footer a:hover i, footer a:active i, footer a:focus i{
 
 /**Cards**/
 .card:hover{
-    border-bottom: 2px solid var(--main2Color);
-    height: auto;
     cursor: pointer;
+    transform: scale(1.1); 
+    box-shadow: 0 0 10px 4px var(--main2Color);    
 }
 
 .card:active, .card:focus{
-    border: 2px solid var(--main2Color);
-    height: auto;
     cursor: pointer;
+    box-shadow: 0 0 10px 4px var(--mainColor);
+    animation: zoom 0.2s ease-out;
 }
 
-/**Logo**/
-a.logo:hover, a.logo:hover p{
-    color: var(--main2Color);
-    cursor: pointer;
+
+@keyframes zoom {
+    0% {
+      transform: scale(1.1, 1.1);
+    }
+    50% {
+      transform: scale(0.9, 0.9);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
 }
 
-a.logo:active, a.logo:active p, a.logo:focus, a.logo:focus p{
-    color: var(--main2Color);
-    cursor: pointer;
+
+
+
+/***ANIMATION SVG**/
+.containerAbout svg .svg_1{
+    transform: translate(100%, -100%) scale(0.5, 0.5);
+    animation: bounce2 1.2s ease-in-out 1s forwards;
 }
 
-/**Swiper .card**/
-swiper-slide:hover{
-    border-bottom: 2px solid var(--main2Color);
-    height: auto;
-    cursor: pointer;
+.containerAbout svg .svg_2{
+    transform: translate(100%);
+    animation: right-in 0.8s ease-in-out 2.4s forwards;
 }
 
-swiper-slide:active, swiper-slide:focus{
-    border-bottom: 2px solid var(--main2Color);
-    height: auto;
-    cursor: pointer;
+.containerAbout svg .svg_3{
+    transform: translate(-200%);
+    animation: left-in 0.8s ease-in-out 2.4s forwards;
 }
+
+.containerAbout svg .svg_4{
+    transform: translate(-200%);
+    animation: left-in 0.8s ease-in-out 2.4s forwards;
+}
+
+
+@keyframes right-in {
+  0% {
+    transform: translate(100%);
+  }
+
+  50% {
+    transform: translate(-20%);
+  }
+
+  100% {
+    transform: translate(0%);
+  }
+}
+
+@keyframes left-in {
+    0% {
+      transform: translate(-200%);
+    }
+  
+    50% {
+      transform: translate(20%);
+    }
+  
+    100% {
+      transform: translate(0%);
+    }
+  }
+
+
+  @keyframes bounce2 {
+	0% {transform: scale(1, 1) translateY(-100%);}
+    20% { transform: scale(1, 1) translateY(0%); }
+    25% { transform: scale(1, 0.6) translateY(calc(0% + 120px));}
+    30% { transform: scale(1, 1) translateY(0%); }
+    45% {transform: scale(0.8, 1.2) translate(20px, -100px);}
+	55% { transform: scale(1, 1) translateY(0%); }
+    60% { transform: scale(1, 0.7) translateY(calc(0% + 75px));}
+    70% { transform: scale(1, 1) translateY(0%); }
+    80% {transform: scale(1, 1) translateY(-15%);}
+    100% {transform: scale(1, 1) translateY(0%);}
+
+}
+
