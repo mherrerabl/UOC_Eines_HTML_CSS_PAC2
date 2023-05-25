@@ -249,7 +249,7 @@ $(function(){
                                                         <p>Per a més informació visiti la web oficial: <a href="${hotel.url}">${hotel.name}</a></p>
                                                     </section>`);
                 
-                createMap(`map${hotel.id}`, hotel.latitude, hotel.altitude, "", hotel.ubication, 15);
+                createMap(`map${hotel.id}`, hotel.latitude, hotel.altitude, "", "", hotel.ubication, 15);
             });
         }
 

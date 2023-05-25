@@ -562,7 +562,7 @@ swiper-container swiper-slide h5{
 }
 
 .containerDetail .accommodation a{
-    text-decoration: underline var(--mainColor) 2px !important;
+    text-decoration: underline var(--mainColor) 2px;
     display: inline-block;
     margin-bottom: 25px;
 }
