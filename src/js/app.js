@@ -1,12 +1,14 @@
 //IMPORT
 import * as $  from "jquery";
 import data from '../json/details.json';
-//import { register } from 'swiper/element/swiper-element-bundle'; //Error intern en el document
-//register();
+
 
 
 $(function(){
-    /**********GENEREAL FUNCTIONS***********/
+    /**********GENEREAL VARIABLES***********/
+    const urlImages = "https://raw.githubusercontent.com/mherrerabl/UOC_Eines_HTML_CSS_PAC2/main/";
+
+   /**********GENEREAL FUNCTIONS***********/
     //Modifica la variable de la categoria clicada
     function setCategory(el) {
         $(el).on("click", function(event){
@@ -24,9 +26,9 @@ $(function(){
     }
 
     //Crea el mapa segons la latitud i l'altitud
-    function createMap(el, lat, alt, img, title, zoom){
+    function createMap(el, latitude, altitude, img, alt, title, zoom){
         const mapOptions = {
-            center: [lat, alt],
+            center: [latitude, altitude],
             zoom: zoom
         }
     
@@ -36,14 +38,13 @@ $(function(){
         
         let markerOptions = {
             title: "Prefectrua de Nara",
-            clickable: true,
-            draggable: true
+            clickable: true
         }
-        const marker = new L.Marker([lat, alt], markerOptions);
+        const marker = new L.Marker([latitude, altitude], markerOptions);
         if(img === ""){
             marker.bindPopup('<p style="text-align: center">'+title+'</p>').openPopup();
         }else{
-            marker.bindPopup('<img style="width: 200px" src="'+img+'"><p style="text-align: center">'+title+'</p>').openPopup();
+            marker.bindPopup('<img style="width: 200px" src="'+img+'" alt="'+alt+'"><p style="text-align: center">'+title+'</p>').openPopup();
         }
         marker.addTo(map);
     }
@@ -52,15 +53,64 @@ $(function(){
     function gridSwiper(wWidth) {
         if (wWidth < 479){
             $('swiper-container').attr('slides-per-view', '1');
-        // createSwiper(1);
         }else if(wWidth < 800){
             $('swiper-container').attr('slides-per-view', '2');
-        // createSwiper(2);
         }else if (wWidth > 801){
             $('swiper-container').attr('slides-per-view', '4');
-        // createSwiper(4);
         }
     }
+
+    //Retorna la url de la imatge segons si te art direction o no
+    function chooseImage(obj, indexUrl){
+        if(Object.keys(obj.type.jpg).length === 2 && indexUrl < 2){
+            return urlImages + obj.type.jpg.art[indexUrl];
+        }else{
+            return urlImages + obj.type.jpg.url[indexUrl];
+        }
+    }
+
+    //Contingut swipers
+    function contentImageCard(obj) {
+        return `<img src="${chooseImage(obj, 1)}"
+                    srcset="${chooseImage(obj, 0)}?as=webp 1x,
+                            ${chooseImage(obj, 0)} 1x,
+                            ${chooseImage(obj, 1)}?as=webp 2x,
+                            ${chooseImage(obj, 1)} 2x"
+                    sizes="(max-width: 384px) 100vw,
+                            (max-width: 799px) 50vw,
+                            (min-width: 800px) 33vw"
+                    alt="${obj.alt}">`;
+    }
+    //Contingut imatges dels punts d'interès (pàgina Detail)
+    function contentImagesArchitecture(obj) {
+        return `<picture>
+                    <source media="(min-width: 850px)" 
+                            srcset="${chooseImage(obj, 2)}?as=webp 3x,
+                                    ${chooseImage(obj, 3)}?as=webp 5x" 
+                            type="image/webp">
+                    <source media="(min-width: 384px)" 
+                            srcset="${chooseImage(obj, 1)}?as=webp" 
+                            type="image/webp">
+                    <source media="(max-width: 383px)" 
+                            srcset="${chooseImage(obj, 0)}?as=webp" 
+                            type="image/webp">
+                    
+                    <source media="(min-width: 850px)" 
+                            srcset="${chooseImage(obj, 2)} 3x,
+                                    ${chooseImage(obj, 3)} 5x" 
+                            type="image/jpg">
+                    <source media="(min-width: 384px)" 
+                            srcset="${chooseImage(obj, 1)}" 
+                            type="image/jpg">
+                    <source media="(max-width: 383px)" 
+                            srcset="${chooseImage(obj, 0)}" 
+                            type="image/jpg">
+
+                    <img src="${chooseImage(obj, 0)}" alt="${obj.alt}">
+                </picture>`;
+    }
+
+
 
     /*****HEADER*****/
     //Menu
