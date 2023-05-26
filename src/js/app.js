@@ -107,6 +107,13 @@ $(function(){
                 </picture>`;
     }
 
+    //Canvia el color del logo
+    function changeColorLogo(event, color){
+        const objectEl = $(event.currentTarget).children("object")[0];
+        const documentEl = objectEl.contentDocument;
+        const svgEl = documentEl.querySelector("svg");
+        svgEl.style.color = color;
+    }
 
 
  /************************************PAGES CONTENT************************************/
@@ -371,18 +378,24 @@ $(function(){
 
     /*****LOGO HOVER*****/ 
     $(".logo:not(.logoIndex)").on("mouseenter", function(event){
-        const objectEl = $(event.currentTarget).children("object")[0];
-        const documentEl = objectEl.contentDocument;
-        const svgEl = documentEl.querySelector("svg");
-        svgEl.style.color = "#B3102E";
+        changeColorLogo(event, "#b3102e");
+    }).on("click", function(event){
+        changeColorLogo(event, "#006612");
     });
 
     $(".logo:not(.logoIndex)").on("mouseleave", function(event){
-        const objectEl = $(event.currentTarget).children("object")[0];
-        const documentEl = objectEl.contentDocument;
-        const svgEl = documentEl.querySelector("svg");
-        svgEl.style.color = "#006612";
+        changeColorLogo(event, "#006612");
     });
+
+    $(".logo:not(.logoIndex)").on("focus", function(event){
+        changeColorLogo(event, "#b3102e");
+    });
+
+    $(".logo:not(.logoIndex)").on("focusout", function(event){
+        changeColorLogo(event, "#006612");
+    });
+
+    
 
 
     //Modifica el nombre de slide que es mostren en pantalla segons la mida de la pantalla

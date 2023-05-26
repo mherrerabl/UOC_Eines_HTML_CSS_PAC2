@@ -38,15 +38,7 @@ footer h2{
     font-size: 4rem;
     font-family: 'Aboreto', cursive;
     color: var(--mainColor);
-}
-
-.logoName h1, .logoName p, .logoName a{
-    font-size: 4rem;
-    font-family: 'Aboreto', cursive;
-}
-
-.logoName p{
-    color: var(--mainColor);
+    margin-bottom: 0;
 }
 
 h2{
@@ -362,34 +354,19 @@ footer > div:last-child li a{
 }
 
 /**Section 1**/
-.containerIndex > section:first-child{
-    clip-path: polygon(50% 0%, 100% 25%, 98% 100%, 2% 100%, 0% 25%);
-    background-color: #eecfac;
-}
-
 .containerIndex > section:first-child > div {   
     margin: 25px 0px;
-    padding-bottom: 25px;
-    clip-path: polygon(50% 3%, 97% 27%, 95% 97%, 5% 97%, 3% 27%);
+    clip-path: polygon(50% 0%, 100% 25%, 95% 100%, 5% 100%, 0% 25%);
+    background-color: #eecfac;
 }
 .containerIndex > section:first-child img{
     width: 100%;
+    clip-path: polygon(50% calc(0% + 3vh), calc(100% - 2.5vh) calc(25% + 7.5vh), calc(95% - 1vh) 100%, calc(5% + 1vh) 100%, calc(0% + 2.5vh) calc(25% + 7.5vh));
 }
-.containerIndex > section:first-child > div > div{
+.containerIndex > section:first-child > div{
     width: 80%;
     margin: 0 auto;
     text-align:center;
-}
-
-.containerIndex .logoName{
-    text-align: right;
-    font-weight: 900;
-    padding: 0;
-    display: inline-block;
-}
-
-.logoName p{
-    text-align: end;
 }
 
 .containerIndex > section:first-child > div > h2 {
@@ -562,7 +539,7 @@ swiper-container swiper-slide h5{
 }
 
 .containerDetail .accommodation a{
-    text-decoration: underline var(--mainColor) 2px;
+    text-decoration: underline var(--mainColor) 2px !important;
     display: inline-block;
     margin-bottom: 25px;
 }
@@ -605,8 +582,12 @@ swiper-container swiper-slide h5{
 /**********MEDIA QUERIES**********/
 @media screen and (max-width: 479px) {
     /**HEADER**/
-    header .logoName h1, header .logoName p{
-        font-size: 3rem;
+    .containerIndex > section:first-child > div > h2{
+        font-size: 20px;
+    }
+
+    .containerIndex > section:first-child > div > h2 span{
+        font-size: 18px;
     }
 
     /**FOOTER**/
@@ -651,9 +632,6 @@ swiper-container swiper-slide h5{
 
  
     /*****INDEX*****/
-    .containerIndex > section:first-child > div img {   
-        clip-path: polygon(50% 6%, 96% 37%, 95% 95%, 5% 95%, 4% 37%);
-    }
 
     /*****CATEGORY*****/
     .containerCategory > ul{
@@ -722,10 +700,6 @@ swiper-container swiper-slide h5{
         max-width: 1000px;
         margin: auto;
         margin-bottom: 70px;
-    }
-    
-    .containerIndex > section:first-child > div img {   
-        clip-path: polygon(50% 6%, 96% 37%, 95% 95%, 5% 95%, 4% 37%);
     }
 
 
@@ -885,10 +859,6 @@ swiper-container swiper-slide h5{
     .containerIndex{
         margin: 50px;
     }
-
-    .containerIndex > section:first-child > div img {   
-        clip-path: polygon(50% 5%, 96.5% 35%, 95.5% 95%, 4.5% 95%, 3.5% 35%);
-    }
 }
     
 
@@ -923,10 +893,6 @@ swiper-container swiper-slide h5{
     .containerIndex {
         margin: 100px 0;
     }
-
-    .containerIndex > section:first-child > div {   
-        clip-path: polygon(50% 5%, 98% 29%, 96% 95%, 4% 95%, 2% 29%);
-    }
 }
 
 /*****HOVER AND ACTIVE****/
@@ -951,10 +917,16 @@ a:active:not(.logo, .menu a)::before  {
 }
 
 /**Logo**/
-a.logo:hover h1{
+a.logo:hover h1, a.logo:hover h2, a.logo:active h1, a.logo:active h2, a.logo:focus h1, a.logo:focus h2{
     color: var(--main2Color);
     font-weight: 700;
 }
+
+a.logo:active h1, a.logo:active h2{
+    color: var(--main2Color);
+    font-weight: 700;
+}
+
    
 /**links header menu**/
 .menu li a:hover{

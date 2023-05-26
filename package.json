@@ -1,7 +1,7 @@
 {
   "name": "pac1_nara",
   "version": "2.0.0",
-  "description": "PAC2",
+  "description": "PAC2: web i recursos multimèdia",
   "author": "Míriam Herrera Blanes",
   "source": "src/index.html",
   "browserslist": [
