@@ -88,7 +88,7 @@ a:not(.logo, .card a, .menu a){
     position: relative;
     background-clip: text;
     color: transparent;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-out;
 }
 
 a:not(.logo, .card a, .menu a):before {
@@ -100,7 +100,7 @@ a:not(.logo, .card a, .menu a):before {
     left: 0;
     width: 0;
     height: 2px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-out;
 }
 
 p{
@@ -986,7 +986,7 @@ footer a:hover i, footer a:active i, footer a:focus i{
 /***ANIMATION SVG**/
 .containerAbout svg .svg_1{
     transform: translate(100%, -100%) scale(0.5, 0.5);
-    animation: bounce2 1.2s ease-in-out 1s forwards;
+    animation: bounce 1.2s ease-in-out 1s forwards;
 }
 
 .containerAbout svg .svg_2{
@@ -1031,10 +1031,10 @@ footer a:hover i, footer a:active i, footer a:focus i{
     100% {
       transform: translate(0%);
     }
-  }
+}
 
 
-  @keyframes bounce2 {
+@keyframes bounce {
 	0% {transform: scale(1, 1) translateY(-100%);}
     20% { transform: scale(1, 1) translateY(0%); }
     25% { transform: scale(1, 0.6) translateY(calc(0% + 120px));}
@@ -1045,6 +1045,5 @@ footer a:hover i, footer a:active i, footer a:focus i{
     70% { transform: scale(1, 1) translateY(0%); }
     80% {transform: scale(1, 1) translateY(-15%);}
     100% {transform: scale(1, 1) translateY(0%);}
-
 }
 
