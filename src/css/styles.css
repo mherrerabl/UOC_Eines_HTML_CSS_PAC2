@@ -361,7 +361,7 @@ footer > div:last-child li a{
 }
 .containerIndex > section:first-child img{
     width: 100%;
-    clip-path: polygon(50% calc(0% + 3vh), calc(100% - 2.5vh) calc(25% + 7.5vh), calc(95% - 1vh) 100%, calc(5% + 1vh) 100%, calc(0% + 2.5vh) calc(25% + 7.5vh));
+    clip-path: polygon(50% 2.5vh,calc(100% - 2.5vh) calc(25% + 4.5vh),calc(95% - 1.5vh) 100%,calc(5% + 1.5vh) 100%,2.5vh calc(25% + 4.5vh));
 }
 .containerIndex > section:first-child > div{
     width: 80%;
